@@ -56,7 +56,7 @@ def plot_centrality_dist(metrics, DB: bool):
     plt.tight_layout()
     plt.savefig(f"ComparisonDB={DB}.png")
 
-    plt.figure(figsize=(10,5))
+    plt.figure(figsize=(15,8))
     plt.subplot(231)
     plt.plot(norm_deg_dist[0], norm_deg_dist[1])
     plt.title("Norm. Degree Centrality")
