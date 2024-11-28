@@ -6,16 +6,15 @@ import pandas as pd
 
 all_dfs = []
 for f in os.scandir("graph"):
-    if not f.name.endswith("_gwcc.json"):
-        continue
+    db = f.name.endswith("_gwcc.json")
     with open(f, 'r') as fi:
         g = json.load(fi)
     G = nx.node_link_graph(g, edges="edges", nodes="nodes", name="name", source="sender", target="receiver",
                            multigraph=False, directed=True)
-    name = f.name.replace("_gwcc.json", "")
-    graph_df = pd.DataFrame(columns=["MS_system", "node"])
+    name = f.name.replace("_gwcc.json", "") if db else f.name.replace("_gwcc_noDB.json", "")
+    graph_df = pd.DataFrame(columns=["MS_system", "node", "DB"])
     for node in G.nodes:
-        graph_df.loc[len(graph_df)] = [name, node]
+        graph_df.loc[len(graph_df)] = [name, node, db]
     norm_degree_centrality = nx.degree_centrality(G)
     degree_centrality = {k: int(v*(len(G.nodes) - 1)) for k, v in norm_degree_centrality.items()}
     norm_in_degree_centrality = nx.in_degree_centrality(G)
