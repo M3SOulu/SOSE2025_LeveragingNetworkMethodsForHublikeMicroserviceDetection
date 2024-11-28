@@ -42,4 +42,5 @@ all_dfs_nodb = sorted(all_dfs_nodb, key=lambda d: d["MS_system"].iloc[0].casefol
 df_db = pd.concat(all_dfs_db)
 df_nodb = pd.concat(all_dfs_nodb)
 df = pd.merge(df_db, df_nodb, on=["MS_system", "node"], how="left")
+# df = df.sort_values(by="Eigenvector Centrality (DB=False)", ascending=False)
 df.to_csv("metrics_centrality.csv", index=False, header=True)
