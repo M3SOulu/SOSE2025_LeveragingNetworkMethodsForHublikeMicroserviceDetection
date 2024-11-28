@@ -10,6 +10,8 @@ def get_dist(df, col, max, num=100):
 
 
 def plot_centrality_dist(metrics, DB: bool):
+    # metrics = metrics[metrics[f"Betweenness Centrality (DB={DB})"] > 0.0001]
+    # metrics = metrics[metrics[f"Eigenvector Centrality (DB={DB})"] > 0.0001]
     norm_deg_dist = get_dist(metrics, f"Norm. Degree Centrality (DB={DB})", 1.0)
     deg_dist = get_dist(metrics, f"Degree Centrality (DB={DB})", metrics[f"Degree Centrality (DB={DB})"].max())
     norm_in_deg_dist = get_dist(metrics, f"Norm. In-degree Centrality (DB={DB})", 1.0)
