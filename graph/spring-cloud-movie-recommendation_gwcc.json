@@ -1,0 +1,270 @@
+{
+    "edges": [
+        {
+            "receiver": "eureka-service",
+            "sender": "recommendation-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "recommendation-service",
+            "sender": "config-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "recommendation-client",
+            "sender": "config-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "eureka-service",
+            "sender": "config-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user-service",
+            "sender": "config-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "movie-service",
+            "sender": "config-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user-service",
+            "sender": "recommendation-client",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "recommendation-service",
+            "sender": "recommendation-client",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "movie-service",
+            "sender": "recommendation-client",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "recommendation-client",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "recommendation-client",
+            "sender": "eureka-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "eureka-service",
+            "sender": "user-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "eureka-service",
+            "sender": "movie-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "config-service",
+            "sender": "github-repository",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "recommendation-client",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "recommendation-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/recommendation/movie', '/recommendation', '/recommendation/user', '/recommendation/user/{userId}', '/recommendation/movie/{movieId}', '/recommendation/dummyData', '/recommendation/recommend/user/{userId}']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "config-service",
+            "stereotype_instances": [
+                "configuration_server",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8888
+                ],
+                [
+                    "Configuration Server",
+                    "Spring Cloud Config"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "recommendation-client",
+            "stereotype_instances": [
+                "circuit_breaker",
+                "monitoring_dashboard",
+                "infrastructural",
+                "gateway",
+                "load_balancer"
+            ],
+            "tagged_values": [
+                [
+                    "Monitoring Dashboard",
+                    "Hystrix"
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Endpoints",
+                    "['/api/recommendation/user/{userId}', '/user/{userId}', '/recommendation/dummyData', '/newuser', '/api/userDetails/{userId}', '/movie', '/movie/dummyData', '/api', '/user']"
+                ],
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ],
+                [
+                    "Gateway",
+                    "Zuul"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "eureka-service",
+            "stereotype_instances": [
+                "infrastructural",
+                "service_discovery"
+            ],
+            "tagged_values": [
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "user-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/user/{userId}', '/user']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "movie-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/movie/{movieId}', '/movie', '/movie/list', '/movie/dummyData']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "github-repository",
+            "stereotype_instances": [
+                "github_repository",
+                "entrypoint"
+            ],
+            "tagged_values": [
+                [
+                    "URL",
+                    "https://github.com/mdeket/spring-cloud-example-config-repo.git\n"
+                ]
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "user_stereotype",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "type": "external_component"
+        }
+    ]
+}

@@ -1,0 +1,352 @@
+{
+    "edges": [
+        {
+            "receiver": "eureka",
+            "sender": "qbike-order",
+            "stereotype_instances": [
+                "load_balanced_link",
+                "restful_http"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "qbike-trip",
+            "sender": "qbike-intention",
+            "stereotype_instances": [
+                "load_balanced_link",
+                "restful_http",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "qbike-intention",
+            "stereotype_instances": [
+                "load_balanced_link",
+                "restful_http",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "microservice-api-gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "qbike-trip",
+            "stereotype_instances": [
+                "load_balanced_link",
+                "restful_http",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "microservice-api-gateway",
+            "sender": "eureka",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "qbike-uc",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "qbike-order",
+            "sender": "rabbit",
+            "stereotype_instances": [
+                "message_consumer_rabbitmq",
+                "restful_http"
+            ],
+            "tagged_values": [
+                [
+                    "Queue",
+                    "intention"
+                ]
+            ]
+        },
+        {
+            "receiver": "microservice-api-gateway",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "mysql",
+            "sender": "uc",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbit",
+            "sender": "uc",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "mysql",
+            "sender": "intention",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbit",
+            "sender": "intention",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "mysql",
+            "sender": "position",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbit",
+            "sender": "position",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "mysql",
+            "sender": "order",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbit",
+            "sender": "order",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbit",
+            "sender": "api-gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbit",
+            "sender": "zipkin",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "qbike-order",
+            "stereotype_instances": [
+                "internal",
+                "load_balancer",
+                "local_logging"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8002
+                ],
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "qbike-intention",
+            "stereotype_instances": [
+                "circuit_breaker",
+                "internal",
+                "load_balancer",
+                "local_logging"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8001
+                ],
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "microservice-api-gateway",
+            "stereotype_instances": [
+                "gateway",
+                "infrastructural",
+                "load_balancer"
+            ],
+            "tagged_values": [
+                [
+                    "Gateway",
+                    "Zuul"
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Port",
+                    8050
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "qbike-trip",
+            "stereotype_instances": [
+                "circuit_breaker",
+                "internal",
+                "load_balancer",
+                "local_logging"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8003
+                ],
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "eureka",
+            "stereotype_instances": [
+                "service_discovery",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8761
+                ],
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "qbike-uc",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/\"users']"
+                ],
+                [
+                    "Port",
+                    8000
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "mysql",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    13306
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "rabbit",
+            "stereotype_instances": [
+                "message_broker",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Message Broker",
+                    "RabbitMQ"
+                ],
+                [
+                    "Port",
+                    15672
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "exitpoint",
+                "user_stereotype",
+                "entrypoint"
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "uc"
+        },
+        {
+            "name": "intention"
+        },
+        {
+            "name": "position"
+        },
+        {
+            "name": "order"
+        },
+        {
+            "name": "api-gateway"
+        },
+        {
+            "name": "zipkin"
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "edges": [
+        {
+            "receiver": "discovery-service",
+            "sender": "account-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "gateway-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "account-service",
+            "sender": "gateway-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "customer-service",
+            "sender": "gateway-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "discovery-service",
+            "sender": "customer-service",
+            "stereotype_instances": [
+                "load_balanced_link",
+                "restful_http"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "gateway-service",
+            "sender": "discovery-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "gateway-service",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "account-service",
+            "stereotype_instances": [
+                "internal",
+                "local_logging"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    2222
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "gateway-service",
+            "stereotype_instances": [
+                "infrastructural",
+                "gateway"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8090
+                ],
+                [
+                    "Gateway",
+                    "Spring Cloud Gateway"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "customer-service",
+            "stereotype_instances": [
+                "internal",
+                "load_balancer",
+                "local_logging"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    3333
+                ],
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "discovery-service",
+            "stereotype_instances": [
+                "infrastructural",
+                "service_discovery"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8761
+                ],
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "exitpoint",
+                "entrypoint",
+                "user_stereotype"
+            ],
+            "type": "external_component"
+        }
+    ]
+}

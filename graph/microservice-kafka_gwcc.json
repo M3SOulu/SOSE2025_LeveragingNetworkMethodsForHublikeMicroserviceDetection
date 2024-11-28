@@ -1,0 +1,287 @@
+{
+    "edges": [
+        {
+            "receiver": "kafka",
+            "sender": "invoicing",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "kafka",
+            "sender": "order",
+            "stereotype_instances": [
+                "message_producer_kafka",
+                "restful_http"
+            ],
+            "tagged_values": [
+                [
+                    "Producer Topic",
+                    "order"
+                ]
+            ]
+        },
+        {
+            "receiver": "order",
+            "sender": "order",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "kafka",
+            "sender": "shipping",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "kafka",
+            "sender": "zookeeper",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "shipping",
+            "sender": "kafka",
+            "stereotype_instances": [
+                "restful_http",
+                "message_consumer_kafka"
+            ],
+            "tagged_values": [
+                [
+                    "Consumer Topic",
+                    "order"
+                ]
+            ]
+        },
+        {
+            "receiver": "invoicing",
+            "sender": "kafka",
+            "stereotype_instances": [
+                "restful_http",
+                "message_consumer_kafka"
+            ],
+            "tagged_values": [
+                [
+                    "Consumer Topic",
+                    "order"
+                ]
+            ]
+        },
+        {
+            "receiver": "order",
+            "sender": "apache",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "shipping",
+            "sender": "apache",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "invoicing",
+            "sender": "apache",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "apache",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "invoicing",
+            "sender": "postgres",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "jdbc"
+            ],
+            "tagged_values": [
+                [
+                    "Username",
+                    "dbuser"
+                ],
+                [
+                    "Password",
+                    "dbpass"
+                ]
+            ]
+        },
+        {
+            "receiver": "order",
+            "sender": "postgres",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "jdbc"
+            ],
+            "tagged_values": [
+                [
+                    "Username",
+                    "dbuser"
+                ],
+                [
+                    "Password",
+                    "dbpass"
+                ]
+            ]
+        },
+        {
+            "receiver": "shipping",
+            "sender": "postgres",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "jdbc"
+            ],
+            "tagged_values": [
+                [
+                    "Username",
+                    "dbuser"
+                ],
+                [
+                    "Password",
+                    "dbpass"
+                ]
+            ]
+        },
+        {
+            "receiver": "apache",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "invoicing",
+            "stereotype_instances": [
+                "local_logging",
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "order",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/\"order']"
+                ],
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "shipping",
+            "stereotype_instances": [
+                "local_logging",
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "zookeeper",
+            "stereotype_instances": [
+                "infrastructural",
+                "configuration_server"
+            ],
+            "tagged_values": [
+                [
+                    "Configuration Server",
+                    "ZooKeeper"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "kafka",
+            "stereotype_instances": [
+                "infrastructural",
+                "message_broker"
+            ],
+            "tagged_values": [
+                [
+                    "Message Broker",
+                    "Kafka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "apache",
+            "stereotype_instances": [
+                "infrastructural",
+                "web_server"
+            ],
+            "tagged_values": [
+                [
+                    "Web Server",
+                    "Apache httpd"
+                ],
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "postgres",
+            "stereotype_instances": [
+                "database",
+                "plaintext_credentials"
+            ],
+            "tagged_values": [
+                [
+                    "Database",
+                    "PostgreSQL"
+                ],
+                [
+                    "Username",
+                    "dbuser"
+                ],
+                [
+                    "Password",
+                    "dbpass"
+                ]
+            ],
+            "type": "database_component"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "entrypoint",
+                "user_stereotype",
+                "exitpoint"
+            ],
+            "type": "external_component"
+        }
+    ]
+}

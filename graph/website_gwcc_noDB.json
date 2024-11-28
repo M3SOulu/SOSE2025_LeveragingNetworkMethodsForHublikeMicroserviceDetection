@@ -1,0 +1,151 @@
+{
+    "edges": [
+        {
+            "receiver": "registry",
+            "sender": "authserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "registry",
+            "sender": "backend",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "gateway",
+            "sender": "registry",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "authserver",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "backend",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "gateway",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "authserver",
+            "stereotype_instances": [
+                "resource_server",
+                "authorization_server",
+                "authentication_scope_all_requests",
+                "basic_authentication",
+                "local_logging",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Authorization Server",
+                    "Spring OAuth2"
+                ],
+                [
+                    "Logging Technology",
+                    "Lombok"
+                ],
+                [
+                    "Endpoints",
+                    "['/user', '/', '/admin']"
+                ],
+                [
+                    "Port",
+                    80
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "backend",
+            "stereotype_instances": [
+                "local_logging",
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Logging Technology",
+                    "Lombok"
+                ],
+                [
+                    "Port",
+                    80
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "registry",
+            "stereotype_instances": [
+                "csrf_disabled",
+                "authentication_scope_all_requests",
+                "basic_authentication",
+                "service_discovery",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8761
+                ],
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "gateway",
+            "stereotype_instances": [
+                "gateway",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Gateway",
+                    "Spring Cloud Gateway"
+                ],
+                [
+                    "Port",
+                    443
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "exitpoint",
+                "entrypoint",
+                "user_stereotype"
+            ],
+            "type": "external_component"
+        }
+    ]
+}

@@ -1,0 +1,192 @@
+{
+    "edges": [
+        {
+            "receiver": "api-gateway",
+            "sender": "serviceregistry",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rating-service",
+            "sender": "user-service",
+            "stereotype_instances": [
+                "restful_http",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "serviceregistry",
+            "sender": "user-service",
+            "stereotype_instances": [
+                "restful_http",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "serviceregistry",
+            "sender": "rating-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "serviceregistry",
+            "sender": "hotel-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "api-gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "hotel-service",
+            "sender": "api-gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user-service",
+            "sender": "api-gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rating-service",
+            "sender": "api-gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "api-gateway",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "serviceregistry",
+            "stereotype_instances": [
+                "service_discovery",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8762
+                ],
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "user-service",
+            "stereotype_instances": [
+                "internal",
+                "local_logging",
+                "load_balancer"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8081
+                ],
+                [
+                    "Endpoints",
+                    "['/users', '/users/{userId}']"
+                ],
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "rating-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/ratings', '/ratings/users/{userId}', '/ratings/hotels/{hotelId}']"
+                ],
+                [
+                    "Port",
+                    8083
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "hotel-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/hotels', '/hotels/{hotelId}']"
+                ],
+                [
+                    "Port",
+                    8082
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "api-gateway",
+            "stereotype_instances": [
+                "infrastructural",
+                "gateway"
+            ],
+            "tagged_values": [
+                [
+                    "Gateway",
+                    "Spring Cloud Gateway"
+                ],
+                [
+                    "Port",
+                    8084
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "user_stereotype",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "type": "external_component"
+        }
+    ]
+}

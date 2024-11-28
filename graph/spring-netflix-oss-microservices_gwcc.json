@@ -1,0 +1,326 @@
+{
+    "edges": [
+        {
+            "receiver": "discovery-service",
+            "sender": "monitor-dashboard",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "discovery-service",
+            "sender": "card-statement-composite",
+            "stereotype_instances": [
+                "circuit_breaker_link",
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "discovery-service",
+            "sender": "card-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "edge-server",
+            "sender": "discovery-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "discovery-service",
+            "sender": "statement-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "monitor-dashboard",
+            "sender": "config-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "card-statement-composite",
+            "sender": "config-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "card-service",
+            "sender": "config-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "discovery-service",
+            "sender": "config-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "statement-service",
+            "sender": "config-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "turbine",
+            "sender": "config-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "edge-server",
+            "sender": "config-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbitmq",
+            "sender": "turbine",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "discovery-service",
+            "sender": "turbine",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "monitor-dashboard",
+            "sender": "turbine",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "edge-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "turbine",
+            "sender": "rabbitmq",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "config-server",
+            "sender": "github-repository",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "edge-server",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbitmq",
+            "sender": "monitor",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "monitor-dashboard",
+            "stereotype_instances": [
+                "infrastructural",
+                "monitoring_dashboard"
+            ],
+            "tagged_values": [
+                [
+                    "Monitoring Dashboard",
+                    "Hystrix"
+                ],
+                [
+                    "Port",
+                    8179
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "card-statement-composite",
+            "stereotype_instances": [
+                "internal",
+                "circuit_breaker"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "card-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "discovery-service",
+            "stereotype_instances": [
+                "infrastructural",
+                "service_discovery"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8761
+                ],
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "statement-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "config-server",
+            "stereotype_instances": [
+                "configuration_server",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Configuration Server",
+                    "Spring Cloud Config"
+                ],
+                [
+                    "Port",
+                    9090
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "turbine",
+            "stereotype_instances": [
+                "infrastructural",
+                "monitoring_server"
+            ],
+            "tagged_values": [
+                [
+                    "Monitoring Server",
+                    "Turbine"
+                ],
+                [
+                    "Port",
+                    8989
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "edge-server",
+            "stereotype_instances": [
+                "infrastructural",
+                "load_balancer",
+                "gateway"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8765
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Gateway",
+                    "Zuul"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "rabbitmq",
+            "stereotype_instances": [
+                "message_broker",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Message Broker",
+                    "RabbitMQ"
+                ],
+                [
+                    "Port",
+                    5672
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "github-repository",
+            "stereotype_instances": [
+                "entrypoint",
+                "github_repository"
+            ],
+            "tagged_values": [
+                [
+                    "URL",
+                    "https://github.com/fernandoabcampos/microservices-config.git"
+                ]
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "exitpoint",
+                "entrypoint",
+                "user_stereotype"
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "monitor"
+        }
+    ]
+}

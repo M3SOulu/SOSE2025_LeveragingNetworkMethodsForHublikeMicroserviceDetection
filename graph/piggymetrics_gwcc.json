@@ -1,0 +1,745 @@
+{
+    "edges": [
+        {
+            "receiver": "registry",
+            "sender": "statistics-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbitmq",
+            "sender": "statistics-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "registry",
+            "sender": "account-service",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ]
+            ]
+        },
+        {
+            "receiver": "rabbitmq",
+            "sender": "account-service",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ]
+            ]
+        },
+        {
+            "receiver": "registry",
+            "sender": "notification-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "rabbitmq",
+            "sender": "notification-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "mail-server",
+            "sender": "notification-service",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "statistics-service",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "account-service",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "notification-service",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "turbine-stream-service",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "registry",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "monitoring",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "auth-service",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "gateway",
+            "sender": "config",
+            "stereotype_instances": [
+                "restful_http",
+                "plaintext_credentials_link"
+            ]
+        },
+        {
+            "receiver": "registry",
+            "sender": "turbine-stream-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "monitoring",
+            "sender": "turbine-stream-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "gateway",
+            "sender": "registry",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "registry",
+            "sender": "auth-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "statistics-service",
+            "sender": "auth-service",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "restful_http",
+                "authentication_with_plaintext_credentials",
+                "auth_provider"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password\n"
+                ]
+            ]
+        },
+        {
+            "receiver": "account-service",
+            "sender": "auth-service",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "restful_http",
+                "authentication_with_plaintext_credentials",
+                "auth_provider"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password\n"
+                ]
+            ]
+        },
+        {
+            "receiver": "notification-service",
+            "sender": "auth-service",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "restful_http",
+                "authentication_with_plaintext_credentials",
+                "auth_provider"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password\n"
+                ]
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "statistics-service",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http",
+                "load_balanced_link",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ]
+            ]
+        },
+        {
+            "receiver": "auth-service",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http",
+                "load_balanced_link",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ]
+            ]
+        },
+        {
+            "receiver": "account-service",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http",
+                "load_balanced_link",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ]
+            ]
+        },
+        {
+            "receiver": "notification-service",
+            "sender": "gateway",
+            "stereotype_instances": [
+                "restful_http",
+                "load_balanced_link",
+                "circuit_breaker_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ]
+            ]
+        },
+        {
+            "receiver": "auth-service",
+            "sender": "auth-mongodb",
+            "stereotype_instances": [
+                "jdbc",
+                "plaintext_credentials_link"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ]
+        },
+        {
+            "receiver": "turbine-stream-service",
+            "sender": "rabbitmq",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "notification-service",
+            "sender": "notification-mongodb",
+            "stereotype_instances": [
+                "jdbc",
+                "plaintext_credentials_link"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ]
+        },
+        {
+            "receiver": "statistics-service",
+            "sender": "statistics-mongodb",
+            "stereotype_instances": [
+                "jdbc",
+                "plaintext_credentials_link"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ]
+        },
+        {
+            "receiver": "account-service",
+            "sender": "account-mongodb",
+            "stereotype_instances": [
+                "jdbc",
+                "plaintext_credentials_link"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ]
+        },
+        {
+            "receiver": "gateway",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "statistics-service",
+            "sender": "external-website",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "statistics-service",
+            "stereotype_instances": [
+                "local_logging",
+                "internal",
+                "pre_authorized_endpoints",
+                "resource_server"
+            ],
+            "tagged_values": [
+                [
+                    "Pre-authorized Endpoints",
+                    "['/{accountName}']"
+                ],
+                [
+                    "Port",
+                    7000
+                ],
+                [
+                    "Endpoints",
+                    "['/latest', '/{accountName}', '/current']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "account-service",
+            "stereotype_instances": [
+                "local_logging",
+                "resource_server",
+                "pre_authorized_endpoints",
+                "internal",
+                "circuit_breaker"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/uaa/users', '/statistics/{accountName}', '/', '/{name}', '/current']"
+                ],
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ],
+                [
+                    "Pre-authorized Endpoints",
+                    "['/{name}']"
+                ],
+                [
+                    "Port",
+                    6000
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "notification-service",
+            "stereotype_instances": [
+                "local_logging",
+                "internal",
+                "resource_server"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8000
+                ],
+                [
+                    "Endpoints",
+                    "['/recipients/current', '/recipients', '/accounts/{accountName}']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "config",
+            "stereotype_instances": [
+                "infrastructural",
+                "plaintext_credentials",
+                "configuration_server",
+                "basic_authentication",
+                "csrf_disabled"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8888
+                ],
+                [
+                    "Password",
+                    "password\n"
+                ],
+                [
+                    "Configuration Server",
+                    "Spring Cloud Config"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "turbine-stream-service",
+            "stereotype_instances": [
+                "infrastructural",
+                "monitoring_server"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8989
+                ],
+                [
+                    "Monitoring Server",
+                    "Turbine"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "registry",
+            "stereotype_instances": [
+                "infrastructural",
+                "service_discovery"
+            ],
+            "tagged_values": [
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ],
+                [
+                    "Port",
+                    8761
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "monitoring",
+            "stereotype_instances": [
+                "infrastructural",
+                "monitoring_dashboard"
+            ],
+            "tagged_values": [
+                [
+                    "Monitoring Dashboard",
+                    "Hystrix"
+                ],
+                [
+                    "Port",
+                    8080
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "auth-service",
+            "stereotype_instances": [
+                "infrastructural",
+                "authentication_scope_all_requests",
+                "local_logging",
+                "csrf_disabled",
+                "resource_server",
+                "authorization_server",
+                "encryption",
+                "pre_authorized_endpoints",
+                "token_server"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    5000
+                ],
+                [
+                    "Authorization Server",
+                    "Spring OAuth2"
+                ],
+                [
+                    "Endpoints",
+                    "['/users/current', '/users']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "gateway",
+            "stereotype_instances": [
+                "infrastructural",
+                "load_balancer",
+                "gateway"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    4000
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ],
+                [
+                    "Gateway",
+                    "Zuul"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "auth-mongodb",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "database"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Password",
+                    "password\n"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ],
+            "type": "database_component"
+        },
+        {
+            "name": "rabbitmq",
+            "stereotype_instances": [
+                "message_broker",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    15672
+                ],
+                [
+                    "Message Broker",
+                    "RabbitMQ"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "notification-mongodb",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "database"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Password",
+                    "password\n"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ],
+            "type": "database_component"
+        },
+        {
+            "name": "statistics-mongodb",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "database"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Password",
+                    "password\n"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ],
+            "type": "database_component"
+        },
+        {
+            "name": "account-mongodb",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "database"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Password",
+                    "password\n"
+                ],
+                [
+                    "Username",
+                    "user"
+                ]
+            ],
+            "type": "database_component"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "user_stereotype",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "external-website",
+            "stereotype_instances": [
+                "external_website",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "tagged_values": [
+                [
+                    "URL",
+                    "https://api.exchangeratesapi.io"
+                ]
+            ]
+        },
+        {
+            "name": "mail-server",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "mail_server",
+                "exitpoint",
+                "entrypoint"
+            ],
+            "tagged_values": [
+                [
+                    "Host",
+                    "smtp.gmail.com"
+                ],
+                [
+                    "Password",
+                    "dev-password"
+                ],
+                [
+                    "Username",
+                    "dev-user"
+                ]
+            ]
+        }
+    ]
+}

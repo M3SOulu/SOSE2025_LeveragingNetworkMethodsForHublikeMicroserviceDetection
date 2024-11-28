@@ -1,0 +1,328 @@
+{
+    "edges": [
+        {
+            "receiver": "webservice-registry",
+            "sender": "web-portal",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "webservice-registry",
+            "sender": "user-webservice",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user",
+            "sender": "api-gateway",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "webservice-registry",
+            "sender": "comments-webservice",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "webservice-registry",
+            "sender": "auth-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "api-gateway",
+            "sender": "webservice-registry",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "comments-webservice",
+            "sender": "task-webservice",
+            "stereotype_instances": [
+                "circuit_breaker_link",
+                "restful_http",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "webservice-registry",
+            "sender": "task-webservice",
+            "stereotype_instances": [
+                "circuit_breaker_link",
+                "restful_http",
+                "load_balanced_link"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ]
+            ]
+        },
+        {
+            "receiver": "web-portal",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "user-webservice",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "api-gateway",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "comments-webservice",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "auth-server",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "webservice-registry",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "task-webservice",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "zipkin-tracing",
+            "sender": "configserver",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "configserver",
+            "sender": "github-repository",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "api-gateway",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "gradle_path": "web-portal/build.gradle",
+            "name": "web-portal",
+            "stereotype_instances": [
+                "monitoring_server",
+                "infrastructural",
+                "monitoring_dashboard"
+            ],
+            "tagged_values": [
+                [
+                    "Monitoring Dashboard",
+                    "Hystrix"
+                ],
+                [
+                    "Monitoring Server",
+                    "Turbine"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "user-webservice/build.gradle",
+            "name": "user-webservice",
+            "stereotype_instances": [
+                "authentication_scope_all_requests",
+                "resource_server",
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/', '/{userName}']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "api-gateway/build.gradle",
+            "name": "api-gateway",
+            "stereotype_instances": [
+                "infrastructural",
+                "load_balancer",
+                "csrf_disabled",
+                "gateway"
+            ],
+            "tagged_values": [
+                [
+                    "Gateway",
+                    "Zuul"
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "comments-webservice/build.gradle",
+            "name": "comments-webservice",
+            "stereotype_instances": [
+                "resource_server",
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/comments', '/comments/{taskId}']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "auth-server/build.gradle",
+            "name": "auth-server",
+            "stereotype_instances": [
+                "authorization_server",
+                "resource_server",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/me']"
+                ],
+                [
+                    "Authorization Server",
+                    "Spring OAuth2"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "webservice-registry/build.gradle",
+            "name": "webservice-registry",
+            "stereotype_instances": [
+                "infrastructural",
+                "service_discovery"
+            ],
+            "tagged_values": [
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "task-webservice/build.gradle",
+            "name": "task-webservice",
+            "stereotype_instances": [
+                "internal",
+                "authentication_scope_all_requests",
+                "circuit_breaker",
+                "load_balancer",
+                "resource_server"
+            ],
+            "tagged_values": [
+                [
+                    "Load Balancer",
+                    "Spring Cloud"
+                ],
+                [
+                    "Endpoints",
+                    "['/usertask/{userName}', '/', '/{taskId}']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "config-server/build.gradle",
+            "name": "configserver",
+            "stereotype_instances": [
+                "configuration_server",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8888
+                ],
+                [
+                    "Configuration Server",
+                    "Spring Cloud Config"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "gradle_path": "zipkin-server/build.gradle",
+            "name": "zipkin-tracing",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [],
+            "type": "service"
+        },
+        {
+            "name": "github-repository",
+            "stereotype_instances": [
+                "github_repository",
+                "entrypoint"
+            ],
+            "tagged_values": [
+                [
+                    "URL",
+                    "https://github.com/anilallewar/microservices-basics-cloud-config"
+                ]
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "user_stereotype",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "type": "external_component"
+        }
+    ]
+}

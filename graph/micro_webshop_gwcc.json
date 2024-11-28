@@ -1,0 +1,426 @@
+{
+    "edges": [
+        {
+            "receiver": "user",
+            "sender": "zuul",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "zuul",
+            "sender": "eureka",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "security-service",
+            "sender": "user-proxy",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "user-proxy",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "product-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "category-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "security-service",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "category-service",
+            "sender": "product-proxy",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link"
+            ]
+        },
+        {
+            "receiver": "product-service",
+            "sender": "product-proxy",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "product-proxy",
+            "stereotype_instances": [
+                "restful_http",
+                "circuit_breaker_link"
+            ]
+        },
+        {
+            "receiver": "eureka",
+            "sender": "auth-server",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        },
+        {
+            "receiver": "product-service",
+            "sender": "database-product-service",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "jdbc"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    ""
+                ],
+                [
+                    "Username",
+                    "admin"
+                ]
+            ]
+        },
+        {
+            "receiver": "category-service",
+            "sender": "database-category-service",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "jdbc"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    ""
+                ],
+                [
+                    "Username",
+                    "admin"
+                ]
+            ]
+        },
+        {
+            "receiver": "security-service",
+            "sender": "database-security-service",
+            "stereotype_instances": [
+                "plaintext_credentials_link",
+                "jdbc"
+            ],
+            "tagged_values": [
+                [
+                    "Password",
+                    ""
+                ],
+                [
+                    "Username",
+                    "admin"
+                ]
+            ]
+        },
+        {
+            "receiver": "zuul",
+            "sender": "user",
+            "stereotype_instances": [
+                "restful_http"
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "zuul",
+            "stereotype_instances": [
+                "infrastructural",
+                "load_balancer",
+                "gateway"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8081
+                ],
+                [
+                    "Gateway",
+                    "Zuul"
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "eureka",
+            "stereotype_instances": [
+                "service_discovery",
+                "monitoring_dashboard",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8761
+                ],
+                [
+                    "Monitoring Dashboard",
+                    "Hystrix"
+                ],
+                [
+                    "Service Discovery",
+                    "Eureka"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "user-proxy",
+            "stereotype_instances": [
+                "internal",
+                "circuit_breaker",
+                "load_balancer"
+            ],
+            "tagged_values": [
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ],
+                [
+                    "Port",
+                    8088
+                ],
+                [
+                    "Endpoints",
+                    "['/users/{userId}', '/users']"
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "product-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8092
+                ],
+                [
+                    "Endpoints",
+                    "['/', '/products/{productId}', '/products', '/products/{categoryId}']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "category-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/categories/byname/{name}', '/', '/status', '/categories/{id}', '/categories']"
+                ],
+                [
+                    "Port",
+                    8091
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "security-service",
+            "stereotype_instances": [
+                "internal"
+            ],
+            "tagged_values": [
+                [
+                    "Endpoints",
+                    "['/', '/users', '/users/{username}', '/roles/{rolelevel}']"
+                ],
+                [
+                    "Port",
+                    8093
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "product-proxy",
+            "stereotype_instances": [
+                "internal",
+                "resource_server",
+                "circuit_breaker",
+                "load_balancer"
+            ],
+            "tagged_values": [
+                [
+                    "Circuit Breaker",
+                    "Hystrix"
+                ],
+                [
+                    "Endpoints",
+                    "['/', '/products/{productId}', '/categories', '/products']"
+                ],
+                [
+                    "Port",
+                    8089
+                ],
+                [
+                    "Load Balancer",
+                    "Ribbon"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "auth-server",
+            "stereotype_instances": [
+                "authorization_server",
+                "resource_server",
+                "in_memory_authentication",
+                "infrastructural"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    8010
+                ],
+                [
+                    "Authorization Server",
+                    "Spring OAuth2"
+                ],
+                [
+                    "Username",
+                    "user"
+                ],
+                [
+                    "Password",
+                    "password"
+                ],
+                [
+                    "Endpoints",
+                    "['/user']"
+                ]
+            ],
+            "type": "service"
+        },
+        {
+            "name": "database-product-service",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "external_database",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    3306
+                ],
+                [
+                    "Username",
+                    "admin"
+                ],
+                [
+                    "Password",
+                    ""
+                ],
+                [
+                    "Database",
+                    "MySQL"
+                ]
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "database-category-service",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "external_database",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    3306
+                ],
+                [
+                    "Username",
+                    "admin"
+                ],
+                [
+                    "Password",
+                    ""
+                ],
+                [
+                    "Database",
+                    "MySQL"
+                ]
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "database-security-service",
+            "stereotype_instances": [
+                "plaintext_credentials",
+                "external_database",
+                "entrypoint",
+                "exitpoint"
+            ],
+            "tagged_values": [
+                [
+                    "Port",
+                    3306
+                ],
+                [
+                    "Username",
+                    "admin"
+                ],
+                [
+                    "Password",
+                    ""
+                ],
+                [
+                    "Database",
+                    "MySQL"
+                ]
+            ],
+            "type": "external_component"
+        },
+        {
+            "name": "user",
+            "stereotype_instances": [
+                "exitpoint",
+                "entrypoint",
+                "user_stereotype"
+            ],
+            "type": "external_component"
+        }
+    ]
+}
