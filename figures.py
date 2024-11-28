@@ -50,9 +50,9 @@ def plot_centrality_dist(metrics, DB: bool):
     plt.plot(norm_out_deg_dist[0], norm_out_deg_dist[1])
     plt.plot(norm_out_deg_dist[0], out_deg_dist[1])
     plt.title("Overlaid Out-degree Centrality")
-    plt.suptitle(f"Comparison of Absolute and Normalized Degree centralities (DB={DB})")
+    plt.suptitle(f"Comparison of Absolute and Normalized\n Cumulative Distributions of Degree centralities (DB={DB})\n")
     plt.tight_layout()
-    plt.savefig(f"ComparsionDB={DB}.png")
+    plt.savefig(f"ComparisonDB={DB}.png")
 
     plt.figure(figsize=(10,5))
     plt.subplot(231)
