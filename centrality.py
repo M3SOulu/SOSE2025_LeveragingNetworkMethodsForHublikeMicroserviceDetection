@@ -31,6 +31,7 @@ for f in os.scandir("graph"):
     graph_df[f"Norm. Out-degree Centrality (DB={db})"] = graph_df["node"].map(norm_out_degree_centrality)
     graph_df[f"Eigenvector Centrality (DB={db})"] = graph_df["node"].map(nx.eigenvector_centrality(G, max_iter=1000))
     graph_df[f"Betweenness Centrality (DB={db})"] = graph_df["node"].map(nx.betweenness_centrality(G))
+    graph_df[f"Closeness Centrality (DB={db})"] = graph_df["node"].map(nx.closeness_centrality(G))
     graph_df[f"PageRank Centrality (DB={db})"] = graph_df["node"].map(nx.pagerank(G))
     hubs, authorities = nx.hits(G)
     graph_df[f"Hub Score (DB={db})"] = graph_df["node"].map(hubs)
