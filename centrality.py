@@ -32,6 +32,9 @@ for f in os.scandir("graph"):
     graph_df[f"Eigenvector Centrality (DB={db})"] = graph_df["node"].map(nx.eigenvector_centrality(G, max_iter=1000))
     graph_df[f"Betweenness Centrality (DB={db})"] = graph_df["node"].map(nx.betweenness_centrality(G))
     graph_df[f"PageRank Centrality (DB={db})"] = graph_df["node"].map(nx.pagerank(G))
+    hubs, authorities = nx.hits(G)
+    graph_df[f"Hub Score (DB={db})"] = graph_df["node"].map(hubs)
+    graph_df[f"Authority Score (DB={db})"] = graph_df["node"].map(authorities)
 
     if db:
         all_dfs_db.append(graph_df)
