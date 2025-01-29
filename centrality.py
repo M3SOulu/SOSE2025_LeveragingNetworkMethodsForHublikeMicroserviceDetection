@@ -38,6 +38,8 @@ def compute_centrality(db: bool):
         hubs, authorities = nx.hits(G)
         graph_df[f"Hub Score"] = graph_df["node"].map(hubs)
         graph_df[f"Authority Score"] = graph_df["node"].map(authorities)
+        G = nx.Graph(G)
+        graph_df[f"Subgraph Centrality"] = graph_df["node"].map(nx.subgraph_centrality(G))
 
         all_dfs.append(graph_df)
     all_dfs = sorted(all_dfs, key=lambda d: d["MS_system"].iloc[0].casefold())
