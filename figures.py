@@ -25,6 +25,7 @@ def plot_centrality_dist(DB: bool):
     pagerank_dist = get_dist(metrics, f"PageRank Centrality", 1.0)
     hubs_dist = get_dist(metrics, f"Hub Score", 1.0)
     auth_dist = get_dist(metrics, f"Authority Score", 1.0)
+    sub_dist = get_dist(metrics, f"Subgraph Centrality", metrics[f"Subgraph Centrality"].max())
 
     plt.figure(figsize=(14,12))
     plt.subplot(331)
@@ -193,6 +194,13 @@ def plot_centrality_dist(DB: bool):
     plt.title("Authority Score")
     plt.tight_layout()
     plt.savefig(f"AuthDB={DB}.png")
+    plt.figure(figsize=(10,10))
+    plt.plot(sub_dist[0], sub_dist[1])
+    plt.xlabel("Threshold")
+    plt.grid(linestyle=':')
+    plt.title("Subgraph Centrality")
+    plt.tight_layout()
+    plt.savefig(f"SubgraphDB={DB}.png")
 
 plot_centrality_dist(DB=True)
 plot_centrality_dist(DB=False)
