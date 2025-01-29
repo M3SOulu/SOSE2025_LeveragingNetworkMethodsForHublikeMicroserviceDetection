@@ -9,17 +9,20 @@ def get_dist(df, col, max, num=100):
     return xs, ys
 
 
-def plot_centrality_dist(metrics, DB: bool):
+def plot_centrality_dist(DB: bool):
     # metrics = metrics[metrics[f"Betweenness Centrality (DB={DB})"] > 0.0001]
     # metrics = metrics[metrics[f"Eigenvector Centrality (DB={DB})"] > 0.0001]
-    norm_deg_dist = get_dist(metrics, f"Norm. Degree Centrality (DB={DB})", 1.0)
-    deg_dist = get_dist(metrics, f"Degree Centrality (DB={DB})", metrics[f"Degree Centrality (DB={DB})"].max())
-    norm_in_deg_dist = get_dist(metrics, f"Norm. In-degree Centrality (DB={DB})", 1.0)
-    in_deg_dist = get_dist(metrics, f"In-degree Centrality (DB={DB})", metrics[f"In-degree Centrality (DB={DB})"].max())
-    norm_out_deg_dist = get_dist(metrics, f"Norm. Out-degree Centrality (DB={DB})", 1.0)
-    out_deg_dist = get_dist(metrics, f"Out-degree Centrality (DB={DB})", metrics[f"Out-degree Centrality (DB={DB})"].max())
-    bet_dist = get_dist(metrics, f"Betweenness Centrality (DB={DB})", 1.0)
-    eig_dist = get_dist(metrics, f"Eigenvector Centrality (DB={DB})", 1.0)
+    metrics = pd.read_csv(f"metrics_centrality_db_{DB}.csv")
+    norm_deg_dist = get_dist(metrics, f"Norm. Degree Centrality", 1.0)
+    deg_dist = get_dist(metrics, f"Degree Centrality", metrics[f"Degree Centrality"].max())
+    norm_in_deg_dist = get_dist(metrics, f"Norm. In-degree Centrality", 1.0)
+    in_deg_dist = get_dist(metrics, f"In-degree Centrality", metrics[f"In-degree Centrality"].max())
+    norm_out_deg_dist = get_dist(metrics, f"Norm. Out-degree Centrality", 1.0)
+    out_deg_dist = get_dist(metrics, f"Out-degree Centrality", metrics[f"Out-degree Centrality"].max())
+    bet_dist = get_dist(metrics, f"Betweenness Centrality", 1.0)
+    closeness_dist = get_dist(metrics, f"Closeness Centrality", 1.0)
+    eig_dist = get_dist(metrics, f"Eigenvector Centrality", 1.0)
+    pagerank_dist = get_dist(metrics, f"PageRank Centrality", 1.0)
 
     plt.figure(figsize=(14,12))
     plt.subplot(331)
@@ -136,7 +139,5 @@ def plot_centrality_dist(metrics, DB: bool):
     plt.tight_layout()
     plt.savefig(f"allMetricsDB={DB}.png")
 
-
-metrics = pd.read_csv("metrics_centrality.csv")
-plot_centrality_dist(metrics, DB=True)
-plot_centrality_dist(metrics, DB=False)
+plot_centrality_dist(DB=True)
+plot_centrality_dist(DB=False)
