@@ -42,7 +42,7 @@ def compute_centrality(db: bool):
         all_dfs.append(graph_df)
     all_dfs = sorted(all_dfs, key=lambda d: d["MS_system"].iloc[0].casefold())
     df_db = pd.concat(all_dfs)
-    # df = df.sort_values(by="Eigenvector Centrality", ascending=False)
+    # df_db = df_db.sort_values(by="Eigenvector Centrality", ascending=False)
     df_db.to_csv(f"metrics_centrality_db_{db}.csv", index=False, header=True)
 
 
