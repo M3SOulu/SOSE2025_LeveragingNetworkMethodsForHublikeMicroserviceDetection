@@ -63,10 +63,12 @@ def compute_centrality(db: bool):
     proportions.to_csv(f"scale_free_test_{db}.csv", index=False, header=True)
 
     # Create a new DataFrame where each column is the name sorted by that metric
-    sorted_names_by_metric = pd.DataFrame({
+    sorted_names_by_metric = {
         col: df_db.sort_values(by=col, ascending=False)['node'].reset_index(drop=True)
-        for col in df_db.columns if col not in ["MS_system", "node"]
-    })
+        for col in df_db.columns if col not in ["MS_system", "node", "Clustering"]
+    }
+    sorted_names_by_metric["Clustering"] =  df_db.sort_values(by="Clustering", ascending=True)['node'].reset_index(drop=True)
+    sorted_names_by_metric = pd.DataFrame(sorted_names_by_metric)
 
     sorted_names_by_metric.to_csv(f"sorted_nodes_db_{db}.csv", index=False)
 
