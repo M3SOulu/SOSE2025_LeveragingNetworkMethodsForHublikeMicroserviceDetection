@@ -1,6 +1,19 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.colors import Normalize
+from matplotlib.cm import get_cmap
+
+def first_derivative(x, y):
+    x = np.array(x)
+    y = np.array(y)
+    dy = np.zeros_like(y)
+    dx = np.diff(x)
+
+    dy[1:-1] = (y[2:] - y[:-2]) / (x[2:] - x[:-2])  # central
+    dy[0] = (y[1] - y[0]) / dx[0]                  # forward
+    dy[-1] = (y[-1] - y[-2]) / dx[-1]              # backward
+    return dy
 
 def second_derivative(xs, ys):
     h = xs[1] - xs[0]
@@ -17,7 +30,7 @@ def second_derivative(xs, ys):
     # Backward difference for the last point
     second_deriv[-1] = (ys[-1] - 2 * ys[-2] + ys[-3]) / h ** 2
 
-    return second_deriv
+    return np.array(second_deriv)
 
 def get_dist(df, col, max, num=100):
     xs = np.linspace(0.0, max, num=num)
@@ -43,9 +56,11 @@ def plot_centrality_dist(DB: bool):
     auth_dist = get_dist(metrics, f"Authority Score", 1.0)
     cluster_dist = get_dist(metrics, "Clustering", 1.0)
 
-    deg_deriv = second_derivative(*norm_deg_dist)
-    deg_deriv = np.array(deg_deriv)
-    deg_deriv = deg_deriv > 0
+    norm_deg_deriv = second_derivative(*norm_deg_dist)
+
+    # 3. Normalize derivative values for colormap
+    norm = Normalize(vmin=np.min(norm_deg_deriv), vmax=np.max(norm_deg_deriv))
+    cmap = get_cmap('cool_r')  # or 'viridis', 'plasma', et
 
 
     ## Comparison figure
@@ -122,12 +137,11 @@ def plot_centrality_dist(DB: bool):
     plt.figure(figsize=(15,20))
     plt.subplot(431)
     plt.plot(norm_deg_dist[0], norm_deg_dist[1])
-    # # Shade regions based on the mask
-    # for i in range(len(norm_deg_dist[1]) - 1):
-    #     if deg_deriv[i]:
-    #         plt.axvspan(norm_deg_dist[0][i], norm_deg_dist[0][i + 1], color='lightgreen', alpha=0.3)
-    #     else:
-    #         plt.axvspan(norm_deg_dist[0][i], norm_deg_dist[0][i + 1], color='lightcoral', alpha=0.3)
+    for i in range(len(norm_deg_dist[0]) - 1):
+        plt.axvspan(norm_deg_dist[0][i], norm_deg_dist[0][i + 1],
+                   color=cmap(norm(norm_deg_deriv[i])),
+                   alpha=0.4,
+                   linewidth=0)
     plt.xlabel("Threshold")
     plt.ylabel("Count(Centrality > Threshold)")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
