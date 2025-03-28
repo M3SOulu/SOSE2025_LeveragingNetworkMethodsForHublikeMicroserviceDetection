@@ -27,6 +27,11 @@ def plot_centrality_dist(DB: bool):
     auth_dist = get_dist(metrics, f"Authority Score", 1.0)
     cluster_dist = get_dist(metrics, "Clustering", 1.0)
 
+    scale_free = pd.read_csv(f"scale_free_test_{DB}.csv")
+    deg_scale = scale_free["Degree Centrality"]
+    in_deg_scale = scale_free["In-degree Centrality"]
+    out_deg_scale = scale_free["Out-degree Centrality"]
+
     ## Comparison figure
     plt.figure(figsize=(14,12))
     plt.subplot(331)
@@ -197,6 +202,33 @@ def plot_centrality_dist(DB: bool):
     plt.tight_layout()
 
     plt.savefig(f"allMetricsDB={DB}.png")
+
+    plt.figure(figsize=(15,5))
+    plt.subplot(1,3,1)
+    plt.plot(deg_scale)
+    plt.title("Degree")
+    plt.xlim((0, 12))
+    plt.ylim((0.0, 0.5))
+    plt.ylabel("Proportion of nodes, P(k)")
+    plt.xlabel("Degree, k")
+
+    plt.subplot(1,3,2)
+    plt.plot(in_deg_scale)
+    plt.xlabel("Degree, k")
+    plt.xlim((0, 12))
+    plt.ylim((0.0, 0.5))
+    plt.title("In-degree")
+
+    plt.subplot(1,3,3)
+    plt.plot(out_deg_scale)
+    plt.xlabel("Degree, k")
+    plt.xlim((0, 12))
+    plt.ylim((0.0, 0.5))
+    plt.title("Out-degree")
+
+    plt.suptitle("Proportion of nodes P(k) for a specific degree k")
+    plt.savefig(f"scale_free_{DB}.png")
+
 
 plot_centrality_dist(DB=True)
 plot_centrality_dist(DB=False)
