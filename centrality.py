@@ -23,6 +23,7 @@ def compute_centrality(db: bool):
         in_degree_centrality = {k: int(v * (len(G.nodes) - 1)) for k, v in norm_in_degree_centrality.items()}
         norm_out_degree_centrality = nx.out_degree_centrality(G)
         out_degree_centrality = {k: int(v * (len(G.nodes) - 1)) for k, v in norm_out_degree_centrality.items()}
+        clustering_coefficient = nx.clustering(G)
 
         graph_df[f"Degree Centrality"] = graph_df["node"].map(degree_centrality)
         graph_df[f"Norm. Degree Centrality"] = graph_df["node"].map(norm_degree_centrality)
@@ -40,6 +41,7 @@ def compute_centrality(db: bool):
         graph_df[f"Authority Score"] = graph_df["node"].map(authorities)
         G = nx.Graph(G)
         graph_df[f"Subgraph Centrality"] = graph_df["node"].map(nx.subgraph_centrality(G))
+        graph_df["Clustering"] = graph_df["node"].map (clustering_coefficient)
 
         all_dfs.append(graph_df)
     all_dfs = sorted(all_dfs, key=lambda d: d["MS_system"].iloc[0].casefold())

@@ -25,7 +25,9 @@ def plot_centrality_dist(DB: bool):
     pagerank_dist = get_dist(metrics, f"PageRank Centrality", 1.0)
     hubs_dist = get_dist(metrics, f"Hub Score", 1.0)
     auth_dist = get_dist(metrics, f"Authority Score", 1.0)
+    cluster_dist = get_dist(metrics, "Clustering", 1.0)
 
+    ## Comparison figure
     plt.figure(figsize=(14,12))
     plt.subplot(331)
     plt.plot(deg_dist[0], deg_dist[1], color='tab:orange')
@@ -94,8 +96,9 @@ def plot_centrality_dist(DB: bool):
     plt.tight_layout()
     plt.savefig(f"ComparisonDB={DB}.png")
 
-    plt.figure(figsize=(15,15))
-    plt.subplot(331)
+    # Cumulative distribution
+    plt.figure(figsize=(15,20))
+    plt.subplot(431)
     plt.plot(norm_deg_dist[0], norm_deg_dist[1])
     plt.xlabel("Threshold")
     plt.ylabel("Count(Centrality > Threshold)")
@@ -104,7 +107,7 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Norm. Degree Centrality")
-    plt.subplot(332)
+    plt.subplot(432)
     plt.plot(norm_in_deg_dist[0], norm_in_deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -112,7 +115,7 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Norm. In-degree Centrality")
-    plt.subplot(333)
+    plt.subplot(433)
     plt.plot(norm_out_deg_dist[0], norm_out_deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -120,7 +123,7 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Norm. Out-degree Centrality")
-    plt.subplot(334)
+    plt.subplot(434)
     plt.plot(bet_dist[0], bet_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -129,7 +132,7 @@ def plot_centrality_dist(DB: bool):
     plt.grid(linestyle=':')
     plt.ylabel("Count(Centrality > Threshold)")
     plt.title("Betweenness Centrality")
-    plt.subplot(336)
+    plt.subplot(436)
     plt.plot(eig_dist[0], eig_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -139,7 +142,7 @@ def plot_centrality_dist(DB: bool):
     plt.title("Eigenvector Centrality")
     plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
     plt.tight_layout()
-    plt.subplot(337)
+    plt.subplot(437)
     plt.plot(pagerank_dist[0], pagerank_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -150,7 +153,7 @@ def plot_centrality_dist(DB: bool):
     plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
     plt.tight_layout()
 
-    plt.subplot(335)
+    plt.subplot(435)
     plt.plot(closeness_dist[0], closeness_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -161,7 +164,7 @@ def plot_centrality_dist(DB: bool):
     plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
     plt.tight_layout()
 
-    plt.subplot(338)
+    plt.subplot(438)
     plt.plot(hubs_dist[0], hubs_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -172,7 +175,7 @@ def plot_centrality_dist(DB: bool):
     plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
     plt.tight_layout()
 
-    plt.subplot(339)
+    plt.subplot(4, 3, 9)
     plt.plot(auth_dist[0], auth_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -181,6 +184,16 @@ def plot_centrality_dist(DB: bool):
     plt.grid(linestyle=':')
     plt.title("Authority Score")
     plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
+    plt.tight_layout()
+
+    plt.subplot(4, 3, 10)
+    plt.plot(cluster_dist[0], cluster_dist[1])
+    plt.xlabel("Threshold")
+    plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+               [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+    plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
+    plt.grid(linestyle=':')
+    plt.title("Clustering coefficient")
     plt.tight_layout()
 
     plt.savefig(f"allMetricsDB={DB}.png")
