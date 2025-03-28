@@ -13,6 +13,7 @@ def compute_centrality(db: bool):
             g = json.load(fi)
         G = nx.node_link_graph(g, edges="edges", nodes="nodes", name="name", source="sender", target="receiver",
                                multigraph=False, directed=True)
+        G.remove_nodes_from(["user"])
         name = f.name.replace("_gwcc.json", "") if db else f.name.replace("_gwcc_noDB.json", "")
         graph_df = pd.DataFrame(columns=["MS_system", "node"])
         for node in G.nodes:
@@ -60,6 +61,14 @@ def compute_centrality(db: bool):
     proportions.rename(columns={'index': 'degree'}, inplace=True)
 
     proportions.to_csv(f"scale_free_test_{db}.csv", index=False, header=True)
+
+    # Create a new DataFrame where each column is the name sorted by that metric
+    sorted_names_by_metric = pd.DataFrame({
+        col: df_db.sort_values(by=col, ascending=False)['node'].reset_index(drop=True)
+        for col in df_db.columns if col not in ["MS_system", "node"]
+    })
+
+    sorted_names_by_metric.to_csv(f"sorted_nodes_db_{db}.csv", index=False)
 
 
 compute_centrality(True)
