@@ -2,6 +2,22 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+def second_derivative(xs, ys):
+    h = xs[1] - xs[0]
+    n = len(ys)
+    second_deriv = [0.0] * n  # Initialize result list
+
+    # Forward difference for the first point
+    second_deriv[0] = (ys[2] - 2 * ys[1] + ys[0]) / h ** 2
+
+    # Central difference for interior points
+    for i in range(1, n - 1):
+        second_deriv[i] = (ys[i + 1] - 2 * ys[i] + ys[i - 1]) / h ** 2
+
+    # Backward difference for the last point
+    second_deriv[-1] = (ys[-1] - 2 * ys[-2] + ys[-3]) / h ** 2
+
+    return second_deriv
 
 def get_dist(df, col, max, num=100):
     xs = np.linspace(0.0, max, num=num)
@@ -27,15 +43,16 @@ def plot_centrality_dist(DB: bool):
     auth_dist = get_dist(metrics, f"Authority Score", 1.0)
     cluster_dist = get_dist(metrics, "Clustering", 1.0)
 
-    scale_free = pd.read_csv(f"scale_free_test_{DB}.csv")
-    deg_scale = scale_free["Degree Centrality"]
-    in_deg_scale = scale_free["In-degree Centrality"]
-    out_deg_scale = scale_free["Out-degree Centrality"]
+    deg_deriv = second_derivative(*norm_deg_dist)
+    deg_deriv = np.array(deg_deriv)
+    deg_deriv = deg_deriv > 0
+
 
     ## Comparison figure
     plt.figure(figsize=(14,12))
     plt.subplot(331)
     plt.plot(deg_dist[0], deg_dist[1], color='tab:orange')
+
     plt.xlabel("Threshold")
     plt.ylabel("Count(Centrality > Threshold)")
     plt.xticks([0,2,4,6,8,10,11],[0,2,4,6,8,10,11])
@@ -105,6 +122,12 @@ def plot_centrality_dist(DB: bool):
     plt.figure(figsize=(15,20))
     plt.subplot(431)
     plt.plot(norm_deg_dist[0], norm_deg_dist[1])
+    # # Shade regions based on the mask
+    # for i in range(len(norm_deg_dist[1]) - 1):
+    #     if deg_deriv[i]:
+    #         plt.axvspan(norm_deg_dist[0][i], norm_deg_dist[0][i + 1], color='lightgreen', alpha=0.3)
+    #     else:
+    #         plt.axvspan(norm_deg_dist[0][i], norm_deg_dist[0][i + 1], color='lightcoral', alpha=0.3)
     plt.xlabel("Threshold")
     plt.ylabel("Count(Centrality > Threshold)")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -202,6 +225,11 @@ def plot_centrality_dist(DB: bool):
     plt.tight_layout()
 
     plt.savefig(f"allMetricsDB={DB}.png")
+
+    scale_free = pd.read_csv(f"scale_free_test_{DB}.csv")
+    deg_scale = scale_free["Degree Centrality"]
+    in_deg_scale = scale_free["In-degree Centrality"]
+    out_deg_scale = scale_free["Out-degree Centrality"]
 
     plt.figure(figsize=(15,5))
     plt.subplot(1,3,1)
