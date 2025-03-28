@@ -49,6 +49,18 @@ def compute_centrality(db: bool):
     # df_db = df_db.sort_values(by="Eigenvector Centrality", ascending=False)
     df_db.to_csv(f"metrics_centrality_db_{db}.csv", index=False, header=True)
 
+    # Columns you want to calculate fractions for
+    columns = ["Degree Centrality", "In-degree Centrality", "Out-degree Centrality"]
+
+    # Get value fractions for each column
+    fractions_dict = {col: df_db[col].value_counts(normalize=True) for col in columns}
+
+    # Convert to DataFrames (optional, if you want a tidy format)
+    proportions = pd.DataFrame(fractions_dict).fillna(0).reset_index()
+    proportions.rename(columns={'index': 'degree'}, inplace=True)
+
+    proportions.to_csv(f"scale_free_test_{db}.csv", index=False, header=True)
+
 
 compute_centrality(True)
 compute_centrality(False)
