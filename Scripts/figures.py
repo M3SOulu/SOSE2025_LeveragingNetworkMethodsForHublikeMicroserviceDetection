@@ -46,14 +46,14 @@ def plot_centrality_dist(data, name, deriv=None):
     else:
         dist_xs, dist_ys = get_dist(data)
 
-    fig_path = os.path.join("Figures", f"{name}.png")
+    fig_path = os.path.join("Figures", f"{name}.pdf")
     if deriv is not None:
         if deriv == 1:
             deriv = first_derivative(dist_xs, dist_ys)
-            fig_path = os.path.join("Figures", "First derivative", f"{name}.png")
+            fig_path = os.path.join("Figures", "First derivative", f"{name}.pdf")
         elif deriv == 2:
             deriv = second_derivative(dist_xs, dist_ys)
-            fig_path = os.path.join("Figures", "Second derivative", f"{name}.png")
+            fig_path = os.path.join("Figures", "Second derivative", f"{name}.pdf")
         # Normalize derivative values for colormap
         norm = Normalize(vmin=np.min(deriv), vmax=np.max(deriv))
         cmap = get_cmap('coolwarm_r')  # or 'viridis', 'plasma', et
@@ -153,7 +153,7 @@ def comparison_figure():
     plt.title("Overlaid Out-degree Centrality")
     plt.suptitle(f"Comparison of Absolute and Normalized\n Cumulative Distributions of Degree centralities\n")
     plt.tight_layout()
-    plt.savefig("Figures/Comparison.png")
+    plt.savefig("Figures/Comparison.pdf")
 
 
 def scale_free_figure():
@@ -186,7 +186,7 @@ def scale_free_figure():
     plt.title("Out-degree")
 
     plt.suptitle("Proportion of nodes P(k) for a specific degree k")
-    plt.savefig("Figures/ScaleFree.png")
+    plt.savefig("Figures/ScaleFree.pdf")
 
 
 if __name__ == "__main__":
