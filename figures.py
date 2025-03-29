@@ -38,10 +38,10 @@ def get_dist(df, col, max, num=100):
     return xs, ys
 
 
-def plot_centrality_dist(DB: bool):
+def plot_centrality_dist():
     # metrics = metrics[metrics[f"Betweenness Centrality (DB={DB})"] > 0.0001]
     # metrics = metrics[metrics[f"Eigenvector Centrality (DB={DB})"] > 0.0001]
-    metrics = pd.read_csv(f"metrics_centrality_db_{DB}.csv")
+    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
     norm_deg_dist = get_dist(metrics, f"Norm. Degree Centrality", 1.0)
     deg_dist = get_dist(metrics, f"Degree Centrality", metrics[f"Degree Centrality"].max())
     norm_in_deg_dist = get_dist(metrics, f"Norm. In-degree Centrality", 1.0)
@@ -130,9 +130,9 @@ def plot_centrality_dist(DB: bool):
     plt.xticks([0.0, 1.0], ["min", "max"])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.title("Overlaid Out-degree Centrality")
-    plt.suptitle(f"Comparison of Absolute and Normalized\n Cumulative Distributions of Degree centralities (DB={DB})\n")
+    plt.suptitle(f"Comparison of Absolute and Normalized\n Cumulative Distributions of Degree centralities\n")
     plt.tight_layout()
-    plt.savefig(f"ComparisonDB={DB}.png")
+    plt.savefig("Figures/Comparison.png")
 
     # Cumulative distribution
     plt.figure(figsize=(10,10))
@@ -149,7 +149,7 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Norm. Degree Centrality")
-    plt.savefig(f"DegreeDB={DB}.png")
+    plt.savefig("Figures/Degree.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(norm_in_deg_dist[0], norm_in_deg_dist[1])
@@ -159,7 +159,7 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Norm. In-degree Centrality")
-    plt.savefig(f"InDegreeDB={DB}.png")
+    plt.savefig("Figures/InDegree.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(norm_out_deg_dist[0], norm_out_deg_dist[1])
@@ -169,7 +169,7 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Norm. Out-degree Centrality")
-    plt.savefig(f"OutDegreeDB={DB}.png")
+    plt.savefig("Figures/OutDegree.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(bet_dist[0], bet_dist[1])
@@ -180,7 +180,7 @@ def plot_centrality_dist(DB: bool):
     plt.grid(linestyle=':')
     plt.ylabel("Count(Centrality > Threshold)")
     plt.title("Betweenness Centrality")
-    plt.savefig(f"BetweennessDB={DB}.png")
+    plt.savefig("Figures/Betweenness.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(eig_dist[0], eig_dist[1])
@@ -190,9 +190,8 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Eigenvector Centrality")
-    plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
     plt.tight_layout()
-    plt.savefig(f"EigenvectorDB={DB}.png")
+    plt.savefig("Figures/Eigenvector.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(pagerank_dist[0], pagerank_dist[1])
@@ -202,9 +201,8 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("PageRank Centrality")
-    plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
     plt.tight_layout()
-    plt.savefig(f"PageRankDB={DB}.png")
+    plt.savefig("Figures/PageRank.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(closeness_dist[0], closeness_dist[1])
@@ -214,9 +212,8 @@ def plot_centrality_dist(DB: bool):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.grid(linestyle=':')
     plt.title("Closeness Centrality")
-    plt.suptitle(f"Cumulative distributions of centrality metrics (DB={DB})")
     plt.tight_layout()
-    plt.savefig(f"ClosenessDB={DB}.png")
+    plt.savefig("Figures/Closeness.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(hubs_dist[0], hubs_dist[1])
@@ -227,7 +224,7 @@ def plot_centrality_dist(DB: bool):
     plt.grid(linestyle=':')
     plt.title("Hub Score")
     plt.tight_layout()
-    plt.savefig(f"HubDB={DB}.png")
+    plt.savefig("Figures/Hub.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(auth_dist[0], auth_dist[1])
@@ -238,14 +235,14 @@ def plot_centrality_dist(DB: bool):
     plt.grid(linestyle=':')
     plt.title("Authority Score")
     plt.tight_layout()
-    plt.savefig(f"AuthDB={DB}.png")
+    plt.savefig("Figures/Auth.png")
     plt.figure(figsize=(10,10))
     plt.plot(sub_dist[0], sub_dist[1])
     plt.xlabel("Threshold")
     plt.grid(linestyle=':')
     plt.title("Subgraph Centrality")
     plt.tight_layout()
-    plt.savefig(f"SubgraphDB={DB}.png")
+    plt.savefig("Figures/Subgraph.png")
 
     plt.figure(figsize=(10,10))
     plt.plot(cluster_dist[0], cluster_dist[1])
@@ -256,9 +253,11 @@ def plot_centrality_dist(DB: bool):
     plt.grid(linestyle=':')
     plt.title("Clustering coefficient")
     plt.tight_layout()
-    plt.savefig(f"Clustering={DB}.png")
+    plt.savefig("Figures/Clustering.png")
 
-    scale_free = pd.read_csv(f"scale_free_test_{DB}.csv")
+
+def scale_free_figure():
+    scale_free = pd.read_csv("Metrics/scale_free_proportion.csv")
     deg_scale = scale_free["Degree Centrality"]
     in_deg_scale = scale_free["In-degree Centrality"]
     out_deg_scale = scale_free["Out-degree Centrality"]
@@ -287,8 +286,9 @@ def plot_centrality_dist(DB: bool):
     plt.title("Out-degree")
 
     plt.suptitle("Proportion of nodes P(k) for a specific degree k")
-    plt.savefig(f"scale_free_{DB}.png")
+    plt.savefig("Figures/ScaleFree.png")
 
 
-plot_centrality_dist(DB=True)
-plot_centrality_dist(DB=False)
+if __name__ == "__main__":
+    plot_centrality_dist()
+    scale_free_figure()
