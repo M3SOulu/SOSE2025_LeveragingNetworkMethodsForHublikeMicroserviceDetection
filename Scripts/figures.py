@@ -40,19 +40,23 @@ def get_dist(col, num=100, max=1.0):
     return xs, ys
 
 
-def plot_centrality_dist(data, name):
-    # metrics = metrics[metrics[f"Betweenness Centrality (DB={DB})"] > 0.0001]
-    # metrics = metrics[metrics[f"Eigenvector Centrality (DB={DB})"] > 0.0001]
+def plot_centrality_dist(data, name, deriv=None):
     if name in ["Subgraph Centrality", "Out-degree Centrality", "In-degree Centrality", "Degree Centrality"]:
         dist_xs, dist_ys = get_dist(data, max=data.max())
     else:
         dist_xs, dist_ys = get_dist(data)
 
-    deriv = first_derivative(dist_xs, dist_ys)
-
-    # 3. Normalize derivative values for colormap
-    norm = Normalize(vmin=np.min(deriv), vmax=np.max(deriv))
-    cmap = get_cmap('cool_r')  # or 'viridis', 'plasma', et
+    fig_path = os.path.join("Figures", f"{name}.png")
+    if deriv is not None:
+        if deriv == 1:
+            deriv = first_derivative(dist_xs, dist_ys)
+            fig_path = os.path.join("Figures", "First derivative", f"{name}.png")
+        elif deriv == 2:
+            deriv = second_derivative(dist_xs, dist_ys)
+            fig_path = os.path.join("Figures", "Second derivative", f"{name}.png")
+        # Normalize derivative values for colormap
+        norm = Normalize(vmin=np.min(deriv), vmax=np.max(deriv))
+        cmap = get_cmap('coolwarm_r')  # or 'viridis', 'plasma', et
 
 
     # Cumulative distribution
@@ -62,14 +66,15 @@ def plot_centrality_dist(data, name):
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.ylabel("Count(Centrality > Threshold)")
     plt.grid(linestyle=':')
-    # for i in range(len(dist_xs) - 1):
-    #     plt.axvspan(dist_xs[i], dist_xs[i + 1],
-    #                color=cmap(norm(deriv[i])),
-    #                alpha=0.4,
-    #                linewidth=0)
+    if deriv is not None:
+        for i in range(len(dist_xs) - 1):
+            plt.axvspan(dist_xs[i], dist_xs[i + 1],
+                       color=cmap(norm(deriv[i])),
+                       alpha=0.4,
+                       linewidth=0)
     plt.title(name)
     plt.tight_layout()
-    plt.savefig(os.path.join("Figures", f"{name}.png"))
+    plt.savefig(fig_path)
 
 
 def comparison_figure():
@@ -193,3 +198,5 @@ if __name__ == "__main__":
         if col in ["MS_system", "Microservice"]:
             continue
         plot_centrality_dist(metrics[col], col)
+        plot_centrality_dist(metrics[col], col, deriv=1)
+        plot_centrality_dist(metrics[col], col, deriv=2)
