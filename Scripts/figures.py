@@ -60,7 +60,7 @@ def plot_centrality_dist(data, name, deriv=None):
 
 
     # Cumulative distribution
-    plt.figure(figsize=(10,10))
+    plt.figure(figsize=(8,8))
     plt.plot(dist_xs, dist_ys)
     plt.xlabel("Threshold")
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
@@ -87,7 +87,7 @@ def comparison_figure():
     out_deg_dist = get_dist(metrics[f"Out-degree Centrality"], max=metrics[f"Out-degree Centrality"].max())
 
     ## Comparison figure
-    plt.figure(figsize=(14, 12))
+    plt.figure(figsize=(10, 8))
     plt.subplot(331)
     plt.plot(deg_dist[0], deg_dist[1], color='tab:orange')
     plt.xlabel("Threshold")
@@ -162,7 +162,7 @@ def scale_free_figure():
     in_deg_scale = scale_free["In-degree Centrality"]
     out_deg_scale = scale_free["Out-degree Centrality"]
 
-    plt.figure(figsize=(15,5))
+    plt.figure(figsize=(10,3))
     plt.subplot(1,3,1)
     plt.plot(deg_scale)
     plt.title("Degree")
@@ -170,6 +170,7 @@ def scale_free_figure():
     plt.ylim((0.0, 0.5))
     plt.ylabel("Proportion of nodes, P(k)")
     plt.xlabel("Degree, k")
+    plt.tight_layout()
 
     plt.subplot(1,3,2)
     plt.plot(in_deg_scale)
@@ -177,6 +178,7 @@ def scale_free_figure():
     plt.xlim((0, 12))
     plt.ylim((0.0, 0.5))
     plt.title("In-degree")
+    plt.tight_layout()
 
     plt.subplot(1,3,3)
     plt.plot(out_deg_scale)
@@ -184,6 +186,7 @@ def scale_free_figure():
     plt.xlim((0, 12))
     plt.ylim((0.0, 0.5))
     plt.title("Out-degree")
+    plt.tight_layout()
 
     plt.suptitle("Proportion of nodes P(k) for a specific degree k")
     plt.savefig("Figures/ScaleFree.pdf")
