@@ -16,9 +16,9 @@ df = pd.read_csv("Metrics/metrics_centrality.csv")
 
 # === Select centrality columns ===
 centrality_cols = [
-    'Degree Centrality', 'Norm. Degree Centrality',
-    'In-degree Centrality', 'Norm. In-degree Centrality',
-    'Out-degree Centrality', 'Norm. Out-degree Centrality',
+    'Norm. Degree Centrality', #'Degree Centrality',
+    'Norm. In-degree Centrality', #'In-degree Centrality',
+    'Norm. Out-degree Centrality', #'Out-degree Centrality',
     'Eigenvector Centrality', 'Betweenness Centrality',
     'Closeness Centrality', 'PageRank Centrality',
     'Hub Score', 'Authority Score',
