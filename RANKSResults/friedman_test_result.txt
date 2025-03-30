@@ -1,0 +1,2 @@
+Friedman Test Statistic: 53.7958
+P-value: 0.0000006566
