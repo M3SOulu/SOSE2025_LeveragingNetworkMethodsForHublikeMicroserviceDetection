@@ -191,15 +191,29 @@ def scale_free_figure():
     plt.suptitle("Proportion of nodes P(k) for a specific degree k")
     plt.savefig("Figures/ScaleFree.pdf")
 
+def clustering_scatterplot(centrality, clustering, name):
+
+    plt.figure(figsize=(8,8))
+    plt.scatter(clustering, centrality)
+    plt.title(f"Scatter plot of {name} vs. Clustering coeff.")
+    plt.xlabel("Clustering Coefficient")
+    plt.ylabel(name)
+    ax = plt.gca()
+    ax.invert_xaxis()
+    plt.savefig(f"Figures/ClusteringScatter/ClusteringScatter_{name}.pdf")
+
 
 if __name__ == "__main__":
-    comparison_figure()
-    scale_free_figure()
+    # comparison_figure()
+    # scale_free_figure()
     metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
 
     for col in metrics.columns:
         if col in ["MS_system", "Microservice"]:
             continue
-        plot_centrality_dist(metrics[col], col)
-        plot_centrality_dist(metrics[col], col, deriv=1)
-        plot_centrality_dist(metrics[col], col, deriv=2)
+        # plot_centrality_dist(metrics[col], col)
+        # plot_centrality_dist(metrics[col], col, deriv=1)
+        # plot_centrality_dist(metrics[col], col, deriv=2)
+        if col != "Clustering Coefficient":
+            clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
+                                   col)
