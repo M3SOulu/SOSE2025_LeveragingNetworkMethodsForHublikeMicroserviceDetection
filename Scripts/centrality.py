@@ -49,6 +49,7 @@ def compute_centrality():
     all_dfs = sorted(all_dfs, key=lambda d: d["MS_system"].iloc[0].casefold())
     df_db = pd.concat(all_dfs)
     # df_db = df_db.sort_values(by="Eigenvector Centrality", ascending=False)
+    df_db['Microservice'] = df_db['MS_system'] + '_' + df_db['Microservice']
     df_db.to_csv(os.path.join("Metrics", "metrics_centrality.csv"), index=False, header=True)
 
     # Columns you want to calculate fractions for
