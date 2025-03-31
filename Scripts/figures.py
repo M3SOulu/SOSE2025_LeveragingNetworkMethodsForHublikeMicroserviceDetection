@@ -46,14 +46,14 @@ def plot_centrality_dist(data, name, deriv=None):
     else:
         dist_xs, dist_ys = get_dist(data)
 
-    fig_path = os.path.join("Figures", f"{name}.pdf")
+    fig_path = os.path.join("Figures", "CDF", f"{name}.pdf")
     if deriv is not None:
         if deriv == 1:
             deriv = first_derivative(dist_xs, dist_ys)
-            fig_path = os.path.join("Figures", "First derivative", f"{name}.pdf")
+            fig_path = os.path.join("Figures", "CDF", "First derivative", f"{name}.pdf")
         elif deriv == 2:
             deriv = second_derivative(dist_xs, dist_ys)
-            fig_path = os.path.join("Figures", "Second derivative", f"{name}.pdf")
+            fig_path = os.path.join("Figures", "CDF", "Second derivative", f"{name}.pdf")
         # Normalize derivative values for colormap
         norm = Normalize(vmin=np.min(deriv), vmax=np.max(deriv))
         cmap = get_cmap('coolwarm_r')  # or 'viridis', 'plasma', et
