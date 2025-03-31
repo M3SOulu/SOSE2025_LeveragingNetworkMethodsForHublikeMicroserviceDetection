@@ -28,6 +28,8 @@ centrality_df = df[centrality_cols]
 
 # === Rank data for each centrality ===
 ranked_df = centrality_df.rank(axis=0, method='average')
+ranked_df["Clustering Coefficient"] = centrality_df["Clustering Coefficient"].rank(ascending=False,
+                                                         method="average")
 
 # === 1. Spearman Correlation ===
 spearman_corr = ranked_df.corr(method='spearman')
