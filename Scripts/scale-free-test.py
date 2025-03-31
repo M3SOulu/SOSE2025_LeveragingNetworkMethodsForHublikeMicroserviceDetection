@@ -64,7 +64,7 @@ for centrality in distributions:
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, f"pdf_{centrality.replace(' ', '_').lower()}.png"))
+    plt.savefig(os.path.join(output_dir, f"pdf_{centrality.replace(' ', '_').lower()}.pdf"))
     plt.close()
 
     # Plot CCDF
@@ -77,7 +77,7 @@ for centrality in distributions:
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, f"ccdf_{centrality.replace(' ', '_').lower()}.png"))
+    plt.savefig(os.path.join(output_dir, f"ccdf_{centrality.replace(' ', '_').lower()}.pdf"))
     plt.close()
 
 # Save summary to CSV
