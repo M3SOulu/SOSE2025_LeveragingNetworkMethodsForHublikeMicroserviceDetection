@@ -240,7 +240,7 @@ def call_graphs():
         G.remove_edges_from(nx.selfloop_edges(G))
         name = f.name.replace("_gwcc_noDB.json", "")
         plt.figure(figsize=(16, 12))
-        nx.draw_networkx(G, pos=nx.fruchterman_reingold_layout(G))
+        nx.draw_networkx(G, pos=nx.arf_layout(G))
         plt.tight_layout()
         plt.savefig(f"Figures/SDGs/{name}_sdg.pdf")
         plt.close()
@@ -248,16 +248,16 @@ def call_graphs():
 
 
 if __name__ == "__main__":
-    comparison_figure()
-    scale_free_figure()
-    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
-    # call_graphs()
-    for col in metrics.columns:
-        if col in ["MS_system", "Microservice"]:
-            continue
-        plot_centrality_dist(metrics[col], col)
-        plot_centrality_dist(metrics[col], col, deriv=1)
-        plot_centrality_dist(metrics[col], col, deriv=2)
-        if col != "Clustering Coefficient":
-            clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
-                                   col, metrics["Microservice"])
+    # comparison_figure()
+    # scale_free_figure()
+    # metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    call_graphs()
+    # for col in metrics.columns:
+    #     if col in ["MS_system", "Microservice"]:
+    #         continue
+    #     plot_centrality_dist(metrics[col], col)
+    #     plot_centrality_dist(metrics[col], col, deriv=1)
+    #     plot_centrality_dist(metrics[col], col, deriv=2)
+    #     if col != "Clustering Coefficient":
+    #         clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
+    #                                col, metrics["Microservice"])
