@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 from matplotlib.cm import get_cmap
 from matplotlib.pyplot import savefig
+from matplotlib.colors import ListedColormap
 
 
 def first_derivative(x, y):
@@ -205,7 +206,6 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
     ax = plt.gca()
     plt.xlim([-0.05, 1.05])
     plt.ylim([-0.05, 1.05])
-    ax.invert_xaxis()
 
     # Compute axis limits
     min_x, max_x = 0.0, 1.0
@@ -226,6 +226,28 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
     #                 xytext=(0, 5),
     #                 ha='center',
     #                 fontsize=8)
+
+    # Parameters for gradient
+    N = 200  # Grid resolution
+    steps = 24  # Number of color bands (sharper = fewer, distinct colors)
+
+    # Generate banded gradient: diagonal ↘ direction
+    gradient = np.fromfunction(lambda i, j: np.floor((i - j) * steps / N + steps / 2), (N, N))
+    # gradient = np.clip(gradient, 0, steps - 1).astype(int)
+
+    # Create sharp red-to-blue colormap with discrete colors
+    colors = np.linspace(0, 1, steps)
+    cmap = ListedColormap(plt.cm.bwr(colors))  # 'bwr' is red → white → blue, perfect for contrast
+
+    # Overlay step-wise diagonal bands
+    ax.imshow(gradient,
+              extent=[0, 1, 0, 1],
+              origin='lower',
+              cmap=cmap,
+              interpolation='nearest',  # Ensures hard edges
+              alpha=0.3,
+              aspect='auto',
+              zorder=0)
 
     plt.savefig(f"Figures/ClusteringScatter/ClusteringScatter_{name}.pdf")
 
@@ -251,14 +273,14 @@ def call_graphs():
 if __name__ == "__main__":
     # comparison_figure()
     # scale_free_figure()
-    # metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
-    call_graphs()
-    # for col in metrics.columns:
-    #     if col in ["MS_system", "Microservice"]:
-    #         continue
+    # call_graphs()
+    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    for col in metrics.columns:
+        if col in ["MS_system", "Microservice"]:
+            continue
     #     plot_centrality_dist(metrics[col], col)
     #     plot_centrality_dist(metrics[col], col, deriv=1)
     #     plot_centrality_dist(metrics[col], col, deriv=2)
-    #     if col != "Clustering Coefficient":
-    #         clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
-    #                                col, metrics["Microservice"])
+        if col != "Clustering Coefficient":
+            clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
+                                   col, metrics["Microservice"])
