@@ -199,7 +199,22 @@ def clustering_scatterplot(centrality, clustering, name):
     plt.xlabel("Clustering Coefficient")
     plt.ylabel(name)
     ax = plt.gca()
+    plt.xlim([-0.05, 1.05])
+    plt.ylim([-0.05, 1.05])
     ax.invert_xaxis()
+
+    # Compute axis limits
+    min_x, max_x = 0.0, 1.0
+    min_y, max_y = 0.0, 1.0
+
+    # Create diagonal lines with y - x = constant (adjusted for visual top-right direction)
+    x_vals = np.linspace(min_x, max_x, 500)
+    offsets = np.linspace((min_y - max_x), (max_y - min_x), 25)
+
+    for offset in offsets:
+        y_vals = x_vals + offset
+        ax.plot(x_vals, y_vals, linestyle='--', color='gray', linewidth=0.5)
+
     plt.savefig(f"Figures/ClusteringScatter/ClusteringScatter_{name}.pdf")
 
 
