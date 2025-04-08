@@ -1,0 +1,480 @@
+{
+    "microservice-kafka": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "microservice-kafka_order",
+            "microservice-kafka_kafka",
+            "microservice-kafka_apache",
+            "microservice-kafka_postgres"
+        ],
+        "LOUBAR": [
+            "microservice-kafka_order",
+            "microservice-kafka_kafka",
+            "microservice-kafka_apache",
+            "microservice-kafka_postgres"
+        ]
+    },
+    "java-microservice": {
+        "ER": [
+            "java-microservice_zookeeper",
+            "java-microservice_config-server",
+            "java-microservice_admin"
+        ],
+        "CM": [],
+        "AVG": [
+            "java-microservice_admin",
+            "java-microservice_config-server",
+            "java-microservice_reminder",
+            "java-microservice_zookeeper"
+        ],
+        "LOUBAR": [
+            "java-microservice_oauth",
+            "java-microservice_admin",
+            "java-microservice_api-gateway",
+            "java-microservice_mailer",
+            "java-microservice_config-server",
+            "java-microservice_reminder",
+            "java-microservice_zookeeper"
+        ]
+    },
+    "microservices-basics-spring-boot": {
+        "ER": [
+            "microservices-basics-spring-boot_configserver"
+        ],
+        "CM": [],
+        "AVG": [
+            "microservices-basics-spring-boot_task-webservice",
+            "microservices-basics-spring-boot_configserver"
+        ],
+        "LOUBAR": [
+            "microservices-basics-spring-boot_task-webservice",
+            "microservices-basics-spring-boot_configserver"
+        ]
+    },
+    "DentalAppointment": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "DentalAppointment_appointment-service",
+            "DentalAppointment_approval-service",
+            "DentalAppointment_gateway-service",
+            "DentalAppointment_message-service"
+        ],
+        "LOUBAR": [
+            "DentalAppointment_appointment-service",
+            "DentalAppointment_approval-service",
+            "DentalAppointment_gateway-service",
+            "DentalAppointment_message-service"
+        ]
+    },
+    "microservice-consul": {
+        "ER": [
+            "microservice-consul_apache",
+            "microservice-consul_order"
+        ],
+        "CM": [],
+        "AVG": [
+            "microservice-consul_order",
+            "microservice-consul_apache"
+        ],
+        "LOUBAR": [
+            "microservice-consul_customer",
+            "microservice-consul_order",
+            "microservice-consul_catalog",
+            "microservice-consul_apache"
+        ]
+    },
+    "train-ticket_v0.0.1": {
+        "ER": [
+            "train-ticket_v0.0.1_ts-preserve-service",
+            "train-ticket_v0.0.1_ts-preserve-other-service",
+            "train-ticket_v0.0.1_ts-rebook-service",
+            "train-ticket_v0.0.1_ts-travel-plan-service",
+            "train-ticket_v0.0.1_ts-admin-basic-info-service",
+            "train-ticket_v0.0.1_ts-travel-service",
+            "train-ticket_v0.0.1_ts-travel2-service",
+            "train-ticket_v0.0.1_ts-cancel-service",
+            "train-ticket_v0.0.1_ts-seat-service",
+            "train-ticket_v0.0.1_ts-route-plan-service",
+            "train-ticket_v0.0.1_ts-basic-service"
+        ],
+        "CM": [],
+        "AVG": [
+            "train-ticket_v0.0.1_ts-cancel-service",
+            "train-ticket_v0.0.1_ts-preserve-service",
+            "train-ticket_v0.0.1_ts-food-service",
+            "train-ticket_v0.0.1_ts-rebook-service",
+            "train-ticket_v0.0.1_ts-register-service",
+            "train-ticket_v0.0.1_ts-admin-basic-info-service",
+            "train-ticket_v0.0.1_ts-basic-service",
+            "train-ticket_v0.0.1_ts-preserve-other-service",
+            "train-ticket_v0.0.1_ts-route-plan-service",
+            "train-ticket_v0.0.1_ts-inside-payment-service",
+            "train-ticket_v0.0.1_ts-seat-service",
+            "train-ticket_v0.0.1_ts-travel-plan-service",
+            "train-ticket_v0.0.1_ts-travel2-service",
+            "train-ticket_v0.0.1_ts-travel-service"
+        ],
+        "LOUBAR": [
+            "train-ticket_v0.0.1_ts-cancel-service",
+            "train-ticket_v0.0.1_ts-preserve-service",
+            "train-ticket_v0.0.1_ts-rebook-service",
+            "train-ticket_v0.0.1_ts-admin-basic-info-service",
+            "train-ticket_v0.0.1_ts-preserve-other-service",
+            "train-ticket_v0.0.1_ts-seat-service",
+            "train-ticket_v0.0.1_ts-travel-plan-service",
+            "train-ticket_v0.0.1_ts-travel2-service",
+            "train-ticket_v0.0.1_ts-travel-service"
+        ]
+    },
+    "blog-microservices": {
+        "ER": [
+            "blog-microservices_config-server"
+        ],
+        "CM": [],
+        "AVG": [
+            "blog-microservices_config-server",
+            "blog-microservices_turbine-server"
+        ],
+        "LOUBAR": [
+            "blog-microservices_config-server",
+            "blog-microservices_turbine-server"
+        ]
+    },
+    "Basilisk": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "Basilisk_rabbitmq"
+        ],
+        "LOUBAR": [
+            "Basilisk_benchmark-service",
+            "Basilisk_repository-service",
+            "Basilisk_rabbitmq"
+        ]
+    },
+    "spring-boot-microservices-workshop": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "spring-boot-microservices-workshop_movie-catalog-service"
+        ],
+        "LOUBAR": [
+            "spring-boot-microservices-workshop_movie-info-service",
+            "spring-boot-microservices-workshop_ratings-data-service",
+            "spring-boot-microservices-workshop_movie-catalog-service"
+        ]
+    },
+    "qbike": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "qbike_qbike-intention",
+            "qbike_uc",
+            "qbike_intention",
+            "qbike_position",
+            "qbike_order"
+        ],
+        "LOUBAR": [
+            "qbike_qbike-order",
+            "qbike_qbike-intention",
+            "qbike_qbike-trip",
+            "qbike_eureka",
+            "qbike_qbike-uc",
+            "qbike_rabbit",
+            "qbike_uc",
+            "qbike_intention",
+            "qbike_position",
+            "qbike_order",
+            "qbike_api-gateway",
+            "qbike_zipkin"
+        ]
+    },
+    "springcloudmicroservices": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "springcloudmicroservices_user-service",
+            "springcloudmicroservices_api-gateway"
+        ],
+        "LOUBAR": [
+            "springcloudmicroservices_serviceregistry",
+            "springcloudmicroservices_user-service",
+            "springcloudmicroservices_rating-service",
+            "springcloudmicroservices_hotel-service",
+            "springcloudmicroservices_api-gateway"
+        ]
+    },
+    "piggymetrics": {
+        "ER": [
+            "piggymetrics_config"
+        ],
+        "CM": [],
+        "AVG": [
+            "piggymetrics_notification-service",
+            "piggymetrics_config",
+            "piggymetrics_auth-service",
+            "piggymetrics_gateway"
+        ],
+        "LOUBAR": [
+            "piggymetrics_notification-service",
+            "piggymetrics_config",
+            "piggymetrics_auth-service",
+            "piggymetrics_gateway"
+        ]
+    },
+    "train-ticket_v1.0.0": {
+        "ER": [
+            "train-ticket_v1.0.0_ts-preserve-service",
+            "train-ticket_v1.0.0_ts-preserve-other-service",
+            "train-ticket_v1.0.0_ts-rebook-service",
+            "train-ticket_v1.0.0_ts-admin-basic-info-service",
+            "train-ticket_v1.0.0_ts-admin-travel-service",
+            "train-ticket_v1.0.0_ts-travel-plan-service",
+            "train-ticket_v1.0.0_ts-cancel-service",
+            "train-ticket_v1.0.0_ts-basic-service",
+            "train-ticket_v1.0.0_ts-travel-service",
+            "train-ticket_v1.0.0_ts-travel2-service",
+            "train-ticket_v1.0.0_ts-food-service",
+            "train-ticket_v1.0.0_ts-seat-service",
+            "train-ticket_v1.0.0_ts-inside-payment-service",
+            "train-ticket_v1.0.0_ts-route-plan-service",
+            "train-ticket_v1.0.0_ts-admin-route-service",
+            "train-ticket_v1.0.0_ts-security-service",
+            "train-ticket_v1.0.0_ts-execute-service",
+            "train-ticket_v1.0.0_ts-admin-order-service"
+        ],
+        "CM": [],
+        "AVG": [
+            "train-ticket_v1.0.0_ts-cancel-service",
+            "train-ticket_v1.0.0_ts-preserve-service",
+            "train-ticket_v1.0.0_ts-food-service",
+            "train-ticket_v1.0.0_ts-rebook-service",
+            "train-ticket_v1.0.0_ts-admin-basic-info-service",
+            "train-ticket_v1.0.0_ts-basic-service",
+            "train-ticket_v1.0.0_ts-preserve-other-service",
+            "train-ticket_v1.0.0_ts-route-plan-service",
+            "train-ticket_v1.0.0_ts-inside-payment-service",
+            "train-ticket_v1.0.0_ts-seat-service",
+            "train-ticket_v1.0.0_ts-travel-plan-service",
+            "train-ticket_v1.0.0_ts-travel2-service",
+            "train-ticket_v1.0.0_ts-travel-service",
+            "train-ticket_v1.0.0_ts-admin-travel-service"
+        ],
+        "LOUBAR": [
+            "train-ticket_v1.0.0_ts-cancel-service",
+            "train-ticket_v1.0.0_ts-preserve-service",
+            "train-ticket_v1.0.0_ts-rebook-service",
+            "train-ticket_v1.0.0_ts-admin-basic-info-service",
+            "train-ticket_v1.0.0_ts-basic-service",
+            "train-ticket_v1.0.0_ts-preserve-other-service",
+            "train-ticket_v1.0.0_ts-travel-plan-service",
+            "train-ticket_v1.0.0_ts-travel2-service",
+            "train-ticket_v1.0.0_ts-travel-service",
+            "train-ticket_v1.0.0_ts-admin-travel-service"
+        ]
+    },
+    "sample-spring-microservices-new": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "sample-spring-microservices-new_config-service",
+            "sample-spring-microservices-new_department-service",
+            "sample-spring-microservices-new_gateway-service",
+            "sample-spring-microservices-new_organization-service"
+        ],
+        "LOUBAR": [
+            "sample-spring-microservices-new_config-service",
+            "sample-spring-microservices-new_department-service",
+            "sample-spring-microservices-new_gateway-service",
+            "sample-spring-microservices-new_organization-service"
+        ]
+    },
+    "sample-spring-cloud-webflux": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "sample-spring-cloud-webflux_gateway-service"
+        ],
+        "LOUBAR": [
+            "sample-spring-cloud-webflux_account-service",
+            "sample-spring-cloud-webflux_gateway-service",
+            "sample-spring-cloud-webflux_customer-service",
+            "sample-spring-cloud-webflux_discovery-service"
+        ]
+    },
+    "scaffold-cloud": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "scaffold-cloud_scaffold-txmanager",
+            "scaffold-cloud_scaffold-business-thirdparty-service",
+            "scaffold-cloud_scaffold-business-job-service",
+            "scaffold-cloud_scaffold-business-sys-service",
+            "scaffold-cloud_demo",
+            "scaffold-cloud_scaffold-config-server",
+            "scaffold-cloud_scaffold-eureka",
+            "scaffold-cloud_scaffold-route-openapi",
+            "scaffold-cloud_scaffold-route-app",
+            "scaffold-cloud_scaffold-route-operate"
+        ],
+        "LOUBAR": [
+            "scaffold-cloud_scaffold-txmanager",
+            "scaffold-cloud_scaffold-business-thirdparty-service",
+            "scaffold-cloud_scaffold-business-job-service",
+            "scaffold-cloud_scaffold-business-sys-service",
+            "scaffold-cloud_demo",
+            "scaffold-cloud_scaffold-config-server",
+            "scaffold-cloud_scaffold-eureka",
+            "scaffold-cloud_scaffold-route-openapi",
+            "scaffold-cloud_scaffold-route-app",
+            "scaffold-cloud_scaffold-route-operate"
+        ]
+    },
+    "jhipster-microservices-example": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "jhipster-microservices-example_jhipster-registry"
+        ],
+        "LOUBAR": [
+            "jhipster-microservices-example_jhipster-registry",
+            "jhipster-microservices-example_store",
+            "jhipster-microservices-example_github-repository"
+        ]
+    },
+    "micro_webshop": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "micro_webshop_user-proxy",
+            "micro_webshop_product-proxy"
+        ],
+        "LOUBAR": [
+            "micro_webshop_eureka",
+            "micro_webshop_user-proxy",
+            "micro_webshop_product-service",
+            "micro_webshop_category-service",
+            "micro_webshop_security-service",
+            "micro_webshop_product-proxy",
+            "micro_webshop_auth-server"
+        ]
+    },
+    "microservice": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "microservice_order",
+            "microservice_zuul"
+        ],
+        "LOUBAR": [
+            "microservice_order",
+            "microservice_eureka",
+            "microservice_turbine",
+            "microservice_catalog",
+            "microservice_zuul",
+            "microservice_customer"
+        ]
+    },
+    "spring-cloud-movie-recommendation": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "spring-cloud-movie-recommendation_config-service",
+            "spring-cloud-movie-recommendation_recommendation-client"
+        ],
+        "LOUBAR": [
+            "spring-cloud-movie-recommendation_recommendation-service",
+            "spring-cloud-movie-recommendation_config-service",
+            "spring-cloud-movie-recommendation_recommendation-client",
+            "spring-cloud-movie-recommendation_eureka-service",
+            "spring-cloud-movie-recommendation_user-service",
+            "spring-cloud-movie-recommendation_movie-service",
+            "spring-cloud-movie-recommendation_github-repository"
+        ]
+    },
+    "geocoder-microservices": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "geocoder-microservices_configurator",
+            "geocoder-microservices_auth-service",
+            "geocoder-microservices_mongodb"
+        ],
+        "LOUBAR": [
+            "geocoder-microservices_configurator",
+            "geocoder-microservices_auth-service",
+            "geocoder-microservices_mongodb"
+        ]
+    },
+    "spring-netflix-oss-microservices": {
+        "ER": [
+            "spring-netflix-oss-microservices_config-server"
+        ],
+        "CM": [],
+        "AVG": [
+            "spring-netflix-oss-microservices_config-server",
+            "spring-netflix-oss-microservices_turbine"
+        ],
+        "LOUBAR": [
+            "spring-netflix-oss-microservices_monitor-dashboard",
+            "spring-netflix-oss-microservices_card-statement-composite",
+            "spring-netflix-oss-microservices_card-service",
+            "spring-netflix-oss-microservices_discovery-service",
+            "spring-netflix-oss-microservices_statement-service",
+            "spring-netflix-oss-microservices_config-server",
+            "spring-netflix-oss-microservices_turbine",
+            "spring-netflix-oss-microservices_rabbitmq",
+            "spring-netflix-oss-microservices_github-repository",
+            "spring-netflix-oss-microservices_monitor"
+        ]
+    },
+    "website": {
+        "ER": [],
+        "CM": [],
+        "AVG": [
+            "website_gateway"
+        ],
+        "LOUBAR": [
+            "website_authserver",
+            "website_backend",
+            "website_registry",
+            "website_gateway"
+        ]
+    },
+    "Tap-And-Eat-MicroServices": {
+        "ER": [
+            "Tap-And-Eat-MicroServices_config-service"
+        ],
+        "CM": [],
+        "AVG": [
+            "Tap-And-Eat-MicroServices_config-service",
+            "Tap-And-Eat-MicroServices_foodtray-service"
+        ],
+        "LOUBAR": [
+            "Tap-And-Eat-MicroServices_account-service",
+            "Tap-And-Eat-MicroServices_config-service",
+            "Tap-And-Eat-MicroServices_foodtray-service",
+            "Tap-And-Eat-MicroServices_price-service",
+            "Tap-And-Eat-MicroServices_store-service",
+            "Tap-And-Eat-MicroServices_customer-service",
+            "Tap-And-Eat-MicroServices_item-service",
+            "Tap-And-Eat-MicroServices_github-repository"
+        ]
+    },
+    "spring-boot-microservices": {
+        "ER": [
+            "spring-boot-microservices_configserver"
+        ],
+        "CM": [],
+        "AVG": [
+            "spring-boot-microservices_task-webservice",
+            "spring-boot-microservices_configserver"
+        ],
+        "LOUBAR": [
+            "spring-boot-microservices_task-webservice",
+            "spring-boot-microservices_configserver"
+        ]
+    }
+}
