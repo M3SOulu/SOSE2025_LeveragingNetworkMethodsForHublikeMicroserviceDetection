@@ -5,23 +5,19 @@ centrality_cols = [col for col in metrics.columns if col not in ['MS_system',
                                                                  "Microservice",
                                                                  'Clustering Coefficient']]
 
+sorted_microservices = {}
 
-results= {}
 for centrality in centrality_cols:
-    # Compute thresholds
-    centrality_thresh = metrics[centrality].quantile(0.75)
-    clustering_thresh = metrics['Clustering Coefficient'].quantile(0.25)
+    # Compute difference
+    metrics[f'diff_{centrality}'] = metrics[centrality] - metrics['Clustering Coefficient']
 
-    # Apply filter
-    filtered = metrics[
-        (metrics[centrality] >= centrality_thresh) &
-        (metrics['Clustering Coefficient'] <= clustering_thresh)
-        ]
+    # Sort by the difference (descending or ascending depending on your preference)
+    sorted_df = metrics.sort_values(by=f'diff_{centrality}', ascending=False)
 
-    # Store the matching nodes
-    results[centrality] = filtered['Microservice'].tolist()
+    # Store only the "Microservice" column in the dictionary (or keep full row if needed)
+    sorted_microservices[centrality] = sorted_df["Microservice"].tolist()
 
 # Convert results to DataFrame for better display (optional)
-results_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in results.items()]))
+results_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in sorted_microservices.items()]))
 
-results_df.to_csv("ClusteringPercentiles.csv", index=False)
+results_df.to_csv("ClusteringRank.csv", index=False)
