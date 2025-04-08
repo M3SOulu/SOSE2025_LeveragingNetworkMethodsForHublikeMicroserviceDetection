@@ -3,13 +3,15 @@
         "ER": [],
         "CM": [],
         "AVG": [
-            "microservice-kafka_order",
             "microservice-kafka_kafka",
             "microservice-kafka_apache",
             "microservice-kafka_postgres"
         ],
         "LOUBAR": [
+            "microservice-kafka_invoicing",
             "microservice-kafka_order",
+            "microservice-kafka_shipping",
+            "microservice-kafka_zookeeper",
             "microservice-kafka_kafka",
             "microservice-kafka_apache",
             "microservice-kafka_postgres"
@@ -69,19 +71,14 @@
         ]
     },
     "microservice-consul": {
-        "ER": [
-            "microservice-consul_apache",
-            "microservice-consul_order"
-        ],
+        "ER": [],
         "CM": [],
         "AVG": [
             "microservice-consul_order",
             "microservice-consul_apache"
         ],
         "LOUBAR": [
-            "microservice-consul_customer",
             "microservice-consul_order",
-            "microservice-consul_catalog",
             "microservice-consul_apache"
         ]
     },
@@ -336,7 +333,9 @@
         "ER": [],
         "CM": [],
         "AVG": [
-            "jhipster-microservices-example_jhipster-registry"
+            "jhipster-microservices-example_jhipster-registry",
+            "jhipster-microservices-example_store",
+            "jhipster-microservices-example_github-repository"
         ],
         "LOUBAR": [
             "jhipster-microservices-example_jhipster-registry",
@@ -395,7 +394,9 @@
         ]
     },
     "geocoder-microservices": {
-        "ER": [],
+        "ER": [
+            "geocoder-microservices_configurator"
+        ],
         "CM": [],
         "AVG": [
             "geocoder-microservices_configurator",

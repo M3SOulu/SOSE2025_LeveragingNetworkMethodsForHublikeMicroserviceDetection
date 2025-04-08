@@ -13,6 +13,7 @@ def compute_centrality():
         G = nx.node_link_graph(g, edges="edges", nodes="nodes", name="name", source="sender", target="receiver",
                                multigraph=False, directed=True)
         G.remove_nodes_from(["user"])
+        G.remove_edges_from(nx.selfloop_edges(G))
         name = f.name.replace("_gwcc_noDB.json", "")
         graph_df = pd.DataFrame(columns=["MS_system", "Microservice"])
         for node in G.nodes:

@@ -1,10 +1,14 @@
 import os
 
 import pandas as pd
+import networkx as nx
+import json
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 from matplotlib.cm import get_cmap
+from matplotlib.pyplot import savefig
+
 
 def first_derivative(x, y):
     x = np.array(x)
@@ -226,17 +230,34 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
     plt.savefig(f"Figures/ClusteringScatter/ClusteringScatter_{name}.pdf")
 
 
-if __name__ == "__main__":
-    # comparison_figure()
-    # scale_free_figure()
-    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+def call_graphs():
+    for f in os.scandir("Raw"):
+        with open(f, 'r') as fi:
+            g = json.load(fi)
+        G = nx.node_link_graph(g, edges="edges", nodes="nodes", name="name", source="sender", target="receiver",
+                               multigraph=False, directed=True)
+        G.remove_nodes_from(["user"])
+        G.remove_edges_from(nx.selfloop_edges(G))
+        name = f.name.replace("_gwcc_noDB.json", "")
+        plt.figure(figsize=(16, 12))
+        nx.draw_networkx(G, pos=nx.fruchterman_reingold_layout(G))
+        plt.tight_layout()
+        plt.savefig(f"Figures/SDGs/{name}_sdg.pdf")
+        plt.close()
 
+
+
+if __name__ == "__main__":
+    comparison_figure()
+    scale_free_figure()
+    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    # call_graphs()
     for col in metrics.columns:
         if col in ["MS_system", "Microservice"]:
             continue
-        # plot_centrality_dist(metrics[col], col)
-        # plot_centrality_dist(metrics[col], col, deriv=1)
-        # plot_centrality_dist(metrics[col], col, deriv=2)
+        plot_centrality_dist(metrics[col], col)
+        plot_centrality_dist(metrics[col], col, deriv=1)
+        plot_centrality_dist(metrics[col], col, deriv=2)
         if col != "Clustering Coefficient":
             clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
                                    col, metrics["Microservice"])

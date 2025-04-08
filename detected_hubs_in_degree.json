@@ -3,8 +3,8 @@
         "ER": [
             "microservice-kafka_kafka",
             "microservice-kafka_shipping",
-            "microservice-kafka_order",
-            "microservice-kafka_invoicing"
+            "microservice-kafka_invoicing",
+            "microservice-kafka_order"
         ],
         "CM": [],
         "AVG": [
@@ -15,7 +15,6 @@
         ],
         "LOUBAR": [
             "microservice-kafka_invoicing",
-            "microservice-kafka_order",
             "microservice-kafka_shipping",
             "microservice-kafka_kafka"
         ]
@@ -80,13 +79,11 @@
         "CM": [],
         "AVG": [
             "microservice-consul_customer",
-            "microservice-consul_order",
             "microservice-consul_catalog",
             "microservice-consul_consul"
         ],
         "LOUBAR": [
             "microservice-consul_customer",
-            "microservice-consul_order",
             "microservice-consul_catalog",
             "microservice-consul_consul"
         ]
@@ -323,7 +320,9 @@
         "ER": [],
         "CM": [],
         "AVG": [
-            "jhipster-microservices-example_jhipster-registry"
+            "jhipster-microservices-example_blog",
+            "jhipster-microservices-example_jhipster-registry",
+            "jhipster-microservices-example_store"
         ],
         "LOUBAR": [
             "jhipster-microservices-example_blog",
@@ -351,13 +350,11 @@
         "ER": [],
         "CM": [],
         "AVG": [
-            "microservice_order",
             "microservice_eureka",
             "microservice_catalog",
             "microservice_customer"
         ],
         "LOUBAR": [
-            "microservice_order",
             "microservice_eureka",
             "microservice_catalog",
             "microservice_customer"
@@ -388,7 +385,6 @@
             "geocoder-microservices_geocoderlocal-service",
             "geocoder-microservices_zuul-gateway",
             "geocoder-microservices_geocoderremote-service",
-            "geocoder-microservices_hystrix-dashboard",
             "geocoder-microservices_eureka-discovery",
             "geocoder-microservices_auth-service"
         ],
@@ -396,7 +392,6 @@
             "geocoder-microservices_geocoderlocal-service",
             "geocoder-microservices_zuul-gateway",
             "geocoder-microservices_geocoderremote-service",
-            "geocoder-microservices_hystrix-dashboard",
             "geocoder-microservices_eureka-discovery",
             "geocoder-microservices_auth-service"
         ]
