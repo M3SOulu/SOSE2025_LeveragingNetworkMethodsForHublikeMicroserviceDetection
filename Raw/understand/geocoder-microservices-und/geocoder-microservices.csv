@@ -1,0 +1,347 @@
+Kind,Name,AvgCyclomatic,CountDeclFile,CountLine,CountLineBlank,CountLineCode,CountLineComment,CountStmt,CountStmtDecl,CountStmtExe,Cyclomatic,RatioCommentToCode,AvgCountLine,AvgCountLineBlank,AvgCountLineCode,AvgCountLineComment,CountClassBase,CountClassCoupled,CountClassCoupledModified,CountClassDerived,CountDeclClass,CountDeclClassMethod,CountDeclClassVariable,CountDeclExecutableUnit,CountDeclFunction,CountDeclInstanceMethod,CountDeclInstanceVariable,CountDeclMethod,CountDeclMethodAll,CountDeclMethodDefault,CountDeclMethodPrivate,CountDeclMethodProtected,CountDeclMethodPublic,CountInput,CountLineCodeDecl,CountLineCodeExe,CountOutput,CountSemicolon,MaxCyclomatic,MaxInheritanceTree,MaxNesting,PercentLackOfCohesion,PercentLackOfCohesionModified,SumCyclomatic,CountDeclInstanceVariablePrivate,CountDeclInstanceVariableProtected,CountDeclInstanceVariablePublic,CountCCViol,CountCCViolType,CCViolDensityLine,CCViolDensityCode
+Unnamed Function,"(unnamed_function_1)",,,12,2,10,0,3,1,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,3,,,,,,,
+Unnamed Function,"(unnamed_function_1)",,,28,3,25,0,4,0,4,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,5,,,,,,,
+Unnamed Function,"(unnamed_function_1)",,,21,3,18,0,5,2,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,4,,,,,,,
+Unnamed Function,"(unnamed_function_1)",,,21,3,18,0,5,2,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,4,,,,,,,
+Unnamed Function,"(unnamed_function_1)",,,21,3,18,0,5,2,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,4,,,,,,,
+Unnamed Function,"(unnamed_function_1)",,,11,1,10,0,2,0,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,3,,,,,,,
+Unnamed Function,"(unnamed_function_1)",,,11,1,10,0,2,0,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,3,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_2)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_2)",,,7,0,7,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_2)",,,6,0,6,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_2)",,,6,0,6,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_2)",,,6,0,6,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_2)",,,5,0,5,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_2)",,,5,0,5,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_3)",,,4,0,4,0,2,0,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_3)",,,5,0,5,0,3,2,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_3)",,,5,0,5,0,3,0,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_3)",,,5,0,5,0,3,0,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_3)",,,5,0,5,0,3,0,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_3)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_3)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_4)",,,5,0,5,0,3,2,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_4)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_4)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_4)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"(unnamed_function_1).(unnamed_function_5)",,,6,0,6,0,4,2,3,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+File,"Address.java",2,,164,37,126,1,101,36,65,,"0,01",6,0,6,0,,,,,1,0,1,19,19,19,7,19,,0,0,0,19,,41,73,,60,22,,2,,,46,,,,0,0,"0,00","0,00"
+File,"AddressGoogleResponse.java",0,,6,3,3,0,2,2,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,0,0,,0,0,0,0,,2,0,,1,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"AddressRepository.java",0,,10,4,6,0,5,5,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,0,0,,0,0,0,0,,5,0,,4,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"AddressRepositoryCustom.java",0,,13,5,5,3,4,4,0,,"0,60",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,0,0,0,1,,4,0,,3,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"AddressRepositoryImpl.java",1,,26,7,16,3,13,10,4,,"0,19",7,1,6,0,,,,,1,0,0,1,1,1,1,1,,0,0,0,1,,11,4,,11,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"AddressRepositoryImplTest.java",1,,37,6,31,0,23,19,8,,"0,00",7,0,7,0,,,,,1,0,0,2,2,2,1,2,,0,0,0,2,,24,8,,20,1,,0,,,2,,,,0,0,"0,00","0,00"
+Class,"AppComponent",0,,3,1,2,0,0,0,0,,,0,0,0,0,0,,,0,,0,0,,,0,0,0,0,,0,0,0,,,,,,0,0,0,,,0,0,0,0,,,,
+Class,"AppModule",0,,1,0,1,0,0,0,0,,,0,0,0,0,0,,,0,,0,0,,,0,0,0,0,,0,0,0,,,,,,0,0,0,,,0,0,0,0,,,,
+Class,"AppRoutingModule",0,,1,0,1,0,0,0,0,,,0,0,0,0,0,,,0,,0,0,,,0,0,0,0,,0,0,0,,,,,,0,0,0,,,0,0,0,0,,,,
+File,"AuthApplication.java",1,,80,14,66,0,32,27,6,,"0,00",8,0,8,0,,,,,2,1,0,4,4,3,3,4,,0,0,0,4,,39,22,,26,1,,0,,,4,,,,0,0,"0,00","0,00"
+Class,"AuthService",2,,254,36,202,17,153,46,121,,,20,1,17,1,3,,,0,,0,0,,,11,20,11,11,,3,0,8,,,,,,8,0,0,,,46,15,0,5,,,,
+Public Method,"AuthService.authenticate",,,110,8,99,3,20,4,17,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,17,,,,,,,
+Unnamed Function,"AuthService.authenticate.(unnamed_function_3)",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"AuthService.authenticate.(unnamed_function_4)",,,16,0,16,0,12,2,12,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+Unnamed Function,"AuthService.authenticate.(unnamed_function_5)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"AuthService.authenticate.(unnamed_function_6)",,,55,1,54,0,42,8,39,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5,,,8,,,,,,,
+Public Method,"AuthService.canActivate",,,9,0,9,0,6,2,5,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+Public Method,"AuthService.canActivateChild",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"AuthService.canLoad",,,9,0,9,0,6,2,5,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+Public Method,"AuthService.constructor",,,11,1,5,5,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,3,,,,,,,
+Unnamed Function,"AuthService.constructor.(unnamed_function_1)",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"AuthService.constructor.(unnamed_function_2)",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Private Method,"AuthService.fetchUserInfo",,,14,0,14,0,5,1,5,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,5,,,,,,,
+Unnamed Function,"AuthService.fetchUserInfo.(unnamed_function_7)",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"AuthService.fetchUserInfo.(unnamed_function_8)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"AuthService.fetchUserInfo.(unnamed_function_9)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"AuthService.getUserName",,,5,0,5,0,4,0,4,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+Public Method,"AuthService.isLoggedIn",,,6,0,6,0,5,1,4,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+Public Method,"AuthService.logout",,,4,0,4,0,2,0,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Private Method,"AuthService.parse",,,35,7,24,4,17,3,17,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,8,,,,,,,
+Unnamed Function,"AuthService.parse.(unnamed_function_10)",,,23,4,15,4,11,3,11,5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,,,5,,,,,,,
+Private Method,"AuthService.startExpiresTimer",,,10,0,10,1,4,0,4,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,3,,,,,,,
+Unnamed Function,"AuthService.startExpiresTimer.(unnamed_function_11)",,,3,0,3,0,2,0,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+File,"ConfiguratorApplication.java",1,,14,3,11,0,7,6,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"DiscoveryApplication.java",1,,15,4,11,0,7,6,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"DiscoveryTest.java",1,,21,3,18,1,13,12,3,,"0,06",6,0,6,1,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,15,3,,11,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GatewayApplication.java",1,,25,6,19,0,12,10,2,,"0,00",4,0,4,0,,,,,1,1,0,2,2,1,0,2,,0,0,0,2,,14,2,,9,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"GatewayApplicationTests.java",1,,20,7,13,0,8,8,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,11,0,,6,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GeocoderController.java",1,,30,7,20,3,15,14,3,,"0,15",6,0,6,0,,,,,1,0,0,1,1,1,1,1,,0,0,0,1,,17,3,,13,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GeocoderController.java",1,,25,8,17,0,12,11,1,,"0,00",4,0,4,0,,,,,1,0,0,1,1,1,1,1,,0,0,0,1,,14,1,,10,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GeocoderLocal.java",1,,25,7,18,0,11,10,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,15,1,,9,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GeocoderRemote.java",1,,27,8,19,0,12,11,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,16,1,,10,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GeocoderService.java",0,,17,6,7,4,6,6,0,,"0,57",0,0,0,0,,,,,1,0,0,0,2,2,0,2,,0,0,0,2,,6,0,,5,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"GeocoderService.java",0,,16,3,5,8,4,4,0,,"1,60",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,0,0,0,1,,4,0,,3,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"GeocoderServiceImpl.java",1,,54,14,39,2,27,18,12,,"0,05",9,1,8,1,,,,,1,0,0,3,3,3,1,3,,0,1,0,2,,24,12,,22,2,,1,,,4,,,,0,0,"0,00","0,00"
+File,"GeocoderServiceImpl.java",2,,37,9,28,1,22,18,8,,"0,04",13,1,12,0,,,,,1,0,1,1,1,1,1,1,,0,0,0,1,,20,10,,20,2,,1,,,2,,,,0,0,"0,00","0,00"
+File,"GeocoderServiceImplTest.java",1,,32,8,24,0,18,16,4,,"0,00",7,0,7,0,,,,,1,0,0,1,1,1,1,1,,0,0,0,1,,20,4,,16,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GeocoderServiceImplTest.java",1,,31,10,21,0,15,14,2,,"0,00",5,0,5,0,,,,,1,0,0,1,1,1,1,1,,0,0,0,1,,18,2,,13,1,,0,,,1,,,,0,0,"0,00","0,00"
+Class,"GeocoderUiPage",1,,9,1,8,0,4,2,2,,,3,0,3,0,0,,,0,,0,0,,,2,0,2,2,,0,0,2,,,,,,1,0,0,,,2,0,0,0,,,,
+Public Method,"GeocoderUiPage.getParagraphText",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"GeocoderUiPage.navigateTo",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+File,"Gruntfile.js",1,,128,15,113,0,26,0,26,1,"0,00",127,14,113,0,,,,,0,,,6,5,,,,,,,,,,,,,,2,,1,,,8,,,,0,0,"0,00","0,00"
+Class,"HomeComponent",1,,30,7,20,3,7,5,3,,,4,0,3,1,1,,,0,,0,0,,,3,9,3,3,,0,0,3,,,,,,1,0,0,,,6,3,0,6,,,,
+Public Method,"HomeComponent.constructor",,,2,0,2,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Function,"HomeComponent.get",,,4,0,3,1,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"HomeComponent.ngOnInit",,,2,0,2,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"HomeComponent.processGeocoder",,,7,0,5,2,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,3,,,,,,,
+Unnamed Function,"HomeComponent.processGeocoder.(unnamed_function_1)",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"HomeComponent.processGeocoder.(unnamed_function_2)",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+File,"HystrixDashboardApplication.java",1,,23,4,19,0,12,10,2,,"0,00",4,0,4,0,,,,,1,1,0,2,2,1,0,2,,0,0,1,1,,14,2,,9,1,,0,,,2,,,,0,0,"0,00","0,00"
+Class,"LoginComponent",1,,25,8,17,0,10,6,4,,,3,0,3,0,1,,,0,,0,0,,,6,2,6,6,,0,0,6,,,,,,1,0,0,,,6,0,0,2,,,,
+Public Method,"LoginComponent.constructor",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"LoginComponent.facebookLogin",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"LoginComponent.googleLogin",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"LoginComponent.ngOnInit",,,2,0,2,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"LoginComponent.oauth2GeocoderLogin",,,4,1,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"LoginComponent.twitterLogin",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+File,"MongoUserDetailsService.java",2,,29,8,21,0,15,12,4,,"0,00",11,3,8,0,,,,,1,0,0,1,1,1,1,1,,0,0,0,1,,15,4,,12,2,,1,,,2,,,,0,0,"0,00","0,00"
+Class,"NavigationbarComponent",1,,21,7,14,0,7,5,2,,,3,0,2,0,0,,,0,,0,0,,,3,3,3,3,,0,0,3,,,,,,1,0,0,,,5,1,0,2,,,,
+Public Method,"NavigationbarComponent.constructor",,,2,0,2,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"NavigationbarComponent.doLogin",,,3,1,2,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"NavigationbarComponent.doLogout",,,3,1,2,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Function,"NavigationbarComponent.get",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Function,"NavigationbarComponent.get",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Interface,"NodeModule",,,3,0,3,0,1,1,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,,,,,,,
+File,"PreRouteFilter.java",1,,39,11,28,0,19,14,8,,"0,00",5,1,5,0,,,,,1,0,1,4,4,4,0,4,,0,0,0,4,,18,8,,14,1,,0,,,4,,,,0,0,"0,00","0,00"
+Class,"PreloadSelectedModules",2,,17,3,12,2,7,2,5,,,13,2,9,2,1,,,0,,0,0,,,1,1,1,1,,0,0,1,,,,,,2,0,0,,,2,0,0,1,,,,
+Public Method,"PreloadSelectedModules.preload",,,13,2,9,2,5,0,5,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+File,"RestTemplateConfig.java",1,,25,8,16,1,13,11,4,,"0,06",9,1,7,1,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,12,4,,11,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"SecurityConfiguration.java",1,,59,9,30,20,18,15,3,,"0,67",8,0,5,3,,,,,1,0,0,3,3,3,0,3,,0,0,0,3,,21,5,,14,1,,0,,,3,,,,0,0,"0,00","0,00"
+File,"SecurityConfiguration.java",1,,48,9,30,9,18,15,3,,"0,30",8,0,5,3,,,,,1,0,0,3,3,3,0,3,,0,0,0,3,,21,5,,14,1,,0,,,3,,,,0,0,"0,00","0,00"
+Class,"Session",0,,41,10,6,25,4,4,0,,,0,0,0,0,0,,,0,,0,0,,,0,4,0,0,,0,0,0,,,,,,0,0,0,,,0,0,0,4,,,,
+File,"SimpleCorsFilter.java",1,,49,10,39,0,27,20,7,,"0,00",6,0,6,0,,,,,1,0,0,4,4,4,0,4,,0,0,0,4,,25,10,,21,2,,1,,,5,,,,0,0,"0,00","0,00"
+File,"User.java",1,,65,16,48,1,29,20,9,,"0,02",4,0,4,0,,,,,1,0,1,9,9,9,2,9,,0,0,0,9,,29,10,,19,1,,0,,,9,,,,0,0,"0,00","0,00"
+File,"UserController.java",1,,34,8,26,0,18,16,2,,"0,00",4,0,4,0,,,,,1,0,0,2,2,2,1,2,,0,0,0,2,,21,2,,15,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"UserRepository.java",0,,11,4,7,0,5,5,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,0,0,,0,0,0,0,,6,0,,4,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"UserService.java",0,,9,4,5,0,4,4,0,,"0,00",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,1,0,0,0,,4,0,,3,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"UserServiceImpl.java",1,,36,11,25,0,20,16,8,,"0,00",13,4,9,0,,,,,1,0,1,1,1,1,2,1,,0,0,0,1,,19,8,,18,1,,0,,,1,,,,0,0,"0,00","0,00"
+Class,"WindowService",2,,15,4,11,0,6,3,3,,,6,2,5,0,0,,,0,,0,0,,,2,0,2,2,,0,0,2,,,,,,2,0,0,,,3,0,0,0,,,,
+Public Method,"WindowService.constructor",,,3,1,2,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"WindowService.createWindow",,,9,2,7,0,4,1,3,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+Public Method,"__karma__.loaded",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+File,"app-routing.module.ts",0,,39,3,35,1,10,10,0,0,"0,03",0,0,0,0,,,,,1,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"app.component.css",0,,72,0,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"app.component.html",0,,3,0,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"app.component.spec.ts",1,,32,5,27,0,18,8,13,1,"0,00",28,3,25,0,,,,,0,,,6,5,,,,,,,,,,,,,,1,,0,,,6,,,,0,0,"0,00","0,00"
+File,"app.component.ts",0,,10,2,8,0,2,2,0,0,"0,00",0,0,0,0,,,,,1,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"app.e2e-spec.ts",1,,14,3,11,0,8,2,6,1,"0,00",12,2,10,0,,,,,0,,,4,3,,,,,,,,,,,,,,1,,0,,,4,,,,0,0,"0,00","0,00"
+File,"app.module.ts",0,,48,12,29,7,11,11,0,0,"0,24",0,0,0,0,,,,,1,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"app.po.ts",1,,11,2,9,0,6,4,2,0,"0,00",3,0,3,0,,,,,1,,,2,2,,,,,,,,,,,,,,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"auth.service.spec.ts",1,,15,3,12,0,7,2,5,1,"0,00",11,1,10,0,,,,,0,,,4,3,,,,,,,,,,,,,,1,,0,,,4,,,,0,0,"0,00","0,00"
+File,"auth.service.ts",2,,272,38,218,17,164,57,121,0,"0,08",20,1,17,1,,,,,1,,,22,22,,,,,,,,,,,,,,8,,5,,,46,,,,0,0,"0,00","0,00"
+Package,"com",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.alphalog",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.alphalog.geocoder",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.alphalog.geocoder.configurator",1,1,14,3,11,0,7,6,1,,"0,00",3,0,3,0,,,,,1,1,0,,,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.configurator.ConfiguratorApplication",1,,8,1,7,0,3,2,1,,"0,00",3,0,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.alphalog.geocoder.configurator.ConfiguratorApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.discovery",1,2,36,7,29,1,20,18,4,,"0,03",5,0,5,1,,,,,2,1,0,,,1,0,2,,0,0,0,2,,23,4,,16,1,,0,,,2,,,,,,,
+Public Class,"com.alphalog.geocoder.discovery.DiscoveryApplication",1,,9,2,7,0,3,2,1,,"0,00",3,0,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.alphalog.geocoder.discovery.DiscoveryApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.discovery.DiscoveryTest",1,,12,2,10,1,5,4,3,,"0,10",6,0,6,1,1,7,4,0,,0,0,,,1,0,1,13,0,0,0,1,,7,3,,3,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.discovery.DiscoveryTest.dicoverEurekaTest",,,6,0,6,1,4,3,3,1,"0,17",,,,,,,,,,,,,,,,,,,,,,0,4,3,3,3,,,0,,,1,,,,,,,
+Package,com.alphalog.geocoder.gateway,1,2,45,13,32,0,20,18,2,,"0,00",3,0,3,0,,,,,2,1,0,,,2,0,3,,0,0,0,3,,25,2,,15,1,,0,,,3,,,,,,,
+Public Class,"com.alphalog.geocoder.gateway.GatewayApplication",1,,15,3,12,0,5,3,2,,"0,00",4,0,4,0,1,8,6,0,,1,0,,,1,0,2,14,0,0,0,2,,7,2,,2,1,1,0,0,0,2,,,,,,,
+Public Static Method,"com.alphalog.geocoder.gateway.GatewayApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.gateway.GatewayApplication.preFilter",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.gateway.GatewayApplicationTests",1,,10,3,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.gateway.GatewayApplicationTests.zuulGetawayTest",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.gateway.filter",1,1,39,11,28,0,19,14,8,,"0,00",5,1,5,0,,,,,1,0,1,,,4,0,4,,0,0,0,4,,18,8,,14,1,,0,,,4,,,,,,,
+Public Class,"com.alphalog.geocoder.gateway.filter.PreRouteFilter",1,,29,7,22,0,13,8,8,,"0,00",5,1,5,0,1,7,4,0,,0,1,,,4,0,4,16,0,0,0,4,,12,8,,8,1,2,0,0,0,4,,,,,,,
+Public Method,"com.alphalog.geocoder.gateway.filter.PreRouteFilter.filterOrder",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.gateway.filter.PreRouteFilter.filterType",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.gateway.filter.PreRouteFilter.run",,,9,2,7,0,5,3,4,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,4,4,8,4,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.gateway.filter.PreRouteFilter.shouldFilter",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.loal",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.alphalog.geocoder.loal.repository",1,1,37,6,31,0,23,19,8,,"0,00",7,0,7,0,,,,,1,0,0,,,2,1,2,,0,0,0,2,,24,8,,20,1,,0,,,2,,,,,,,
+Public Class,"com.alphalog.geocoder.loal.repository.AddressRepositoryImplTest",1,,22,2,20,0,12,8,8,,"0,00",7,0,7,0,1,7,7,0,,0,0,,,2,1,2,14,0,0,0,2,,13,8,,9,1,1,0,0,0,2,,,,,,,
+Public Method,"com.alphalog.geocoder.loal.repository.AddressRepositoryImplTest.saveAddressTest",,,6,0,6,0,4,2,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,3,3,4,3,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.loal.repository.AddressRepositoryImplTest.searchAddressTest",,,8,0,8,0,6,4,5,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,5,5,5,5,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.loal.services",1,1,32,8,24,0,18,16,4,,"0,00",7,0,7,0,,,,,1,0,0,,,1,1,1,,0,0,0,1,,20,4,,16,1,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.loal.services.GeocoderServiceImplTest",1,,16,3,13,0,7,5,4,,"0,00",7,0,7,0,1,7,6,0,,0,0,,,1,1,1,13,0,0,0,1,,9,4,,5,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.loal.services.GeocoderServiceImplTest.getAdresseInfomationTest",,,7,0,7,0,5,3,4,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,4,4,5,4,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.local",1,1,25,7,18,0,11,10,1,,"0,00",3,0,3,0,,,,,1,1,0,,,0,0,1,,0,0,0,1,,15,1,,9,1,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.local.GeocoderLocal",1,,13,3,10,0,3,2,1,,"0,00",3,0,3,0,1,8,6,0,,1,0,,,0,0,1,13,0,0,0,1,,7,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.alphalog.geocoder.local.GeocoderLocal.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.local.config",1,1,59,9,30,20,18,15,3,,"0,67",8,0,5,3,,,,,1,0,0,,,3,0,3,,0,0,0,3,,21,5,,14,1,,0,,,3,,,,,,,
+Public Class,"com.alphalog.geocoder.local.config.SecurityConfiguration",1,,45,6,19,20,7,4,3,,"1,05",8,0,5,3,1,11,9,0,,0,0,,,3,0,3,15,0,0,0,3,,10,5,,3,1,2,0,0,0,3,,,,,,,
+Public Method,"com.alphalog.geocoder.local.config.SecurityConfiguration.clientCredentialsResourceDetails",,,9,0,5,4,2,1,1,1,"0,80",,,,,,,,,,,,,,,,,,,,,,2,3,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.config.SecurityConfiguration.configure",,,6,0,6,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,3,5,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.config.SecurityConfiguration.restTemplate",,,9,0,4,5,2,1,1,1,"1,25",,,,,,,,,,,,,,,,,,,,,,1,2,1,2,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.local.controller",1,1,30,7,20,3,15,14,3,,"0,15",6,0,6,0,,,,,1,0,0,,,1,1,1,,0,0,0,1,,17,3,,13,1,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.local.controller.GeocoderController",1,,17,3,11,3,6,5,3,,"0,27",6,0,6,0,1,9,7,0,,0,0,,,1,1,1,13,0,0,0,1,,8,3,,4,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.controller.GeocoderController.geocoder",,,6,0,6,0,4,3,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,8,4,3,4,3,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.local.model",2,1,164,37,126,1,101,36,65,,"0,01",6,0,6,0,,,,,1,0,1,,,19,7,19,,0,0,0,19,,41,73,,60,22,,2,,,46,,,,,,,
+Public Class,"com.alphalog.geocoder.local.model.Address",2,,155,33,121,1,96,31,65,,"0,01",6,0,6,0,2,4,2,0,,0,1,,,19,7,19,31,0,0,0,19,,36,73,,55,22,1,2,74,74,46,,,,,,,
+Public Constructor,"com.alphalog.geocoder.local.model.Address.Address",,,7,0,7,0,6,1,5,1,"0,00",,,,,,,,,,,,,,,,,,,,,,8,1,5,6,5,,,0,,,1,,,,,,,
+Public Constructor,"com.alphalog.geocoder.local.model.Address.Address",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.equals",,,41,0,41,0,39,2,37,22,"0,00",,,,,,,,,,,,,,,,,,,,,,7,3,38,3,17,,,2,,,22,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.getCity",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.getCountry",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.getId",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.getLatitude",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.getLongitude",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.getPostalCode",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.getStreet",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.hashCode",,,12,0,12,0,10,3,7,7,"0,00",,,,,,,,,,,,,,,,,,,,,,6,4,9,2,9,,,0,,,7,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.setCity",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.setCountry",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.setId",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.setLatitude",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.setLongitude",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.setPostalCode",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.setStreet",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.model.Address.toString",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,5,2,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.local.repository",1,3,49,16,27,6,22,19,4,,"0,22",7,1,6,0,,,,,3,0,0,,,2,1,2,,0,0,0,2,,20,4,,18,1,,0,,,1,,,,,,,
+Public Interface,"com.alphalog.geocoder.local.repository.AddressRepository",0,,3,1,2,0,1,1,0,,"0,00",0,0,0,0,2,0,0,0,,0,0,,,0,0,0,13,0,0,0,0,,1,0,,0,0,2,0,0,0,0,,,,,,,
+Public Interface,"com.alphalog.geocoder.local.repository.AddressRepositoryCustom",0,,5,2,3,0,2,2,0,,"0,00",0,0,0,0,0,1,1,2,,0,0,,,1,0,1,1,0,0,0,1,,2,0,,1,0,0,0,0,0,0,,,,,,,
+Public Abstract Method,"com.alphalog.geocoder.local.repository.AddressRepositoryCustom.findAddress",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,0,1,1,,,0,,,0,,,,,,,
+Public Class,"com.alphalog.geocoder.local.repository.AddressRepositoryImpl",1,,17,4,10,3,7,4,4,,"0,30",7,1,6,0,2,6,5,0,,0,0,,,1,1,1,13,0,0,0,1,,5,4,,5,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.local.repository.AddressRepositoryImpl.findAddress",,,7,1,6,0,5,2,4,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,4,7,4,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.local.services",1,2,71,20,46,6,33,24,12,,"0,13",9,1,8,1,,,,,2,0,0,,,5,1,5,,0,1,0,4,,30,12,,27,2,,1,,,4,,,,,,,
+Public Interface,"com.alphalog.geocoder.local.services.GeocoderService",0,,7,3,4,0,3,3,0,,"0,00",0,0,0,0,0,2,1,1,,0,0,,,2,0,2,2,0,0,0,2,,3,0,,2,0,0,0,0,0,0,,,,,,,
+Public Abstract Method,"com.alphalog.geocoder.local.services.GeocoderService.getAdresseInfomation",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,0,1,1,,,0,,,0,,,,,,,
+Public Abstract Method,"com.alphalog.geocoder.local.services.GeocoderService.saveAdress",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,0,1,,,0,,,0,,,,,,,
+Public Class,"com.alphalog.geocoder.local.services.GeocoderServiceImpl",1,,38,8,29,2,17,8,12,,"0,07",9,1,8,1,2,13,7,0,,0,0,,,3,1,3,15,0,1,0,2,,14,12,,12,2,1,1,33,33,4,,,,,,,
+Public Method,"com.alphalog.geocoder.local.services.GeocoderServiceImpl.getAdresseInfomation",,,20,2,17,2,11,4,10,2,"0,12",,,,,,,,,,,,,,,,,,,,,,3,7,10,11,9,,,1,,,2,,,,,,,
+Public Method,"com.alphalog.geocoder.local.services.GeocoderServiceImpl.saveAdress",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,1,1,,,0,,,1,,,,,,,
+Private Method,"com.alphalog.geocoder.local.services.GeocoderServiceImpl.showDefaultAdress",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,2,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.monitoring",1,1,23,4,19,0,12,10,2,,"0,00",4,0,4,0,,,,,1,1,0,,,1,0,2,,0,0,1,1,,14,2,,9,1,,0,,,2,,,,,,,
+Public Class,"com.alphalog.geocoder.monitoring.HystrixDashboardApplication",1,,14,2,12,0,5,3,2,,"0,00",4,0,4,0,1,8,5,0,,1,0,,,1,0,2,14,0,0,1,1,,7,2,,2,1,2,0,0,0,2,,,,,,,
+Protected Method,"com.alphalog.geocoder.monitoring.HystrixDashboardApplication.configure",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,1,3,1,,,0,,,1,,,,,,,
+Public Static Method,"com.alphalog.geocoder.monitoring.HystrixDashboardApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.remote",1,1,27,8,19,0,12,11,1,,"0,00",3,0,3,0,,,,,1,1,0,,,0,0,1,,0,0,0,1,,16,1,,10,1,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.remote.GeocoderRemote",1,,13,3,10,0,3,2,1,,"0,00",3,0,3,0,1,8,6,0,,1,0,,,0,0,1,13,0,0,0,1,,7,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.alphalog.geocoder.remote.GeocoderRemote.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.remote.config",1,2,73,17,46,10,31,26,7,,"0,22",8,0,6,3,,,,,2,0,0,,,4,0,4,,0,0,0,4,,33,9,,25,1,,0,,,4,,,,,,,
+Public Class,"com.alphalog.geocoder.remote.config.RestTemplateConfig",1,,13,3,9,1,6,4,4,,"0,11",9,1,7,1,1,6,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,4,,4,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.remote.config.RestTemplateConfig.restTemplate",,,9,1,7,1,5,3,4,1,"0,14",,,,,,,,,,,,,,,,,,,,,,1,4,4,4,4,,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.remote.config.SecurityConfiguration",1,,34,6,19,9,7,4,3,,"0,47",8,0,5,3,1,11,9,0,,0,0,,,3,0,3,15,0,0,0,3,,10,5,,3,1,2,0,0,0,3,,,,,,,
+Public Method,"com.alphalog.geocoder.remote.config.SecurityConfiguration.clientCredentialsResourceDetails",,,9,0,5,4,2,1,1,1,"0,80",,,,,,,,,,,,,,,,,,,,,,2,3,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.remote.config.SecurityConfiguration.configure",,,6,0,6,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,3,5,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.remote.config.SecurityConfiguration.restTemplate",,,9,0,4,5,2,1,1,1,"1,25",,,,,,,,,,,,,,,,,,,,,,1,2,1,2,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.remote.controller",1,1,25,8,17,0,12,11,1,,"0,00",4,0,4,0,,,,,1,0,0,,,1,1,1,,0,0,0,1,,14,1,,10,1,,0,,,1,,,,,,,
+Public Class,"com.alphalog.geocoder.remote.controller.GeocoderController",1,,12,3,9,0,4,3,1,,"0,00",4,0,4,0,1,8,6,0,,0,0,,,1,1,1,13,0,0,0,1,,6,1,,2,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.remote.controller.GeocoderController.geocoder",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,5,2,1,2,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.remote.model",0,1,6,3,3,0,2,2,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,0,0,,0,0,0,0,,2,0,,1,0,,0,,,0,,,,,,,
+Public Class,"com.alphalog.geocoder.remote.model.AddressGoogleResponse",0,,3,1,2,0,1,1,0,,"0,00",0,0,0,0,1,0,0,0,,0,0,,,0,0,0,12,0,0,0,0,,1,0,,0,0,1,0,0,0,0,,,,,,,
+Package,"com.alphalog.geocoder.remote.services",2,3,84,22,54,9,41,36,10,,"0,17",9,1,9,0,,,,,3,0,1,,,3,2,3,,0,0,0,3,,42,12,,36,2,,1,,,3,,,,,,,
+Public Interface,"com.alphalog.geocoder.remote.services.GeocoderService",0,,9,2,3,4,2,2,0,,"1,33",0,0,0,0,0,2,0,1,,0,0,,,1,0,1,1,0,0,0,1,,2,0,,1,0,0,0,0,0,0,,,,,,,
+Public Abstract Method,"com.alphalog.geocoder.remote.services.GeocoderService.getAddressInformation",,,5,0,1,4,1,1,0,0,"4,00",,,,,,,,,,,,,,,,,,,,,,2,1,0,1,1,,,0,,,0,,,,,,,
+Public Class,"com.alphalog.geocoder.remote.services.GeocoderServiceImpl",2,,23,5,18,1,12,8,8,,"0,06",13,1,12,0,2,12,6,0,,0,1,,,1,1,1,13,0,0,0,1,,10,10,,10,2,1,1,0,0,2,,,,,,,
+Public Method,"com.alphalog.geocoder.remote.services.GeocoderServiceImpl.getAddressInformation",,,13,1,12,0,9,5,8,2,"0,00",,,,,,,,,,,,,,,,,,,,,,3,5,9,9,7,,,1,,,2,,,,,,,
+Public Class,"com.alphalog.geocoder.remote.services.GeocoderServiceImplTest",1,,14,3,11,0,5,4,2,,"0,00",5,0,5,0,1,6,5,0,,0,0,,,1,1,1,13,0,0,0,1,,8,2,,3,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.remote.services.GeocoderServiceImplTest.googleGeocoderTest",,,5,0,5,0,3,2,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,3,2,3,2,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.security",1,1,80,14,66,0,32,27,6,,"0,00",8,0,8,0,,,,,2,1,0,,,3,3,4,,0,0,0,4,,39,22,,26,1,,0,,,4,,,,,,,
+Public Class,"com.alphalog.geocoder.security.AuthApplication",1,,59,11,48,0,14,9,6,,"0,00",3,0,3,0,1,8,6,0,,1,0,,,0,0,1,13,0,0,0,1,,21,22,,8,1,1,0,0,0,1,,,,,,,
+Protected Static Class,"com.alphalog.geocoder.security.AuthApplication.OAuth2AuthorizationConfig",1,,47,9,38,0,11,7,5,,"0,00",10,0,10,0,1,12,10,0,,0,0,,,3,3,3,15,0,0,0,3,,14,21,,7,1,2,0,67,67,3,,,,,,,
+Public Method,"com.alphalog.geocoder.security.AuthApplication.OAuth2AuthorizationConfig.configure",,,19,1,18,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,15,6,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.AuthApplication.OAuth2AuthorizationConfig.configure",,,6,0,6,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,4,2,3,3,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.AuthApplication.OAuth2AuthorizationConfig.configure",,,5,0,5,0,3,1,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,2,3,2,,,0,,,1,,,,,,,
+Public Static Method,"com.alphalog.geocoder.security.AuthApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.security.controller",1,1,34,8,26,0,18,16,2,,"0,00",4,0,4,0,,,,,1,0,0,,,2,1,2,,0,0,0,2,,21,2,,15,1,,0,,,2,,,,,,,
+Public Class,"com.alphalog.geocoder.security.controller.UserController",1,,17,3,14,0,6,4,2,,"0,00",4,0,4,0,1,10,9,0,,0,0,,,2,1,2,14,0,0,0,2,,9,2,,3,1,1,0,50,50,2,,,,,,,
+Public Method,"com.alphalog.geocoder.security.controller.UserController.createUser",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.controller.UserController.getUser",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,2,1,3,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.security.domain",1,1,65,16,48,1,29,20,9,,"0,02",4,0,4,0,,,,,1,0,1,,,9,2,9,,0,0,0,9,,29,10,,19,1,,0,,,9,,,,,,,
+Public Class,"com.alphalog.geocoder.security.domain.User",1,,55,13,41,1,22,13,9,,"0,02",4,0,4,0,2,5,2,0,,0,1,,,9,2,9,21,0,0,0,9,,22,10,,12,1,1,0,78,78,9,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.getAuthorities",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.getPassword",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.getUsername",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.isAccountNonExpired",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.isAccountNonLocked",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.isCredentialsNonExpired",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.isEnabled",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.setPassword",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.domain.User.setUsername",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.security.filter",1,1,49,10,39,0,27,20,7,,"0,00",6,0,6,0,,,,,1,0,0,,,4,0,4,,0,0,0,4,,25,10,,21,2,,1,,,5,,,,,,,
+Public Class,"com.alphalog.geocoder.security.filter.SimpleCorsFilter",1,,30,5,25,0,14,7,7,,"0,00",6,0,6,0,2,12,9,0,,0,0,,,4,0,4,16,0,0,0,4,,12,10,,8,2,1,1,0,0,5,,,,,,,
+Public Constructor,"com.alphalog.geocoder.security.filter.SimpleCorsFilter.SimpleCorsFilter",,,2,0,2,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,0,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.filter.SimpleCorsFilter.destroy",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.filter.SimpleCorsFilter.doFilter",,,15,1,14,0,10,3,7,2,"0,00",,,,,,,,,,,,,,,,,,,,,,4,4,10,5,8,,,1,,,2,,,,,,,
+Public Method,"com.alphalog.geocoder.security.filter.SimpleCorsFilter.init",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.security.repository",0,1,11,4,7,0,5,5,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,0,0,,0,0,0,0,,6,0,,4,0,,0,,,0,,,,,,,
+Public Interface,"com.alphalog.geocoder.security.repository.UserRepository",0,,4,1,3,0,1,1,0,,"0,00",0,0,0,0,1,1,1,0,,0,0,,,0,0,0,12,0,0,0,0,,2,0,,0,0,2,0,0,0,0,,,,,,,
+Package,"com.alphalog.geocoder.security.service",1,2,45,15,30,0,24,20,8,,"0,00",13,4,9,0,,,,,2,0,1,,,2,2,2,,1,0,0,1,,23,8,,21,1,,0,,,1,,,,,,,
+Public Interface,"com.alphalog.geocoder.security.service.UserService",0,,5,2,3,0,2,2,0,,"0,00",0,0,0,0,0,1,1,1,,0,0,,,1,0,1,1,1,0,0,0,,2,0,,1,0,0,0,0,0,0,,,,,,,
+Abstract Method,"com.alphalog.geocoder.security.service.UserService.create",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,0,1,,,0,,,0,,,,,,,
+Public Class,"com.alphalog.geocoder.security.service.UserServiceImpl",1,,24,8,16,0,11,7,8,,"0,00",13,4,9,0,2,10,8,0,,0,1,,,1,2,1,13,0,0,0,1,,10,8,,9,1,1,0,0,0,1,,,,,,,
+Public Method,"com.alphalog.geocoder.security.service.UserServiceImpl.create",,,13,4,9,0,7,3,6,1,"0,00",,,,,,,,,,,,,,,,,,,,,,4,4,6,8,6,,,0,,,1,,,,,,,
+Package,"com.alphalog.geocoder.security.service.security",2,1,29,8,21,0,15,12,4,,"0,00",11,3,8,0,,,,,1,0,0,,,1,1,1,,0,0,0,1,,15,4,,12,2,,1,,,2,,,,,,,
+Public Class,"com.alphalog.geocoder.security.service.security.MongoUserDetailsService",2,,18,5,13,0,7,4,4,,"0,00",11,3,8,0,2,8,6,0,,0,0,,,1,1,1,13,0,0,0,1,,7,4,,4,2,1,1,0,0,2,,,,,,,
+Public Method,"com.alphalog.geocoder.security.service.security.MongoUserDetailsService.loadUserByUsername",,,11,3,8,0,5,2,4,2,"0,00",,,,,,,,,,,,,,,,,,,,,,2,3,4,2,3,,,1,,,2,,,,,,,
+Unknown Annotation,"com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"environment.prod.ts",0,,3,0,3,0,1,1,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"environment.ts",0,,8,1,3,4,1,1,0,0,"1,33",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+Public Method,"exports.config.beforeLaunch",,,5,0,5,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"exports.config.jasmineNodeOpts.print",,,1,0,1,0,0,0,0,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Public Method,"exports.config.onPrepare",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+File,"home.component.css",0,,1,0,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"home.component.html",0,,44,9,0,1,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"home.component.spec.ts",1,,25,5,20,0,13,4,9,1,"0,00",21,3,18,0,,,,,0,,,5,4,,,,,,,,,,,,,,1,,0,,,5,,,,0,0,"0,00","0,00"
+File,"home.component.ts",1,,41,8,30,3,13,11,3,0,"0,10",4,0,3,1,,,,,1,,,6,6,,,,,,,,,,,,,,1,,0,,,6,,,,0,0,"0,00","0,00"
+File,"index.html",0,,15,1,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+Unknown Annotation,"javax.validation.Valid",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"karma.conf.js",2,,44,1,41,3,2,0,2,1,"0,07",41,0,41,1,,,,,0,,,2,1,,,,,,,,,,,,,,2,,0,,,3,,,,0,0,"0,00","0,00"
+File,"login.component.css",0,,71,0,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"login.component.html",0,,71,10,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"login.component.spec.ts",1,,25,5,20,0,13,4,9,1,"0,00",21,3,18,0,,,,,0,,,5,4,,,,,,,,,,,,,,1,,0,,,5,,,,0,0,"0,00","0,00"
+File,"login.component.ts",1,,36,9,27,0,16,12,4,0,"0,00",3,0,3,0,,,,,1,,,6,6,,,,,,,,,,,,,,1,,0,,,6,,,,0,0,"0,00","0,00"
+File,"main.ts",2,,12,4,8,0,7,4,3,2,"0,00",0,0,0,0,,,,,0,,,1,0,,,,,,,,,,,,,,2,,1,,,2,,,,0,0,"0,00","0,00"
+Public Method,"module.exports",,,127,14,113,0,25,0,25,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,7,,,,,,,
+Public Method,"module.exports",,,41,0,41,1,1,0,1,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,2,,,,,,,
+Unnamed Function,"module.exports.(unnamed_function_1)",,,3,0,3,0,1,0,1,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"module.exports.(unnamed_function_2)",,,13,2,11,0,5,0,5,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+Unnamed Function,"module.exports.(unnamed_function_3)",,,3,0,3,0,2,0,2,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,1,,,,,,,
+Unnamed Function,"module.exports.(unnamed_function_4)",,,16,3,13,0,4,0,4,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,2,,,,,,,
+File,"navigationbar.component.css",0,,1,0,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"navigationbar.component.html",0,,26,1,0,6,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"navigationbar.component.spec.ts",1,,25,5,20,0,13,4,9,1,"0,00",21,3,18,0,,,,,0,,,5,4,,,,,,,,,,,,,,1,,0,,,5,,,,0,0,"0,00","0,00"
+File,"navigationbar.component.ts",1,,28,8,20,0,10,8,2,0,"0,00",3,0,2,0,,,,,1,,,5,5,,,,,,,,,,,,,,1,,0,,,5,,,,0,0,"0,00","0,00"
+Unknown Annotation,"org.junit.Test",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.junit.runner.RunWith",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.beans.factory.annotation.Autowired",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.boot.autoconfigure.SpringBootApplication",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.boot.context.properties.ConfigurationProperties",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.boot.test.context.SpringBootTest",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.client.discovery.EnableDiscoveryClient",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.config.server.EnableConfigServer",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.eureka.EnableEurekaClient",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.eureka.server.EnableEurekaServer",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.hystrix.EnableHystrix",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.turbine.stream.EnableTurbineStream",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.zuul.EnableZuulProxy",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.context.annotation.Bean",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.context.annotation.ComponentScan",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.context.annotation.Configuration",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.context.annotation.Import",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.core.annotation.Order",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.data.annotation.Id",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.data.mongodb.core.mapping.Document",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.stereotype.Component",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.stereotype.Repository",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.stereotype.Service",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.RequestBody",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.RequestMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.RequestParam",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.RestController",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"polyfills.ts",0,,68,15,3,51,3,3,0,0,"17,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,128,9,119,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,58,3,55,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,62,6,56,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,108,8,100,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,110,8,102,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,74,10,64,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,21,3,17,1,0,0,0,0,"0,06",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,65,1,64,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"protractor.conf.js",1,,30,3,25,2,5,2,4,1,"0,08",3,0,3,0,,,,,0,,,4,3,,,,,,,,,,,,,,1,,0,,,4,,,,0,0,"0,00","0,00"
+File,"selective-preload-strategy.ts",2,,23,4,17,2,12,7,5,0,"0,12",13,2,9,2,,,,,1,,,1,1,,,,,,,,,,,,,,2,,1,,,2,,,,0,0,"0,00","0,00"
+File,"session.ts",0,,41,10,6,25,5,5,0,0,"4,17",0,0,0,0,,,,,1,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"styles.css",0,,1,0,0,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"test.ts",1,,32,4,21,7,15,11,5,1,"0,33",1,0,1,0,,,,,0,,,2,1,,,,,,,,,,,,,,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"typings.d.ts",0,,5,0,4,1,3,3,0,0,"0,25",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"window.service.spec.ts",1,,15,3,12,0,7,2,5,1,"0,00",11,1,10,0,,,,,0,,,4,3,,,,,,,,,,,,,,1,,0,,,4,,,,0,0,"0,00","0,00"
+File,"window.service.ts",2,,18,5,13,0,8,5,3,0,"0,00",6,2,5,0,,,,,1,,,2,2,,,,,,,,,,,,,,2,,1,,,3,,,,0,0,"0,00","0,00"

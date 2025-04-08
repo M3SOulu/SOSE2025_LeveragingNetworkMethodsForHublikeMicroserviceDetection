@@ -1,0 +1,195 @@
+Kind,Name,AvgCyclomatic,CountDeclFile,CountLine,CountLineBlank,CountLineCode,CountLineComment,CountStmt,CountStmtDecl,CountStmtExe,Cyclomatic,RatioCommentToCode,AvgCountLine,AvgCountLineBlank,AvgCountLineCode,AvgCountLineComment,CountClassBase,CountClassCoupled,CountClassCoupledModified,CountClassDerived,CountDeclClass,CountDeclClassMethod,CountDeclClassVariable,CountDeclExecutableUnit,CountDeclFunction,CountDeclInstanceMethod,CountDeclInstanceVariable,CountDeclMethod,CountDeclMethodAll,CountDeclMethodDefault,CountDeclMethodPrivate,CountDeclMethodProtected,CountDeclMethodPublic,CountInput,CountLineCodeDecl,CountLineCodeExe,CountOutput,CountSemicolon,MaxCyclomatic,MaxInheritanceTree,MaxNesting,PercentLackOfCohesion,PercentLackOfCohesionModified,SumCyclomatic,CountDeclInstanceVariablePrivate,CountDeclInstanceVariableProtected,CountDeclInstanceVariablePublic,CountCCViol,CountCCViolType,CCViolDensityLine,CCViolDensityCode
+File,"Account.java",0,,46,8,33,5,19,19,0,,"0,15",0,0,0,0,,,,,1,0,0,0,0,0,7,0,,0,0,0,0,,32,0,,18,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"AccountRepository.java",0,,17,7,10,0,8,8,0,,"0,00",0,0,0,0,,,,,1,0,0,0,3,3,0,3,,3,0,0,0,,9,0,,7,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"AccountServiceApplication.java",1,,37,9,23,5,15,13,3,,"0,22",5,0,5,0,,,,,1,1,0,2,2,1,1,2,,0,0,0,2,,18,4,,12,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"AccountServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"ConfigServiceApplication.java",1,,21,3,13,5,8,7,1,,"0,38",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,10,1,,6,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"ConfigServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"Customer.java",1,,52,8,39,5,22,21,1,,"0,13",3,0,3,0,,,,,1,0,0,1,1,1,11,1,,0,0,0,1,,36,1,,20,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"CustomerRepository.java",0,,19,5,9,5,6,6,0,,"0,56",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,1,0,0,0,,8,0,,5,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"CustomerServiceApplication.java",1,,19,3,11,5,7,6,1,,"0,45",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"CustomerServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"DiscoveryServiceApplication.java",1,,19,3,11,5,7,6,1,,"0,45",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"DiscoveryServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"FoodTrayController.java",1,,64,13,46,5,31,25,10,,"0,11",5,0,5,0,,,,,1,0,0,5,5,5,3,5,,0,0,0,5,,34,10,,25,1,,0,,,5,,,,0,0,"0,00","0,00"
+File,"FoodTrayServiceApplication.java",1,,28,4,23,1,14,13,1,,"0,04",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,20,1,,12,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"FoodTrayServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"Item.java",1,,27,6,16,5,10,7,3,,"0,31",4,0,4,0,,,,,1,0,0,2,2,2,2,2,,0,0,0,2,,10,3,,7,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"Item.java",1,,42,9,28,5,18,14,4,,"0,18",4,0,4,0,,,,,1,0,0,2,2,2,3,2,,0,0,0,2,,21,4,,15,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"ItemRepository.java",0,,21,6,10,5,8,8,0,,"0,50",0,0,0,0,,,,,1,0,0,0,2,2,0,2,,2,0,0,0,,9,0,,7,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"ItemServiceApplication.java",1,,55,8,42,5,35,24,21,,"0,12",9,0,9,0,,,,,1,1,0,3,3,1,1,2,,0,0,0,2,,28,21,,32,1,,0,,,3,,,,0,0,"0,00","0,00"
+File,"ItemServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"ItemServiceFallback.java",1,,21,5,10,6,6,5,1,,"0,60",4,0,4,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,7,1,,4,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"ItemServiceRepository.java",0,,20,4,11,5,8,8,0,,"0,45",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,1,0,0,0,,10,0,,7,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"Price.java",1,,28,6,17,5,11,7,4,,"0,29",4,0,4,0,,,,,1,0,0,2,2,2,2,2,,0,0,0,2,,10,4,,8,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"Price.java",1,,40,7,28,5,18,14,4,,"0,18",4,0,4,0,,,,,1,0,0,2,2,2,3,2,,0,0,0,2,,21,4,,15,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"PriceRepository.java",0,,17,4,8,5,6,6,0,,"0,63",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,1,0,0,0,,7,0,,5,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"PriceServiceApplication.java",1,,29,7,22,0,15,13,3,,"0,00",4,0,4,0,,,,,1,1,0,2,2,1,1,2,,0,0,0,2,,17,3,,12,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"PriceServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"PriceServiceFallback.java",1,,18,4,8,6,5,4,1,,"0,75",4,0,4,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,5,1,,3,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"PriceServiceRepository.java",0,,20,4,11,5,8,8,0,,"0,45",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,1,0,0,0,,10,0,,7,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"Store.java",1,,76,17,53,6,35,22,13,,"0,11",3,0,3,0,,,,,1,0,0,10,10,10,4,10,,0,0,0,10,,29,13,,24,1,,0,,,10,,,,0,0,"0,00","0,00"
+File,"StoreRepository.java",0,,18,4,9,5,6,6,0,,"0,56",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,1,0,0,0,,8,0,,5,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"StoreServiceApplication.java",1,,19,3,11,5,7,6,1,,"0,45",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"StoreServiceApplicationTests.java",1,,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"TrayItem.java",1,,36,10,21,5,14,9,5,,"0,24",3,0,3,0,,,,,1,0,0,4,4,4,2,4,,0,0,0,4,,11,5,,9,1,,0,,,4,,,,0,0,"0,00","0,00"
+File,"TrayItemService.java",0,,9,4,5,0,3,3,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,0,0,,0,0,0,0,,4,0,,2,0,,0,,,0,,,,0,0,"0,00","0,00"
+Package,"com",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Unknown Annotation,"com.fasterxml.jackson.annotation.JsonIgnore",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"com.fasterxml.jackson.annotation.JsonProperty",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Package,"com.github",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.github.joffry",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.github.joffry.ferrater",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.github.joffry.ferrater.configservice",1,1,21,3,13,5,8,7,1,,"0,38",3,0,3,0,,,,,1,1,0,,,0,0,1,,0,0,0,1,,10,1,,6,1,,0,,,1,,,,,,,
+Public Class,"com.github.joffry.ferrater.configservice.ConfigServiceApplication",1,,14,1,8,5,3,2,1,,"0,63",3,0,3,0,1,6,4,0,,1,0,,,0,0,1,13,0,0,0,1,,5,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.github.joffry.ferrater.configservice.ConfigServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.github.joffry.ferrater.discoveryservice",1,2,35,7,23,5,14,13,1,,"0,22",3,0,3,0,,,,,2,1,0,,,1,0,2,,0,0,0,2,,18,1,,10,1,,0,,,2,,,,,,,
+Public Class,"com.github.joffry.ferrater.discoveryservice.DiscoveryServiceApplication",1,,13,1,7,5,3,2,1,,"0,71",3,0,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.github.joffry.ferrater.discoveryservice.DiscoveryServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.github.joffry.ferrater.discoveryservice.DiscoveryServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffry.ferrater.discoveryservice.DiscoveryServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.github.joffryferrater.accountservice",1,2,53,13,35,5,22,20,3,,"0,14",4,0,4,0,,,,,2,1,0,,,2,1,3,,0,0,0,3,,28,4,,17,1,,0,,,3,,,,,,,
+Public Class,"com.github.joffryferrater.accountservice.AccountServiceApplication",1,,24,4,15,5,7,5,3,,"0,33",5,0,5,0,1,9,7,0,,1,0,,,1,1,2,14,0,0,0,2,,10,4,,4,1,1,0,50,50,2,,,,,,,
+Public Method,"com.github.joffryferrater.accountservice.AccountServiceApplication.init",,,6,0,6,0,3,2,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,4,3,1,2,,,0,,,1,,,,,,,
+Public Static Method,"com.github.joffryferrater.accountservice.AccountServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.accountservice.AccountServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.accountservice.AccountServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.accountservice.models",0,2,63,15,43,5,27,27,0,,"0,12",0,0,0,0,,,,,2,0,0,,,3,7,3,,3,0,0,0,,41,0,,25,0,,0,,,0,,,,,,,
+Public Class,"com.github.joffryferrater.accountservice.models.Account",0,,31,4,22,5,8,8,0,,"0,23",0,0,0,0,1,12,10,0,,0,0,,,0,7,0,12,0,0,0,0,,21,0,,7,0,1,0,0,0,0,,,,,,,
+Public Interface,"com.github.joffryferrater.accountservice.models.AccountRepository",0,,8,3,5,0,4,4,0,,"0,00",0,0,0,0,1,4,3,0,,0,0,,,3,0,3,15,3,0,0,0,,5,0,,3,0,2,0,0,0,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.accountservice.models.AccountRepository.findByEmail",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.accountservice.models.AccountRepository.findByFirstName",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.accountservice.models.AccountRepository.findByLastName",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Package,"com.github.joffryferrater.configservice",1,1,16,4,12,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,,,1,0,1,,0,0,0,1,,10,0,,5,1,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.configservice.ConfigServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.configservice.ConfigServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.customerservice",1,2,35,7,23,5,14,13,1,,"0,22",3,0,3,0,,,,,2,1,0,,,1,0,2,,0,0,0,2,,18,1,,10,1,,0,,,2,,,,,,,
+Public Class,"com.github.joffryferrater.customerservice.CustomerServiceApplication",1,,13,1,7,5,3,2,1,,"0,71",3,0,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.github.joffryferrater.customerservice.CustomerServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.customerservice.CustomerServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.customerservice.CustomerServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.customerservice.models",1,2,71,13,48,10,28,27,1,,"0,21",3,0,3,0,,,,,2,0,0,,,2,11,2,,1,0,0,1,,44,1,,25,1,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.customerservice.models.Customer",1,,40,4,31,5,14,13,1,,"0,16",3,0,3,0,1,9,7,0,,0,0,,,1,11,1,13,0,0,0,1,,28,1,,12,1,1,0,100,100,1,,,,,,,
+Public Constructor,"com.github.joffryferrater.customerservice.models.Customer.Customer",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,1,2,1,,,0,,,1,,,,,,,
+Public Interface,"com.github.joffryferrater.customerservice.models.CustomerRepository",0,,7,2,5,0,2,2,0,,"0,00",0,0,0,0,1,4,3,0,,0,0,,,1,0,1,13,1,0,0,0,,4,0,,1,0,2,0,0,0,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.customerservice.models.CustomerRepository.findById",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Package,"com.github.joffryferrater.foodtrayservice",1,3,108,21,81,6,52,45,11,,"0,07",4,0,4,0,,,,,3,1,0,,,6,3,7,,0,0,0,7,,64,11,,42,1,,0,,,7,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.FoodTrayController",1,,46,8,33,5,18,12,10,,"0,15",5,0,5,0,1,13,10,0,,0,0,,,5,3,5,17,0,0,0,5,,21,10,,12,1,1,0,60,60,5,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.FoodTrayController.addFoodTrayItem",,,5,0,5,0,3,1,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,4,2,2,2,2,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.FoodTrayController.getItem",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,4,2,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.FoodTrayController.getItems",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.FoodTrayController.getPrice",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,4,2,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.FoodTrayController.getTrayItem",,,7,0,7,0,5,4,4,1,"0,00",,,,,,,,,,,,,,,,,,,,,,5,5,4,6,4,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.FoodTrayServiceApplication",1,,14,1,12,1,3,2,1,,"0,08",3,0,3,0,1,10,8,0,,1,0,,,0,0,1,13,0,0,0,1,,9,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.github.joffryferrater.foodtrayservice.FoodTrayServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.FoodTrayServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.FoodTrayServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.foodtrayservice.domain",1,3,91,22,54,15,35,23,12,,"0,28",4,0,4,0,,,,,3,0,0,,,8,6,8,,0,0,0,8,,31,12,,24,1,,0,,,8,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.domain.Item",1,,22,3,14,5,8,5,3,,"0,36",4,0,4,0,1,3,2,0,,0,0,,,2,2,2,14,0,0,0,2,,8,3,,5,1,1,0,50,50,2,,,,,,,
+Public Constructor,"com.github.joffryferrater.foodtrayservice.domain.Item.Item",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,1,2,1,,,0,,,1,,,,,,,
+Public Constructor,"com.github.joffryferrater.foodtrayservice.domain.Item.Item",,,4,0,4,0,3,1,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,1,2,3,2,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.domain.Price",1,,24,4,15,5,9,5,4,,"0,33",4,0,4,0,1,3,2,0,,0,0,,,2,2,2,14,0,0,0,2,,8,4,,6,1,1,0,50,50,2,,,,,,,
+Public Constructor,"com.github.joffryferrater.foodtrayservice.domain.Price.Price",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,2,1,,,0,,,1,,,,,,,
+Public Constructor,"com.github.joffryferrater.foodtrayservice.domain.Price.Price",,,5,0,5,0,4,1,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,1,3,4,3,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.domain.TrayItem",1,,31,7,19,5,12,7,5,,"0,26",3,0,3,0,1,2,1,0,,0,0,,,4,2,4,16,0,0,0,4,,9,5,,7,1,1,0,50,50,4,,,,,,,
+Public Constructor,"com.github.joffryferrater.foodtrayservice.domain.TrayItem.TrayItem",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,1,2,1,,,0,,,1,,,,,,,
+Public Constructor,"com.github.joffryferrater.foodtrayservice.domain.TrayItem.TrayItem",,,4,0,4,0,3,1,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,1,2,3,2,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.domain.TrayItem.getAmount",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.domain.TrayItem.getName",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.foodtrayservice.repository",1,4,79,17,40,22,27,25,2,,"0,55",4,0,4,0,,,,,4,0,0,,,4,0,4,,2,0,0,2,,32,2,,21,1,,0,,,2,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.repository.ItemServiceFallback",1,,15,2,7,6,3,2,1,,"0,86",4,0,4,0,2,4,2,0,,0,0,,,1,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.repository.ItemServiceFallback.findByItemCode",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,2,1,,,0,,,1,,,,,,,
+Public Interface,"com.github.joffryferrater.foodtrayservice.repository.ItemServiceRepository",0,,6,1,5,0,2,2,0,,"0,00",0,0,0,0,0,6,5,1,,0,0,,,1,0,1,1,1,0,0,0,,4,0,,1,0,0,0,0,0,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.foodtrayservice.repository.ItemServiceRepository.findByItemCode",,,2,0,2,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,4,2,0,1,1,,,0,,,0,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.repository.PriceServiceFallback",1,,14,2,6,6,3,2,1,,"1,00",4,0,4,0,2,3,1,0,,0,0,,,1,0,1,13,0,0,0,1,,3,1,,1,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.foodtrayservice.repository.PriceServiceFallback.findByItemCode",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,1,2,1,,,0,,,1,,,,,,,
+Public Interface,"com.github.joffryferrater.foodtrayservice.repository.PriceServiceRepository",0,,6,1,5,0,2,2,0,,"0,00",0,0,0,0,0,6,5,1,,0,0,,,1,0,1,1,1,0,0,0,,4,0,,1,0,0,0,0,0,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.foodtrayservice.repository.PriceServiceRepository.findByItemCode",,,2,0,2,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,4,2,0,1,1,,,0,,,0,,,,,,,
+Package,"com.github.joffryferrater.foodtrayservice.service",0,1,9,4,5,0,3,3,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,0,0,,0,0,0,0,,4,0,,2,0,,0,,,0,,,,,,,
+Public Class,"com.github.joffryferrater.foodtrayservice.service.TrayItemService",0,,5,2,3,0,1,1,0,,"0,00",0,0,0,0,1,1,1,0,,0,0,,,0,0,0,12,0,0,0,0,,2,0,,0,0,1,0,0,0,0,,,,,,,
+Package,"com.github.joffryferrater.itemservice",1,2,71,12,54,5,42,31,21,,"0,09",8,0,8,0,,,,,2,1,0,,,2,1,3,,0,0,0,3,,38,21,,37,1,,0,,,4,,,,,,,
+Public Class,"com.github.joffryferrater.itemservice.ItemServiceApplication",1,,40,3,32,5,25,14,21,,"0,16",13,0,13,0,1,12,7,0,,1,0,,,1,1,2,14,0,0,0,2,,18,21,,22,1,1,0,100,100,3,,,,,,,
+Public Method,"com.github.joffryferrater.itemservice.ItemServiceApplication.init",,,23,0,23,0,21,11,20,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,12,20,4,20,,,0,,,2,,,,,,,
+Lambda Method,"com.github.joffryferrater.itemservice.ItemServiceApplication.init.(lambda_expr_1)",,,1,0,1,0,0,0,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,0,1,2,0,,,0,,,1,,,,,,,
+Public Static Method,"com.github.joffryferrater.itemservice.ItemServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.itemservice.ItemServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.itemservice.ItemServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.itemservice.models",1,2,63,15,38,10,26,22,4,,"0,26",4,0,4,0,,,,,2,0,0,,,4,3,4,,2,0,0,2,,30,4,,22,1,,0,,,2,,,,,,,
+Public Class,"com.github.joffryferrater.itemservice.models.Item",1,,29,4,20,5,10,6,4,,"0,25",4,0,4,0,1,9,7,0,,0,0,,,2,3,2,14,0,0,0,2,,13,4,,7,1,1,0,67,67,2,,,,,,,
+Public Constructor,"com.github.joffryferrater.itemservice.models.Item.Item",,,5,0,5,0,4,1,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,1,3,4,3,,,0,,,1,,,,,,,
+Public Constructor,"com.github.joffryferrater.itemservice.models.Item.Item",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,2,1,,,0,,,1,,,,,,,
+Public Interface,"com.github.joffryferrater.itemservice.models.ItemRepository",0,,7,2,5,0,3,3,0,,"0,00",0,0,0,0,1,5,3,0,,0,0,,,2,0,2,14,2,0,0,0,,4,0,,2,0,2,0,0,0,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.itemservice.models.ItemRepository.findByItemCode",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.itemservice.models.ItemRepository.findByName",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Package,"com.github.joffryferrater.priceservice",1,2,45,11,34,0,22,20,3,,"0,00",4,0,4,0,,,,,2,1,0,,,2,1,3,,0,0,0,3,,27,3,,17,1,,0,,,3,,,,,,,
+Public Class,"com.github.joffryferrater.priceservice.PriceServiceApplication",1,,17,3,14,0,7,5,3,,"0,00",4,0,4,0,1,9,7,0,,1,0,,,1,1,2,14,0,0,0,2,,9,3,,4,1,1,0,50,50,2,,,,,,,
+Public Method,"com.github.joffryferrater.priceservice.PriceServiceApplication.init",,,5,0,5,0,3,2,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,3,2,2,2,,,0,,,1,,,,,,,
+Public Static Method,"com.github.joffryferrater.priceservice.PriceServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.priceservice.PriceServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.priceservice.PriceServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.priceservice.models",1,2,57,11,36,10,24,20,4,,"0,28",4,0,4,0,,,,,2,0,0,,,3,3,3,,1,0,0,2,,28,4,,20,1,,0,,,2,,,,,,,
+Public Class,"com.github.joffryferrater.priceservice.models.Price",1,,28,3,20,5,10,6,4,,"0,25",4,0,4,0,1,9,7,0,,0,0,,,2,3,2,14,0,0,0,2,,13,4,,7,1,1,0,67,67,2,,,,,,,
+Public Constructor,"com.github.joffryferrater.priceservice.models.Price.Price",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,2,1,,,0,,,1,,,,,,,
+Public Constructor,"com.github.joffryferrater.priceservice.models.Price.Price",,,5,0,5,0,4,1,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,1,3,4,3,,,0,,,1,,,,,,,
+Public Interface,"com.github.joffryferrater.priceservice.models.PriceRepository",0,,6,2,4,0,2,2,0,,"0,00",0,0,0,0,1,4,3,0,,0,0,,,1,0,1,13,1,0,0,0,,3,0,,1,0,2,0,0,0,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.priceservice.models.PriceRepository.findByItemCode",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Package,"com.github.joffryferrater.storeservice",1,2,35,7,23,5,14,13,1,,"0,22",3,0,3,0,,,,,2,1,0,,,1,0,2,,0,0,0,2,,18,1,,10,1,,0,,,2,,,,,,,
+Public Class,"com.github.joffryferrater.storeservice.StoreServiceApplication",1,,13,1,7,5,3,2,1,,"0,71",3,0,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.github.joffryferrater.storeservice.StoreServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Class,"com.github.joffryferrater.storeservice.StoreServiceApplicationTests",1,,9,2,7,0,2,2,0,,"0,00",3,0,3,0,1,3,3,0,,0,0,,,1,0,1,13,0,0,0,1,,5,0,,0,1,1,0,0,0,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.StoreServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.github.joffryferrater.storeservice.models",1,2,94,21,62,11,41,28,13,,"0,18",3,0,3,0,,,,,2,0,0,,,11,4,11,,1,0,0,10,,37,13,,29,1,,0,,,10,,,,,,,
+Public Class,"com.github.joffryferrater.storeservice.models.Store",1,,66,14,46,6,28,15,13,,"0,13",3,0,3,0,1,8,6,0,,0,0,,,10,4,10,22,0,0,0,10,,22,13,,17,1,1,0,73,73,10,,,,,,,
+Public Constructor,"com.github.joffryferrater.storeservice.models.Store.Store",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,2,1,,,0,,,1,,,,,,,
+Public Constructor,"com.github.joffryferrater.storeservice.models.Store.Store",,,6,0,6,0,5,1,4,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,1,4,5,4,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.getBranchName",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.getId",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.getLocation",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.getStoreName",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.setBranchName",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.setId",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.setLocation",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.github.joffryferrater.storeservice.models.Store.setStoreName",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Public Interface,"com.github.joffryferrater.storeservice.models.StoreRepository",0,,6,1,5,0,2,2,0,,"0,00",0,0,0,0,1,4,3,0,,0,0,,,1,0,1,13,1,0,0,0,,4,0,,1,0,2,0,0,0,0,,,,,,,
+Abstract Method,"com.github.joffryferrater.storeservice.models.StoreRepository.findByStoreName",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Unknown Annotation,"javax.annotation.PostConstruct",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"javax.persistence.Entity",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"javax.persistence.GeneratedValue",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"javax.persistence.Id",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"javax.persistence.Table",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"javax.transaction.Transactional",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"javax.validation.constraints.NotNull",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"lombok.Data",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"lombok.Getter",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"lombok.RequiredArgsConstructor",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.junit.Test",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.junit.runner.RunWith",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.beans.factory.annotation.Autowired",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.boot.autoconfigure.SpringBootApplication",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.boot.test.context.SpringBootTest",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.client.discovery.EnableDiscoveryClient",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.config.server.EnableConfigServer",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.eureka.server.EnableEurekaServer",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.feign.EnableFeignClients",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.feign.FeignClient",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.hystrix.EnableHystrix",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.context.annotation.ComponentScan",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.data.repository.query.Param",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.data.rest.core.annotation.RepositoryRestResource",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.stereotype.Component",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.stereotype.Service",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.PathVariable",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.RequestMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.RestController",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"pom.xml",0,,71,8,63,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,80,7,73,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,82,11,71,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,91,11,80,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,96,10,86,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,84,9,75,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,66,7,59,1,0,0,0,0,"0,02",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,85,10,75,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,85,10,75,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"

@@ -1,0 +1,217 @@
+Kind,Name,AvgCyclomatic,CountDeclFile,CountLine,CountLineBlank,CountLineCode,CountLineComment,CountStmt,CountStmtDecl,CountStmtExe,Cyclomatic,RatioCommentToCode,AvgCountLine,AvgCountLineBlank,AvgCountLineCode,AvgCountLineComment,CountClassBase,CountClassCoupled,CountClassCoupledModified,CountClassDerived,CountDeclClass,CountDeclClassMethod,CountDeclClassVariable,CountDeclExecutableUnit,CountDeclFunction,CountDeclInstanceMethod,CountDeclInstanceVariable,CountDeclMethod,CountDeclMethodAll,CountDeclMethodDefault,CountDeclMethodPrivate,CountDeclMethodProtected,CountDeclMethodPublic,CountInput,CountLineCodeDecl,CountLineCodeExe,CountOutput,CountSemicolon,MaxCyclomatic,MaxInheritanceTree,MaxNesting,PercentLackOfCohesion,PercentLackOfCohesionModified,SumCyclomatic,CountDeclInstanceVariablePrivate,CountDeclInstanceVariableProtected,CountDeclInstanceVariablePublic,CountCCViol,CountCCViolType,CCViolDensityLine,CCViolDensityCode
+Package,"(Unnamed_Package)",2,1,40,6,27,10,25,14,13,,"0,37",37,6,24,10,,,,,1,1,0,,,0,0,1,,0,0,0,1,,14,21,,22,2,,1,,,2,,,,,,,
+Unknown Annotation,"AllArgsConstructor",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"ApiResponse.java",0,,15,2,13,0,7,7,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,3,0,,0,0,0,0,,12,0,,6,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"ApigatewayApplication.java",1,,13,4,9,0,6,5,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,6,1,,4,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"ApigatewayApplicationTests.java",1,,13,4,9,0,5,5,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,1,0,0,0,,7,0,,3,1,,0,,,1,,,,0,0,"0,00","0,00"
+Unknown Annotation,"Builder",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"Column",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"Entity",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"GetMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"Getter",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"GlobalExceptionHandler.java",1,,24,5,19,0,14,10,5,,"0,00",10,1,9,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,12,5,,12,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"GlobalExceptionHandler.java",1,,19,3,16,0,11,10,3,,"0,00",7,0,7,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,12,3,,9,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"Hotel.java",0,,30,5,25,0,12,12,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,4,0,,0,0,0,0,,24,0,,11,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"Hotel.java",0,,25,3,22,0,12,12,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,4,0,,0,0,0,0,,21,0,,11,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"HotelController.java",1,,41,8,32,1,17,14,3,,"0,03",5,0,5,0,,,,,1,0,0,3,3,3,1,3,,0,0,0,3,,20,4,,13,1,,0,,,3,,,,0,0,"0,00","0,00"
+File,"HotelRepository.java",0,,8,2,6,0,4,4,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,0,0,,0,0,0,0,,4,0,,3,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"HotelService.java",0,,15,7,8,0,7,7,0,,"0,00",0,0,0,0,,,,,1,0,0,0,3,3,0,3,,3,0,0,0,,7,0,,6,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"HotelService.java",0,,13,3,10,0,7,7,0,,"0,00",0,0,0,0,,,,,1,0,0,0,1,1,0,1,,1,0,0,0,,9,0,,6,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"HotelServiceApplication.java",1,,13,4,9,0,6,5,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,6,1,,4,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"HotelServiceApplicationTests.java",1,,13,4,9,0,5,5,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,1,0,0,0,,7,0,,3,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"HotelServiceImpl.java",1,,34,6,28,0,19,15,5,,"0,00",4,0,4,0,,,,,1,0,0,4,4,3,1,3,,0,0,0,3,,20,5,,15,1,,0,,,4,,,,0,0,"0,00","0,00"
+Unknown Annotation,"Id",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Public Class,"Main",2,,38,6,25,10,24,13,13,,"0,40",37,6,24,10,1,6,0,0,,1,0,,,0,0,1,13,0,0,0,1,,13,21,,21,2,1,1,0,0,2,,,,,,,
+File,"Main.java",2,,40,6,27,10,25,14,13,,"0,37",37,6,24,10,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,14,21,,22,2,,1,,,2,,,,0,0,"0,00","0,00"
+Public Static Method,"Main.main",,,37,6,24,10,23,12,13,2,"0,42",,,,,,,,,,,,,,,,,,,,,,1,12,21,4,21,,,1,,,2,,,,,,,
+File,"MyConfig.java",1,,17,3,14,0,8,7,1,,"0,00",6,0,6,0,,,,,1,0,0,1,1,1,0,1,,0,0,0,1,,10,1,,6,1,,0,,,1,,,,0,0,"0,00","0,00"
+Unknown Annotation,"NoArgsConstructor",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"PathVariable",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"PostMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"Rating.java",0,,23,5,18,0,10,10,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,5,0,,0,0,0,0,,17,0,,9,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"Rating.java",0,,21,6,15,0,9,9,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,6,0,,0,0,0,0,,14,0,,8,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"RatingController.java",1,,42,8,34,0,18,14,4,,"0,00",5,0,5,0,,,,,1,0,0,4,4,4,1,4,,0,0,0,4,,21,4,,13,1,,0,,,4,,,,0,0,"0,00","0,00"
+File,"RatingRepository.java",0,,15,5,9,1,7,7,0,,"0,11",0,0,0,0,,,,,1,0,0,0,2,2,0,2,,2,0,0,0,,7,0,,6,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"RatingService.java",0,,19,8,11,0,9,9,0,,"0,00",0,0,0,0,,,,,1,0,0,0,4,4,0,4,,4,0,0,0,,9,0,,8,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"RatingService.java",0,,23,5,18,0,12,12,0,,"0,00",0,0,0,0,,,,,1,0,0,0,3,3,0,3,,1,0,0,2,,17,0,,11,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"RatingServiceApplication.java",1,,15,4,11,0,7,6,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"RatingServiceApplicationTests.java",1,,17,6,11,0,7,7,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,1,0,0,0,,9,0,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"RatingServiceImpl.java",1,,36,8,28,0,17,13,4,,"0,00",4,0,4,0,,,,,1,0,0,4,4,4,1,4,,0,0,0,4,,19,4,,12,1,,0,,,4,,,,0,0,"0,00","0,00"
+Unknown Annotation,"RequestBody",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"RequestMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"ResourceNotFoundException.java",1,,12,2,10,0,6,4,2,,"0,00",4,0,4,0,,,,,1,0,0,2,2,2,0,2,,0,0,0,2,,4,2,,3,1,,0,,,2,,,,0,0,"0,00","0,00"
+File,"ResourceNotFoundException.java",1,,14,3,11,0,6,4,2,,"0,00",4,0,4,0,,,,,1,0,0,2,2,2,0,2,,0,0,0,2,,4,2,,3,1,,0,,,2,,,,0,0,"0,00","0,00"
+Unknown Annotation,"RestController",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"ServiceRegistryApplication.java",1,,15,4,11,0,7,6,1,,"0,00",3,0,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,8,1,,5,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"ServiceRegistryApplicationTests.java",1,,13,4,9,0,5,5,0,,"0,00",3,0,3,0,,,,,1,0,0,1,1,1,0,1,,1,0,0,0,,7,0,,3,1,,0,,,1,,,,0,0,"0,00","0,00"
+Unknown Annotation,"Setter",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"Table",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"Transient",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"User.java",0,,29,5,24,0,10,10,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,5,0,,0,0,0,0,,23,0,,9,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"UserController.java",1,,38,6,32,0,19,16,6,,"0,00",6,0,6,0,,,,,1,0,0,3,3,3,1,3,,0,0,0,3,,22,6,,15,1,,0,,,3,,,,0,0,"0,00","0,00"
+File,"UserRepository.java",0,,9,3,6,0,4,4,0,,"0,00",0,0,0,0,,,,,1,0,0,0,0,0,0,0,,0,0,0,0,,4,0,,3,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"UserServericeImp.java",1,,82,16,62,5,46,35,18,,"0,08",7,1,6,1,,,,,1,0,0,7,7,5,4,5,,0,0,0,5,,45,19,,40,1,,0,,,7,,,,0,0,"0,00","0,00"
+File,"UserService.java",0,,19,9,10,0,9,9,0,,"0,00",0,0,0,0,,,,,1,0,0,0,5,5,0,5,,5,0,0,0,,9,0,,8,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"UserServiceApplication.java",1,,17,5,12,0,8,7,1,,"0,00",4,1,3,0,,,,,1,1,0,1,1,0,0,1,,0,0,0,1,,9,1,,6,1,,0,,,1,,,,0,0,"0,00","0,00"
+File,"UserServiceApplicationTests.java",1,,27,6,21,0,13,12,3,,"0,00",5,0,5,0,,,,,1,0,0,2,2,2,1,2,,2,0,0,0,,16,3,,10,1,,0,,,2,,,,0,0,"0,00","0,00"
+Package,"com",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.lcwd",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.lcwd.Hotel",1,2,26,8,18,0,11,10,1,,"0,00",3,0,3,0,,,,,2,1,0,,,1,0,2,,1,0,0,1,,13,1,,7,1,,0,,,2,,,,,,,
+Public Class,"com.lcwd.Hotel.HotelServiceApplication",1,,8,2,6,0,3,2,1,,"0,00",3,0,3,0,1,4,2,0,,1,0,,,0,0,1,13,0,0,0,1,,3,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.lcwd.Hotel.HotelServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Class,"com.lcwd.Hotel.HotelServiceApplicationTests",1,,8,2,6,0,2,2,0,,"0,00",3,0,3,0,1,2,2,0,,0,0,,,1,0,1,13,1,0,0,0,,4,0,,0,1,1,0,0,0,1,,,,,,,
+Method,"com.lcwd.Hotel.HotelServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.lcwd.Hotel.controllers",1,1,41,8,32,1,17,14,3,,"0,03",5,0,5,0,,,,,1,0,0,,,3,1,3,,0,0,0,3,,20,4,,13,1,,0,,,3,,,,,,,
+Public Class,"com.lcwd.Hotel.controllers.HotelController",1,,29,5,23,1,8,5,3,,"0,04",5,0,5,0,1,12,11,0,,0,0,,,3,1,3,15,0,0,0,3,,11,4,,4,1,1,0,0,0,3,,,,,,,
+Public Method,"com.lcwd.Hotel.controllers.HotelController.GetALL",,,5,0,5,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,1,3,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.Hotel.controllers.HotelController.GetById",,,5,0,5,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,3,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.Hotel.controllers.HotelController.createHotel",,,6,0,6,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,2,2,4,1,,,0,,,1,,,,,,,
+Package,"com.lcwd.Hotel.entities",0,1,30,5,25,0,12,12,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,4,0,,0,0,0,0,,24,0,,11,0,,0,,,0,,,,,,,
+Public Class,"com.lcwd.Hotel.entities.Hotel",0,,22,4,18,0,5,5,0,,"0,00",0,0,0,0,1,10,9,0,,0,0,,,0,4,0,12,0,0,0,0,,17,0,,4,0,1,0,0,0,0,,,,,,,
+Package,"com.lcwd.Hotel.exceptions",1,2,36,7,29,0,20,14,7,,"0,00",6,0,5,0,,,,,2,0,0,,,3,0,3,,0,0,0,3,,16,7,,15,1,,0,,,3,,,,,,,
+Public Class,"com.lcwd.Hotel.exceptions.GlobalExceptionHandler",1,,14,2,12,0,7,3,5,,"0,00",10,1,9,0,1,9,5,0,,0,0,,,1,0,1,13,0,0,0,1,,5,5,,5,1,1,0,0,0,1,,,,,,,
+Public Method,"com.lcwd.Hotel.exceptions.GlobalExceptionHandler.notFoundHandler",,,10,1,9,0,6,2,5,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,3,5,6,5,,,0,,,1,,,,,,,
+Public Class,"com.lcwd.Hotel.exceptions.ResourceNotFoundException",1,,10,1,9,0,5,3,2,,"0,00",4,0,4,0,1,1,0,0,,0,0,,,2,0,2,50,0,0,0,2,,3,2,,2,1,1,0,0,0,2,,,,,,,
+Public Constructor,"com.lcwd.Hotel.exceptions.ResourceNotFoundException.ResourceNotFoundException",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,2,1,,,0,,,1,,,,,,,
+Public Constructor,"com.lcwd.Hotel.exceptions.ResourceNotFoundException.ResourceNotFoundException",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,1,2,1,,,0,,,1,,,,,,,
+Package,"com.lcwd.Hotel.impl",1,1,34,6,28,0,19,15,5,,"0,00",4,0,4,0,,,,,1,0,0,,,3,1,3,,0,0,0,3,,20,5,,15,1,,0,,,4,,,,,,,
+Public Class,"com.lcwd.Hotel.impl.HotelServiceImpl",1,,22,3,19,0,10,6,5,,"0,00",5,0,5,0,2,9,5,0,,0,0,,,3,1,3,15,0,0,0,3,,11,5,,6,1,1,0,0,0,4,,,,,,,
+Public Method,"com.lcwd.Hotel.impl.HotelServiceImpl.getALL",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.Hotel.impl.HotelServiceImpl.getById",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,2,1,3,1,,,0,,,2,,,,,,,
+Lambda Method,"com.lcwd.Hotel.impl.HotelServiceImpl.getById.(lambda_expr_1)",,,1,0,1,0,0,0,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,0,1,2,0,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.Hotel.impl.HotelServiceImpl.save",,,6,0,6,0,4,2,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,3,3,5,3,,,0,,,1,,,,,,,
+Package,"com.lcwd.Hotel.repositories",0,1,8,2,6,0,4,4,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,0,0,,0,0,0,0,,4,0,,3,0,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.Hotel.repositories.HotelRepository",0,,3,0,3,0,1,1,0,,"0,00",0,0,0,0,1,0,0,0,,0,0,,,0,0,0,12,0,0,0,0,,1,0,,0,0,2,0,0,0,0,,,,,,,
+Package,"com.lcwd.Hotel.services",0,1,15,7,8,0,7,7,0,,"0,00",0,0,0,0,,,,,1,0,0,,,3,0,3,,3,0,0,0,,7,0,,6,0,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.Hotel.services.HotelService",0,,9,4,5,0,4,4,0,,"0,00",0,0,0,0,0,3,1,1,,0,0,,,3,0,3,3,3,0,0,0,,4,0,,3,0,0,0,0,0,0,,,,,,,
+Abstract Method,"com.lcwd.Hotel.services.HotelService.getALL",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.Hotel.services.HotelService.getById",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.Hotel.services.HotelService.save",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Package,"com.lcwd.gateway",1,2,26,8,18,0,11,10,1,,"0,00",3,0,3,0,,,,,2,1,0,,,1,0,2,,1,0,0,1,,13,1,,7,1,,0,,,2,,,,,,,
+Public Class,"com.lcwd.gateway.ApigatewayApplication",1,,8,2,6,0,3,2,1,,"0,00",3,0,3,0,1,4,2,0,,1,0,,,0,0,1,13,0,0,0,1,,3,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.lcwd.gateway.ApigatewayApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Class,"com.lcwd.gateway.ApigatewayApplicationTests",1,,8,2,6,0,2,2,0,,"0,00",3,0,3,0,1,2,2,0,,0,0,,,1,0,1,13,1,0,0,0,,4,0,,0,1,1,0,0,0,1,,,,,,,
+Method,"com.lcwd.gateway.ApigatewayApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.lcwd.rating",1,2,32,10,22,0,14,13,1,,"0,00",3,0,3,0,,,,,2,1,0,,,1,0,2,,1,0,0,1,,17,1,,10,1,,0,,,2,,,,,,,
+Public Class,"com.lcwd.rating.RatingServiceApplication",1,,9,2,7,0,3,2,1,,"0,00",3,0,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.lcwd.rating.RatingServiceApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Class,"com.lcwd.rating.RatingServiceApplicationTests",1,,10,4,6,0,2,2,0,,"0,00",3,0,3,0,1,2,2,0,,0,0,,,1,0,1,13,1,0,0,0,,4,0,,0,1,1,0,0,0,1,,,,,,,
+Method,"com.lcwd.rating.RatingServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.lcwd.rating.controller",1,1,42,8,34,0,18,14,4,,"0,00",5,0,5,0,,,,,1,0,0,,,4,1,4,,0,0,0,4,,21,4,,13,1,,0,,,4,,,,,,,
+Public Class,"com.lcwd.rating.controller.RatingController",1,,31,5,26,0,10,6,4,,"0,00",5,0,5,0,1,12,11,0,,0,0,,,4,1,4,16,0,0,0,4,,13,4,,5,1,1,0,0,0,4,,,,,,,
+Public Method,"com.lcwd.rating.controller.RatingController.create",,,5,0,5,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,2,1,4,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.rating.controller.RatingController.getAllRating",,,5,0,5,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,1,3,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.rating.controller.RatingController.getAllRating",,,5,0,5,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,3,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.rating.controller.RatingController.getAllRatingByUserId",,,5,0,5,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,3,1,,,0,,,1,,,,,,,
+Package,"com.lcwd.rating.entities",0,1,23,5,18,0,10,10,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,5,0,,0,0,0,0,,17,0,,9,0,,0,,,0,,,,,,,
+Public Class,"com.lcwd.rating.entities.Rating",0,,17,3,14,0,6,6,0,,"0,00",0,0,0,0,1,8,7,0,,0,0,,,0,5,0,12,0,0,0,0,,13,0,,5,0,1,0,0,0,0,,,,,,,
+Package,"com.lcwd.rating.repository",0,1,15,5,9,1,7,7,0,,"0,11",0,0,0,0,,,,,1,0,0,,,2,0,2,,2,0,0,0,,7,0,,6,0,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.rating.repository.RatingRepository",0,,8,2,5,1,3,3,0,,"0,20",0,0,0,0,1,2,0,0,,0,0,,,2,0,2,14,2,0,0,0,,3,0,,2,0,2,0,0,0,0,,,,,,,
+Abstract Method,"com.lcwd.rating.repository.RatingRepository.findByHotelId",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.rating.repository.RatingRepository.findByUserId",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Package,"com.lcwd.rating.services",0,1,19,8,11,0,9,9,0,,"0,00",0,0,0,0,,,,,1,0,0,,,4,0,4,,4,0,0,0,,9,0,,8,0,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.rating.services.RatingService",0,,11,4,7,0,5,5,0,,"0,00",0,0,0,0,0,3,1,1,,0,0,,,4,0,4,4,4,0,0,0,,5,0,,4,0,0,0,0,0,0,,,,,,,
+Abstract Method,"com.lcwd.rating.services.RatingService.create",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.rating.services.RatingService.getAllRatings",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.rating.services.RatingService.getRatingsbyHotelId",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.rating.services.RatingService.getRatingsbyUserId",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Package,"com.lcwd.rating.services.impl",1,1,36,8,28,0,17,13,4,,"0,00",4,0,4,0,,,,,1,0,0,,,4,1,4,,0,0,0,4,,19,4,,12,1,,0,,,4,,,,,,,
+Public Class,"com.lcwd.rating.services.impl.RatingServiceImpl",1,,26,5,21,0,10,6,4,,"0,00",4,0,4,0,2,7,4,0,,0,0,,,4,1,4,16,0,0,0,4,,12,4,,5,1,1,0,0,0,4,,,,,,,
+Public Method,"com.lcwd.rating.services.impl.RatingServiceImpl.create",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.rating.services.impl.RatingServiceImpl.getAllRatings",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.rating.services.impl.RatingServiceImpl.getRatingsbyHotelId",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.rating.services.impl.RatingServiceImpl.getRatingsbyUserId",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,2,1,,,0,,,1,,,,,,,
+Package,"com.lcwd.service",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.lcwd.service.registry",1,2,28,8,20,0,12,11,1,,"0,00",3,0,3,0,,,,,2,1,0,,,1,0,2,,1,0,0,1,,15,1,,8,1,,0,,,2,,,,,,,
+Public Class,"com.lcwd.service.registry.ServiceRegistryApplication",1,,9,2,7,0,3,2,1,,"0,00",3,0,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.lcwd.service.registry.ServiceRegistryApplication.main",,,3,0,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Class,"com.lcwd.service.registry.ServiceRegistryApplicationTests",1,,8,2,6,0,2,2,0,,"0,00",3,0,3,0,1,2,2,0,,0,0,,,1,0,1,13,1,0,0,0,,4,0,,0,1,1,0,0,0,1,,,,,,,
+Method,"com.lcwd.service.registry.ServiceRegistryApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Package,"com.lcwd.user",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.lcwd.user.service",1,2,44,11,33,0,21,19,4,,"0,00",5,0,4,0,,,,,2,1,0,,,2,1,3,,2,0,0,1,,25,4,,16,1,,0,,,3,,,,,,,
+Public Class,"com.lcwd.user.service.UserServiceApplication",1,,10,3,7,0,3,2,1,,"0,00",4,1,3,0,1,5,3,0,,1,0,,,0,0,1,13,0,0,0,1,,4,1,,1,1,1,0,0,0,1,,,,,,,
+Public Static Method,"com.lcwd.user.service.UserServiceApplication.main",,,4,1,3,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,1,1,,,0,,,1,,,,,,,
+Class,"com.lcwd.user.service.UserServiceApplicationTests",1,,19,4,15,0,7,6,3,,"0,00",5,0,5,0,1,7,5,0,,0,0,,,2,1,2,14,2,0,0,0,,10,3,,4,1,1,0,50,50,2,,,,,,,
+Method,"com.lcwd.user.service.UserServiceApplicationTests.contextLoads",,,3,0,3,0,1,1,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,0,0,,,0,,,1,,,,,,,
+Method,"com.lcwd.user.service.UserServiceApplicationTests.createRating",,,7,0,7,0,4,3,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,4,3,8,3,,,0,,,1,,,,,,,
+Package,"com.lcwd.user.service.config",1,1,17,3,14,0,8,7,1,,"0,00",6,0,6,0,,,,,1,0,0,,,1,0,1,,0,0,0,1,,10,1,,6,1,,0,,,1,,,,,,,
+Public Class,"com.lcwd.user.service.config.MyConfig",1,,10,1,9,0,3,2,1,,"0,00",6,0,6,0,1,4,4,0,,0,0,,,1,0,1,13,0,0,0,1,,5,1,,1,1,1,0,0,0,1,,,,,,,
+Public Method,"com.lcwd.user.service.config.MyConfig.restTemplate",,,6,0,6,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,3,1,1,1,,,0,,,1,,,,,,,
+Package,"com.lcwd.user.service.controller",1,1,38,6,32,0,19,16,6,,"0,00",6,0,6,0,,,,,1,0,0,,,3,1,3,,0,0,0,3,,22,6,,15,1,,0,,,3,,,,,,,
+Public Class,"com.lcwd.user.service.controller.UserController",1,,27,3,24,0,11,8,6,,"0,00",6,0,6,0,1,13,11,0,,0,0,,,3,1,3,15,0,0,0,3,,14,6,,7,1,1,0,0,0,3,,,,,,,
+Public Method,"com.lcwd.user.service.controller.UserController.CreateUser",,,6,0,6,0,3,2,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,3,2,4,2,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.user.service.controller.UserController.GetUserById",,,6,0,6,0,3,2,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,3,3,2,4,2,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.user.service.controller.UserController.getAllUser",,,6,0,6,0,3,2,2,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,3,2,3,2,,,0,,,1,,,,,,,
+Package,"com.lcwd.user.service.entities",0,3,75,14,61,0,31,31,0,,"0,00",0,0,0,0,,,,,3,0,0,,,0,15,0,,0,0,0,0,,58,0,,28,0,,0,,,0,,,,,,,
+Public Class,"com.lcwd.user.service.entities.Hotel",0,,16,1,15,0,5,5,0,,"0,00",0,0,0,0,1,7,6,0,,0,0,,,0,4,0,12,0,0,0,0,,14,0,,4,0,1,0,0,0,0,,,,,,,
+Public Class,"com.lcwd.user.service.entities.Rating",0,,17,4,13,0,7,7,0,,"0,00",0,0,0,0,1,7,6,0,,0,0,,,0,6,0,12,0,0,0,0,,12,0,,6,0,1,0,0,0,0,,,,,,,
+Public Class,"com.lcwd.user.service.entities.User",0,,22,2,20,0,6,6,0,,"0,00",0,0,0,0,1,12,10,0,,0,0,,,0,5,0,12,0,0,0,0,,19,0,,5,0,1,0,0,0,0,,,,,,,
+Package,"com.lcwd.user.service.exceptions",1,2,33,6,27,0,17,14,5,,"0,00",5,0,5,0,,,,,2,0,0,,,3,0,3,,0,0,0,3,,16,5,,12,1,,0,,,3,,,,,,,
+Public Class,"com.lcwd.user.service.exceptions.GlobalExceptionHandler",1,,11,1,10,0,5,4,3,,"0,00",7,0,7,0,1,9,6,0,,0,0,,,1,0,1,13,0,0,0,1,,6,3,,3,1,1,0,0,0,1,,,,,,,
+Public Method,"com.lcwd.user.service.exceptions.GlobalExceptionHandler.handlerResourceNotFoundException",,,7,0,7,0,4,3,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,4,3,7,3,,,0,,,1,,,,,,,
+Public Class,"com.lcwd.user.service.exceptions.ResourceNotFoundException",1,,12,2,10,0,5,3,2,,"0,00",4,0,4,0,1,1,0,0,,0,0,,,2,0,2,50,0,0,0,2,,3,2,,2,1,1,0,0,0,2,,,,,,,
+Public Constructor,"com.lcwd.user.service.exceptions.ResourceNotFoundException.ResourceNotFoundException",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,1,2,1,,,0,,,1,,,,,,,
+Public Constructor,"com.lcwd.user.service.exceptions.ResourceNotFoundException.ResourceNotFoundException",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,1,1,2,1,,,0,,,1,,,,,,,
+Package,"com.lcwd.user.service.external",0,0,0,0,0,0,0,0,0,,"0,00",0,0,0,0,,,,,0,0,0,,,0,0,0,,0,0,0,0,,0,0,,0,0,,0,,,0,,,,,,,
+Package,"com.lcwd.user.service.external.services",0,2,36,8,28,0,19,19,0,,"0,00",0,0,0,0,,,,,2,0,0,,,4,0,4,,2,0,0,2,,26,0,,17,0,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.user.service.external.services.HotelService",0,,6,1,5,0,2,2,0,,"0,00",0,0,0,0,0,5,4,0,,0,0,,,1,0,1,1,1,0,0,0,,4,0,,1,0,0,0,0,0,0,,,,,,,
+Abstract Method,"com.lcwd.user.service.external.services.HotelService.getHotel",,,2,0,2,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,0,1,1,,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.user.service.external.services.RatingService",0,,13,3,10,0,4,4,0,,"0,00",0,0,0,0,0,8,7,0,,0,0,,,3,0,3,3,1,0,0,2,,9,0,,3,0,0,0,0,0,0,,,,,,,
+Public Abstract Method,"com.lcwd.user.service.external.services.RatingService.createRating",,,2,0,2,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.user.service.external.services.RatingService.getRatings",,,2,0,2,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,1,1,,,0,,,0,,,,,,,
+Public Abstract Method,"com.lcwd.user.service.external.services.RatingService.updateRating",,,2,0,2,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,2,0,1,1,,,0,,,0,,,,,,,
+Package,"com.lcwd.user.service.impl",1,1,82,16,62,5,46,35,18,,"0,08",7,1,6,1,,,,,1,0,0,,,5,4,5,,0,0,0,5,,45,19,,40,1,,0,,,7,,,,,,,
+Public Class,"com.lcwd.user.service.impl.UserServericeImp",1,,60,13,43,5,27,16,18,,"0,12",8,1,7,1,2,20,11,0,,0,0,,,5,4,5,17,0,0,0,5,,26,19,,21,1,1,0,65,65,7,,,,,,,
+Public Method,"com.lcwd.user.service.impl.UserServericeImp.deleteUser",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,1,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.user.service.impl.UserServericeImp.getAllUsers",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,2,1,2,1,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.user.service.impl.UserServericeImp.getUserById",,,23,4,15,5,12,6,11,1,"0,33",,,,,,,,,,,,,,,,,,,,,,6,8,12,14,11,,,0,,,3,,,,,,,
+Lambda Method,"com.lcwd.user.service.impl.UserServericeImp.getUserById.(lambda_expr_1)",,,1,0,1,0,0,0,0,1,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,1,2,0,,,0,,,1,,,,,,,
+Lambda Method,"com.lcwd.user.service.impl.UserServericeImp.getUserById.(lambda_expr_2)",,,9,1,5,3,3,1,3,1,"0,60",,,,,,,,,,,,,,,,,,,,,,2,2,4,4,3,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.user.service.impl.UserServericeImp.saveUser",,,6,0,6,0,4,2,3,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,3,3,5,3,,,0,,,1,,,,,,,
+Public Method,"com.lcwd.user.service.impl.UserServericeImp.updateUser",,,4,0,4,0,2,1,1,1,"0,00",,,,,,,,,,,,,,,,,,,,,,2,2,1,2,1,,,0,,,1,,,,,,,
+Package,"com.lcwd.user.service.payload",0,1,15,2,13,0,7,7,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,3,0,,0,0,0,0,,12,0,,6,0,,0,,,0,,,,,,,
+Public Class,"com.lcwd.user.service.payload.ApiResponse",0,,11,1,10,0,4,4,0,,"0,00",0,0,0,0,1,7,6,0,,0,0,,,0,3,0,12,0,0,0,0,,9,0,,3,0,1,0,0,0,0,,,,,,,
+Package,"com.lcwd.user.service.repositories",0,1,9,3,6,0,4,4,0,,"0,00",0,0,0,0,,,,,1,0,0,,,0,0,0,,0,0,0,0,,4,0,,3,0,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.user.service.repositories.UserRepository",0,,4,1,3,0,1,1,0,,"0,00",0,0,0,0,1,0,0,0,,0,0,,,0,0,0,12,0,0,0,0,,1,0,,0,0,2,0,0,0,0,,,,,,,
+Package,"com.lcwd.user.service.services",0,1,19,9,10,0,9,9,0,,"0,00",0,0,0,0,,,,,1,0,0,,,5,0,5,,5,0,0,0,,9,0,,8,0,,0,,,0,,,,,,,
+Public Interface,"com.lcwd.user.service.services.UserService",0,,13,6,7,0,6,6,0,,"0,00",0,0,0,0,0,3,1,1,,0,0,,,5,0,5,5,5,0,0,0,,6,0,,5,0,0,0,0,0,0,,,,,,,
+Abstract Method,"com.lcwd.user.service.services.UserService.deleteUser",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,0,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.user.service.services.UserService.getAllUsers",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.user.service.services.UserService.getUserById",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.user.service.services.UserService.saveUser",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,1,1,0,1,1,,,0,,,0,,,,,,,
+Abstract Method,"com.lcwd.user.service.services.UserService.updateUser",,,1,0,1,0,1,1,0,0,"0,00",,,,,,,,,,,,,,,,,,,,,,0,1,0,1,1,,,0,,,0,,,,,,,
+Unknown Annotation,"jakarta.persistence.Column",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"jakarta.persistence.Entity",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"jakarta.persistence.Id",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"jakarta.persistence.Table",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"lombok.AllArgsConstructor",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"lombok.Getter",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"lombok.NoArgsConstructor",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"lombok.Setter",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"misc.xml",0,,6,0,6,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"modules.xml",0,,8,0,8,0,0,0,0,0,"0,00",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+Unknown Annotation,"org.junit.jupiter.api.Test",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.beans.factory.annotation.Autowired",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.boot.autoconfigure.SpringBootApplication",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.boot.test.context.SpringBootTest",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.client.discovery.EnableDiscoveryClient",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.client.loadbalancer.LoadBalanced",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.netflix.eureka.server.EnableEurekaServer",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.openfeign.EnableFeignClients",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.cloud.openfeign.FeignClient",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.context.annotation.Bean",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.context.annotation.Configuration",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.data.annotation.Id",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.data.mongodb.core.mapping.Document",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.stereotype.Service",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.ExceptionHandler",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.GetMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.PathVariable",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.PostMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.PutMapping",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Unknown Annotation,"org.springframework.web.bind.annotation.RestControllerAdvice",,,,,,,,,,,"0,00",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+File,"pom.xml",0,,83,3,80,1,0,0,0,0,"0,01",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,73,1,72,1,0,0,0,0,"0,01",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,81,4,71,7,0,0,0,0,"0,10",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,57,3,54,1,0,0,0,0,"0,02",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
+File,"pom.xml",0,,85,1,84,1,0,0,0,0,"0,01",0,0,0,0,,,,,0,,,0,0,,,,,,,,,,,,,,0,,0,,,0,,,,0,0,"0,00","0,00"
