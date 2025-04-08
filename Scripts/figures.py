@@ -281,6 +281,7 @@ if __name__ == "__main__":
     #     plot_centrality_dist(metrics[col], col)
     #     plot_centrality_dist(metrics[col], col, deriv=1)
     #     plot_centrality_dist(metrics[col], col, deriv=2)
-        if col != "Clustering Coefficient":
+        if col not in ["Degree Centrality", "Clustering Coefficient", "In-degree Centrality",
+                       "Out-degree Centrality", "Subgraph Centrality"]:
             clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
                                    col, metrics["Microservice"])
