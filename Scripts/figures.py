@@ -7,7 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 from matplotlib.cm import get_cmap
-from matplotlib.pyplot import savefig
 from matplotlib.colors import ListedColormap
 
 
@@ -233,7 +232,6 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
 
     # Generate banded gradient: diagonal ↘ direction
     gradient = np.fromfunction(lambda i, j: np.floor((i - j) * steps / N + steps / 2), (N, N))
-    # gradient = np.clip(gradient, 0, steps - 1).astype(int)
 
     # Create sharp red-to-blue colormap with discrete colors
     colors = np.linspace(0, 1, steps)
