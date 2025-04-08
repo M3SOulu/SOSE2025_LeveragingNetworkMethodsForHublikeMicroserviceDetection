@@ -191,7 +191,7 @@ def scale_free_figure():
     plt.suptitle("Proportion of nodes P(k) for a specific degree k")
     plt.savefig("Figures/ScaleFree.pdf")
 
-def clustering_scatterplot(centrality, clustering, name):
+def clustering_scatterplot(centrality, clustering, name, microservices):
 
     plt.figure(figsize=(8,8))
     plt.scatter(clustering, centrality)
@@ -214,6 +214,14 @@ def clustering_scatterplot(centrality, clustering, name):
     for offset in offsets:
         y_vals = x_vals + offset
         ax.plot(x_vals, y_vals, linestyle='--', color='gray', linewidth=0.5)
+    #
+    # for i, label in enumerate(microservices):
+    #     ax.annotate(label,
+    #                 (clustering[i], centrality[i]),
+    #                 textcoords="offset points",  # offset the text slightly
+    #                 xytext=(0, 5),
+    #                 ha='center',
+    #                 fontsize=8)
 
     plt.savefig(f"Figures/ClusteringScatter/ClusteringScatter_{name}.pdf")
 
@@ -231,4 +239,4 @@ if __name__ == "__main__":
         # plot_centrality_dist(metrics[col], col, deriv=2)
         if col != "Clustering Coefficient":
             clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
-                                   col)
+                                   col, metrics["Microservice"])
