@@ -241,6 +241,7 @@ def call_graphs():
         name = f.name.replace("_gwcc_noDB.json", "")
         plt.figure(figsize=(16, 12))
         nx.draw_networkx(G, pos=nx.arf_layout(G))
+        plt.title(name)
         plt.tight_layout()
         plt.savefig(f"Figures/SDGs/{name}_sdg.pdf")
         plt.close()
