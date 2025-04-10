@@ -7,7 +7,7 @@ import pandas as pd
 
 def compute_centrality():
     all_dfs = []
-    for f in os.scandir("Raw"):
+    for f in os.scandir("Raw/graph"):
         with open(f, 'r') as fi:
             g = json.load(fi)
         G = nx.node_link_graph(g, edges="edges", nodes="nodes", name="name", source="sender", target="receiver",
@@ -40,40 +40,13 @@ def compute_centrality():
         hubs, authorities = nx.hits(G)
         graph_df[f"Hub Score"] = graph_df["Microservice"].map(hubs)
         graph_df[f"Authority Score"] = graph_df["Microservice"].map(authorities)
-
-        G = nx.Graph(G)
-        graph_df[f"Subgraph Centrality"] = graph_df["Microservice"].map(nx.subgraph_centrality(G))
         graph_df["Clustering Coefficient"] = graph_df["Microservice"].map(clustering_coefficient)
 
         all_dfs.append(graph_df)
 
     all_dfs = sorted(all_dfs, key=lambda d: d["MS_system"].iloc[0].casefold())
     df_db = pd.concat(all_dfs)
-    # df_db = df_db.sort_values(by="Eigenvector Centrality", ascending=False)
-    df_db['Microservice'] = df_db['MS_system'] + '_' + df_db['Microservice']
     df_db.to_csv(os.path.join("Metrics", "metrics_centrality.csv"), index=False, header=True)
-
-    # Columns you want to calculate fractions for
-    columns = ["Degree Centrality", "In-degree Centrality", "Out-degree Centrality"]
-
-    # Get value fractions for each column
-    fractions_dict = {col: df_db[col].value_counts(normalize=True) for col in columns}
-
-    # Convert to DataFrames (optional, if you want a tidy format)
-    proportions = pd.DataFrame(fractions_dict).fillna(0).reset_index()
-    proportions.rename(columns={'index': 'degree'}, inplace=True)
-
-    proportions.to_csv(os.path.join("Metrics", "scale_free_proportion.csv"), index=False, header=True)
-
-    # Create a new DataFrame where each column is the name sorted by that metric
-    sorted_names_by_metric = {
-        col: df_db.sort_values(by=col, ascending=False)["Microservice"].reset_index(drop=True)
-        for col in df_db.columns if col not in ["MS_system", "Microservice", "Clustering Coefficient"]
-    }
-    sorted_names_by_metric["Clustering"] =  df_db.sort_values(by="Clustering Coefficient", ascending=True)["Microservice"].reset_index(drop=True)
-    sorted_names_by_metric = pd.DataFrame(sorted_names_by_metric)
-
-    sorted_names_by_metric.to_csv(os.path.join("Metrics", "sorted_nodes.csv"), index=False)
 
 
 if __name__ == "__main__":

@@ -3,10 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import powerlaw
 
-# Create output directory
-output_dir = "ScaleFreeResults"
-os.makedirs(output_dir, exist_ok=True)
-
 # Load data
 df = pd.read_csv("Metrics/metrics_centrality.csv")
 
@@ -64,7 +60,7 @@ for centrality in distributions:
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, f"pdf_{centrality.replace(' ', '_').lower()}.pdf"))
+    plt.savefig(os.path.join("Results", "ScaleFreeTest", f"pdf_{centrality.replace(' ', '_').lower()}.pdf"))
     plt.close()
 
     # Plot CCDF
@@ -77,9 +73,9 @@ for centrality in distributions:
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, f"ccdf_{centrality.replace(' ', '_').lower()}.pdf"))
+    plt.savefig(os.path.join("Results", "ScaleFreeTest", f"ccdf_{centrality.replace(' ', '_').lower()}.pdf"))
     plt.close()
 
 # Save summary to CSV
 summary_df = pd.DataFrame(results_summary)
-summary_df.to_csv(os.path.join(output_dir, "scale_free_summary.csv"), index=False)
+summary_df.to_csv(os.path.join("Results", "ScaleFreeTest", "scale_free_summary.csv"), index=False)
