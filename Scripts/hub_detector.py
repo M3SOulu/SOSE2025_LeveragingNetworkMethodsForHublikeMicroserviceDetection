@@ -136,7 +136,7 @@ def hubs(data, N, degree_list = False, out_degrees = False, weighted = False):
 
 def detect_hubs(out_degrees):
     all_results = {}
-    for f in os.scandir("Raw"):
+    for f in os.scandir("Raw/graph"):
         with open(f, 'r') as fi:
             g = json.load(fi)
         G = nx.node_link_graph(g, edges="edges", nodes="nodes", name="name", source="sender", target="receiver",
@@ -157,9 +157,13 @@ def detect_hubs(out_degrees):
     return all_results
 
 if __name__ == "__main__":
-    res = detect_hubs(False)
-    with open("detected_hubs_in_degree.json", 'w') as f:
-        json.dump(res, f, indent=4)
-    res = detect_hubs(True)
-    with open("detected_hubs_out_degree.json", 'w') as f:
-        json.dump(res, f, indent=4)
+    res_in = detect_hubs(False)
+    res_out = detect_hubs(True)
+    results_merged = {}
+    for system in res_out:
+        results_merged[system] = {}
+        for method in res_out[system]:
+            results_merged[system][f"{method}_in_degree"] = res_in[system][method]
+            results_merged[system][f"{method}_out_degree"] = res_out[system][method]
+    with open("Results/Kirkley.json", 'w') as f:
+        json.dump(results_merged, f, indent=4)
