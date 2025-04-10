@@ -152,7 +152,7 @@ def detect_hubs(out_degrees):
         # print(results)
         all_results[name] = {}
         for method in ["ER", "CM", "AVG", "LOUBAR"]:
-            detected_hubs = [f"{name}_{index_to_node[hub_index]}" for hub_index in results[method]["hub_nodes"]]
+            detected_hubs = [index_to_node[hub_index] for hub_index in results[method]["hub_nodes"]]
             all_results[name][method] = detected_hubs
     return all_results
 

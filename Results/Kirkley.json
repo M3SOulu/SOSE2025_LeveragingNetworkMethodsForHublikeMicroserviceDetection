@@ -1,108 +1,108 @@
 {
     "microservice-kafka": {
         "ER_in_degree": [
-            "microservice-kafka_kafka",
-            "microservice-kafka_shipping",
-            "microservice-kafka_invoicing",
-            "microservice-kafka_order"
+            "kafka",
+            "shipping",
+            "invoicing",
+            "order"
         ],
         "ER_out_degree": [],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "microservice-kafka_invoicing",
-            "microservice-kafka_order",
-            "microservice-kafka_shipping",
-            "microservice-kafka_kafka"
+            "invoicing",
+            "order",
+            "shipping",
+            "kafka"
         ],
         "AVG_out_degree": [
-            "microservice-kafka_kafka",
-            "microservice-kafka_apache",
-            "microservice-kafka_postgres"
+            "kafka",
+            "apache",
+            "postgres"
         ],
         "LOUBAR_in_degree": [
-            "microservice-kafka_invoicing",
-            "microservice-kafka_shipping",
-            "microservice-kafka_kafka"
+            "invoicing",
+            "shipping",
+            "kafka"
         ],
         "LOUBAR_out_degree": [
-            "microservice-kafka_invoicing",
-            "microservice-kafka_order",
-            "microservice-kafka_shipping",
-            "microservice-kafka_zookeeper",
-            "microservice-kafka_kafka",
-            "microservice-kafka_apache",
-            "microservice-kafka_postgres"
+            "invoicing",
+            "order",
+            "shipping",
+            "zookeeper",
+            "kafka",
+            "apache",
+            "postgres"
         ]
     },
     "java-microservice": {
         "ER_in_degree": [
-            "java-microservice_logstash",
-            "java-microservice_eureka-server"
+            "logstash",
+            "eureka-server"
         ],
         "ER_out_degree": [
-            "java-microservice_zookeeper",
-            "java-microservice_config-server",
-            "java-microservice_admin"
+            "zookeeper",
+            "config-server",
+            "admin"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "java-microservice_oauth",
-            "java-microservice_api-gateway",
-            "java-microservice_eureka-server",
-            "java-microservice_mailer",
-            "java-microservice_reminder",
-            "java-microservice_logstash"
+            "oauth",
+            "api-gateway",
+            "eureka-server",
+            "mailer",
+            "reminder",
+            "logstash"
         ],
         "AVG_out_degree": [
-            "java-microservice_admin",
-            "java-microservice_config-server",
-            "java-microservice_reminder",
-            "java-microservice_zookeeper"
+            "admin",
+            "config-server",
+            "reminder",
+            "zookeeper"
         ],
         "LOUBAR_in_degree": [
-            "java-microservice_oauth",
-            "java-microservice_api-gateway",
-            "java-microservice_eureka-server",
-            "java-microservice_mailer",
-            "java-microservice_reminder",
-            "java-microservice_logstash"
+            "oauth",
+            "api-gateway",
+            "eureka-server",
+            "mailer",
+            "reminder",
+            "logstash"
         ],
         "LOUBAR_out_degree": [
-            "java-microservice_oauth",
-            "java-microservice_admin",
-            "java-microservice_api-gateway",
-            "java-microservice_mailer",
-            "java-microservice_config-server",
-            "java-microservice_reminder",
-            "java-microservice_zookeeper"
+            "oauth",
+            "admin",
+            "api-gateway",
+            "mailer",
+            "config-server",
+            "reminder",
+            "zookeeper"
         ]
     },
     "microservices-basics-spring-boot": {
         "ER_in_degree": [],
         "ER_out_degree": [
-            "microservices-basics-spring-boot_configserver"
+            "configserver"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "microservices-basics-spring-boot_api-gateway",
-            "microservices-basics-spring-boot_comments-webservice",
-            "microservices-basics-spring-boot_webservice-registry"
+            "api-gateway",
+            "comments-webservice",
+            "webservice-registry"
         ],
         "AVG_out_degree": [
-            "microservices-basics-spring-boot_task-webservice",
-            "microservices-basics-spring-boot_configserver"
+            "task-webservice",
+            "configserver"
         ],
         "LOUBAR_in_degree": [
-            "microservices-basics-spring-boot_api-gateway",
-            "microservices-basics-spring-boot_comments-webservice",
-            "microservices-basics-spring-boot_webservice-registry"
+            "api-gateway",
+            "comments-webservice",
+            "webservice-registry"
         ],
         "LOUBAR_out_degree": [
-            "microservices-basics-spring-boot_task-webservice",
-            "microservices-basics-spring-boot_configserver"
+            "task-webservice",
+            "configserver"
         ]
     },
     "DentalAppointment": {
@@ -111,30 +111,30 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "DentalAppointment_appointment-service",
-            "DentalAppointment_hospital-manage-service",
-            "DentalAppointment_message-service",
-            "DentalAppointment_personal-info-service"
+            "appointment-service",
+            "hospital-manage-service",
+            "message-service",
+            "personal-info-service"
         ],
         "AVG_out_degree": [
-            "DentalAppointment_appointment-service",
-            "DentalAppointment_approval-service",
-            "DentalAppointment_gateway-service",
-            "DentalAppointment_message-service"
+            "appointment-service",
+            "approval-service",
+            "gateway-service",
+            "message-service"
         ],
         "LOUBAR_in_degree": [
-            "DentalAppointment_appointment-service",
-            "DentalAppointment_approval-service",
-            "DentalAppointment_hospital-manage-service",
-            "DentalAppointment_message-service",
-            "DentalAppointment_personal-info-service",
-            "DentalAppointment_mail-server"
+            "appointment-service",
+            "approval-service",
+            "hospital-manage-service",
+            "message-service",
+            "personal-info-service",
+            "mail-server"
         ],
         "LOUBAR_out_degree": [
-            "DentalAppointment_appointment-service",
-            "DentalAppointment_approval-service",
-            "DentalAppointment_gateway-service",
-            "DentalAppointment_message-service"
+            "appointment-service",
+            "approval-service",
+            "gateway-service",
+            "message-service"
         ]
     },
     "microservice-consul": {
@@ -143,139 +143,139 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "microservice-consul_customer",
-            "microservice-consul_catalog",
-            "microservice-consul_consul"
+            "customer",
+            "catalog",
+            "consul"
         ],
         "AVG_out_degree": [
-            "microservice-consul_order",
-            "microservice-consul_apache"
+            "order",
+            "apache"
         ],
         "LOUBAR_in_degree": [
-            "microservice-consul_customer",
-            "microservice-consul_catalog",
-            "microservice-consul_consul"
+            "customer",
+            "catalog",
+            "consul"
         ],
         "LOUBAR_out_degree": [
-            "microservice-consul_order",
-            "microservice-consul_apache"
+            "order",
+            "apache"
         ]
     },
     "train-ticket_v0.0.1": {
         "ER_in_degree": [
-            "train-ticket_v0.0.1_ts-sso-service",
-            "train-ticket_v0.0.1_ts-station-service",
-            "train-ticket_v0.0.1_ts-order-service",
-            "train-ticket_v0.0.1_ts-order-other-service",
-            "train-ticket_v0.0.1_ts-travel-service",
-            "train-ticket_v0.0.1_ts-travel2-service",
-            "train-ticket_v0.0.1_ts-seat-service",
-            "train-ticket_v0.0.1_ts-ticketinfo-service",
-            "train-ticket_v0.0.1_ts-route-service",
-            "train-ticket_v0.0.1_ts-train-service"
+            "ts-sso-service",
+            "ts-station-service",
+            "ts-order-service",
+            "ts-order-other-service",
+            "ts-travel-service",
+            "ts-travel2-service",
+            "ts-seat-service",
+            "ts-ticketinfo-service",
+            "ts-route-service",
+            "ts-train-service"
         ],
         "ER_out_degree": [
-            "train-ticket_v0.0.1_ts-preserve-service",
-            "train-ticket_v0.0.1_ts-preserve-other-service",
-            "train-ticket_v0.0.1_ts-rebook-service",
-            "train-ticket_v0.0.1_ts-travel-plan-service",
-            "train-ticket_v0.0.1_ts-admin-basic-info-service",
-            "train-ticket_v0.0.1_ts-travel-service",
-            "train-ticket_v0.0.1_ts-travel2-service",
-            "train-ticket_v0.0.1_ts-cancel-service",
-            "train-ticket_v0.0.1_ts-seat-service",
-            "train-ticket_v0.0.1_ts-route-plan-service",
-            "train-ticket_v0.0.1_ts-basic-service"
+            "ts-preserve-service",
+            "ts-preserve-other-service",
+            "ts-rebook-service",
+            "ts-travel-plan-service",
+            "ts-admin-basic-info-service",
+            "ts-travel-service",
+            "ts-travel2-service",
+            "ts-cancel-service",
+            "ts-seat-service",
+            "ts-route-plan-service",
+            "ts-basic-service"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "train-ticket_v0.0.1_ts-contacts-service",
-            "train-ticket_v0.0.1_ts-notification-service",
-            "train-ticket_v0.0.1_ts-order-other-service",
-            "train-ticket_v0.0.1_ts-route-service",
-            "train-ticket_v0.0.1_ts-price-service",
-            "train-ticket_v0.0.1_ts-train-service",
-            "train-ticket_v0.0.1_ts-order-service",
-            "train-ticket_v0.0.1_ts-station-service",
-            "train-ticket_v0.0.1_ts-ticketinfo-service",
-            "train-ticket_v0.0.1_ts-inside-payment-service",
-            "train-ticket_v0.0.1_ts-seat-service",
-            "train-ticket_v0.0.1_ts-travel2-service",
-            "train-ticket_v0.0.1_ts-travel-service",
-            "train-ticket_v0.0.1_ts-sso-service"
+            "ts-contacts-service",
+            "ts-notification-service",
+            "ts-order-other-service",
+            "ts-route-service",
+            "ts-price-service",
+            "ts-train-service",
+            "ts-order-service",
+            "ts-station-service",
+            "ts-ticketinfo-service",
+            "ts-inside-payment-service",
+            "ts-seat-service",
+            "ts-travel2-service",
+            "ts-travel-service",
+            "ts-sso-service"
         ],
         "AVG_out_degree": [
-            "train-ticket_v0.0.1_ts-cancel-service",
-            "train-ticket_v0.0.1_ts-preserve-service",
-            "train-ticket_v0.0.1_ts-food-service",
-            "train-ticket_v0.0.1_ts-rebook-service",
-            "train-ticket_v0.0.1_ts-register-service",
-            "train-ticket_v0.0.1_ts-admin-basic-info-service",
-            "train-ticket_v0.0.1_ts-basic-service",
-            "train-ticket_v0.0.1_ts-preserve-other-service",
-            "train-ticket_v0.0.1_ts-route-plan-service",
-            "train-ticket_v0.0.1_ts-inside-payment-service",
-            "train-ticket_v0.0.1_ts-seat-service",
-            "train-ticket_v0.0.1_ts-travel-plan-service",
-            "train-ticket_v0.0.1_ts-travel2-service",
-            "train-ticket_v0.0.1_ts-travel-service"
+            "ts-cancel-service",
+            "ts-preserve-service",
+            "ts-food-service",
+            "ts-rebook-service",
+            "ts-register-service",
+            "ts-admin-basic-info-service",
+            "ts-basic-service",
+            "ts-preserve-other-service",
+            "ts-route-plan-service",
+            "ts-inside-payment-service",
+            "ts-seat-service",
+            "ts-travel-plan-service",
+            "ts-travel2-service",
+            "ts-travel-service"
         ],
         "LOUBAR_in_degree": [
-            "train-ticket_v0.0.1_ts-order-other-service",
-            "train-ticket_v0.0.1_ts-route-service",
-            "train-ticket_v0.0.1_ts-train-service",
-            "train-ticket_v0.0.1_ts-order-service",
-            "train-ticket_v0.0.1_ts-station-service",
-            "train-ticket_v0.0.1_ts-ticketinfo-service",
-            "train-ticket_v0.0.1_ts-seat-service",
-            "train-ticket_v0.0.1_ts-travel2-service",
-            "train-ticket_v0.0.1_ts-travel-service",
-            "train-ticket_v0.0.1_ts-sso-service"
+            "ts-order-other-service",
+            "ts-route-service",
+            "ts-train-service",
+            "ts-order-service",
+            "ts-station-service",
+            "ts-ticketinfo-service",
+            "ts-seat-service",
+            "ts-travel2-service",
+            "ts-travel-service",
+            "ts-sso-service"
         ],
         "LOUBAR_out_degree": [
-            "train-ticket_v0.0.1_ts-cancel-service",
-            "train-ticket_v0.0.1_ts-preserve-service",
-            "train-ticket_v0.0.1_ts-rebook-service",
-            "train-ticket_v0.0.1_ts-admin-basic-info-service",
-            "train-ticket_v0.0.1_ts-preserve-other-service",
-            "train-ticket_v0.0.1_ts-seat-service",
-            "train-ticket_v0.0.1_ts-travel-plan-service",
-            "train-ticket_v0.0.1_ts-travel2-service",
-            "train-ticket_v0.0.1_ts-travel-service"
+            "ts-cancel-service",
+            "ts-preserve-service",
+            "ts-rebook-service",
+            "ts-admin-basic-info-service",
+            "ts-preserve-other-service",
+            "ts-seat-service",
+            "ts-travel-plan-service",
+            "ts-travel2-service",
+            "ts-travel-service"
         ]
     },
     "blog-microservices": {
         "ER_in_degree": [
-            "blog-microservices_discovery-server"
+            "discovery-server"
         ],
         "ER_out_degree": [
-            "blog-microservices_config-server"
+            "config-server"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "blog-microservices_monitor-dashboard",
-            "blog-microservices_discovery-server"
+            "monitor-dashboard",
+            "discovery-server"
         ],
         "AVG_out_degree": [
-            "blog-microservices_config-server",
-            "blog-microservices_turbine-server"
+            "config-server",
+            "turbine-server"
         ],
         "LOUBAR_in_degree": [
-            "blog-microservices_recommendation-service",
-            "blog-microservices_product-service",
-            "blog-microservices_review-service",
-            "blog-microservices_composite-service",
-            "blog-microservices_monitor-dashboard",
-            "blog-microservices_auth-server",
-            "blog-microservices_turbine-server",
-            "blog-microservices_edge-server",
-            "blog-microservices_discovery-server"
+            "recommendation-service",
+            "product-service",
+            "review-service",
+            "composite-service",
+            "monitor-dashboard",
+            "auth-server",
+            "turbine-server",
+            "edge-server",
+            "discovery-server"
         ],
         "LOUBAR_out_degree": [
-            "blog-microservices_config-server",
-            "blog-microservices_turbine-server"
+            "config-server",
+            "turbine-server"
         ]
     },
     "Basilisk": {
@@ -284,20 +284,20 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "Basilisk_rabbitmq"
+            "rabbitmq"
         ],
         "AVG_out_degree": [
-            "Basilisk_rabbitmq"
+            "rabbitmq"
         ],
         "LOUBAR_in_degree": [
-            "Basilisk_benchmark-service",
-            "Basilisk_repository-service",
-            "Basilisk_rabbitmq"
+            "benchmark-service",
+            "repository-service",
+            "rabbitmq"
         ],
         "LOUBAR_out_degree": [
-            "Basilisk_benchmark-service",
-            "Basilisk_repository-service",
-            "Basilisk_rabbitmq"
+            "benchmark-service",
+            "repository-service",
+            "rabbitmq"
         ]
     },
     "spring-boot-microservices-workshop": {
@@ -306,61 +306,61 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "spring-boot-microservices-workshop_discovery-server"
+            "discovery-server"
         ],
         "AVG_out_degree": [
-            "spring-boot-microservices-workshop_movie-catalog-service"
+            "movie-catalog-service"
         ],
         "LOUBAR_in_degree": [
-            "spring-boot-microservices-workshop_movie-info-service",
-            "spring-boot-microservices-workshop_ratings-data-service",
-            "spring-boot-microservices-workshop_discovery-server"
+            "movie-info-service",
+            "ratings-data-service",
+            "discovery-server"
         ],
         "LOUBAR_out_degree": [
-            "spring-boot-microservices-workshop_movie-info-service",
-            "spring-boot-microservices-workshop_ratings-data-service",
-            "spring-boot-microservices-workshop_movie-catalog-service"
+            "movie-info-service",
+            "ratings-data-service",
+            "movie-catalog-service"
         ]
     },
     "qbike": {
         "ER_in_degree": [
-            "qbike_rabbit",
-            "qbike_mysql",
-            "qbike_eureka"
+            "rabbit",
+            "mysql",
+            "eureka"
         ],
         "ER_out_degree": [],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "qbike_eureka",
-            "qbike_mysql",
-            "qbike_rabbit"
+            "eureka",
+            "mysql",
+            "rabbit"
         ],
         "AVG_out_degree": [
-            "qbike_qbike-intention",
-            "qbike_uc",
-            "qbike_intention",
-            "qbike_position",
-            "qbike_order"
+            "qbike-intention",
+            "uc",
+            "intention",
+            "position",
+            "order"
         ],
         "LOUBAR_in_degree": [
-            "qbike_eureka",
-            "qbike_mysql",
-            "qbike_rabbit"
+            "eureka",
+            "mysql",
+            "rabbit"
         ],
         "LOUBAR_out_degree": [
-            "qbike_qbike-order",
-            "qbike_qbike-intention",
-            "qbike_qbike-trip",
-            "qbike_eureka",
-            "qbike_qbike-uc",
-            "qbike_rabbit",
-            "qbike_uc",
-            "qbike_intention",
-            "qbike_position",
-            "qbike_order",
-            "qbike_api-gateway",
-            "qbike_zipkin"
+            "qbike-order",
+            "qbike-intention",
+            "qbike-trip",
+            "eureka",
+            "qbike-uc",
+            "rabbit",
+            "uc",
+            "intention",
+            "position",
+            "order",
+            "api-gateway",
+            "zipkin"
         ]
     },
     "springcloudmicroservices": {
@@ -369,149 +369,149 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "springcloudmicroservices_serviceregistry",
-            "springcloudmicroservices_rating-service"
+            "serviceregistry",
+            "rating-service"
         ],
         "AVG_out_degree": [
-            "springcloudmicroservices_user-service",
-            "springcloudmicroservices_api-gateway"
+            "user-service",
+            "api-gateway"
         ],
         "LOUBAR_in_degree": [
-            "springcloudmicroservices_serviceregistry",
-            "springcloudmicroservices_user-service",
-            "springcloudmicroservices_rating-service",
-            "springcloudmicroservices_hotel-service",
-            "springcloudmicroservices_api-gateway"
+            "serviceregistry",
+            "user-service",
+            "rating-service",
+            "hotel-service",
+            "api-gateway"
         ],
         "LOUBAR_out_degree": [
-            "springcloudmicroservices_serviceregistry",
-            "springcloudmicroservices_user-service",
-            "springcloudmicroservices_rating-service",
-            "springcloudmicroservices_hotel-service",
-            "springcloudmicroservices_api-gateway"
+            "serviceregistry",
+            "user-service",
+            "rating-service",
+            "hotel-service",
+            "api-gateway"
         ]
     },
     "piggymetrics": {
         "ER_in_degree": [],
         "ER_out_degree": [
-            "piggymetrics_config"
+            "config"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "piggymetrics_statistics-service",
-            "piggymetrics_account-service",
-            "piggymetrics_notification-service",
-            "piggymetrics_registry",
-            "piggymetrics_rabbitmq"
+            "statistics-service",
+            "account-service",
+            "notification-service",
+            "registry",
+            "rabbitmq"
         ],
         "AVG_out_degree": [
-            "piggymetrics_notification-service",
-            "piggymetrics_config",
-            "piggymetrics_auth-service",
-            "piggymetrics_gateway"
+            "notification-service",
+            "config",
+            "auth-service",
+            "gateway"
         ],
         "LOUBAR_in_degree": [
-            "piggymetrics_statistics-service",
-            "piggymetrics_account-service",
-            "piggymetrics_notification-service",
-            "piggymetrics_registry",
-            "piggymetrics_rabbitmq"
+            "statistics-service",
+            "account-service",
+            "notification-service",
+            "registry",
+            "rabbitmq"
         ],
         "LOUBAR_out_degree": [
-            "piggymetrics_notification-service",
-            "piggymetrics_config",
-            "piggymetrics_auth-service",
-            "piggymetrics_gateway"
+            "notification-service",
+            "config",
+            "auth-service",
+            "gateway"
         ]
     },
     "train-ticket_v1.0.0": {
         "ER_in_degree": [
-            "train-ticket_v1.0.0_ts-order-service",
-            "train-ticket_v1.0.0_ts-station-service",
-            "train-ticket_v1.0.0_ts-route-service",
-            "train-ticket_v1.0.0_ts-train-service",
-            "train-ticket_v1.0.0_ts-order-other-service",
-            "train-ticket_v1.0.0_ts-travel-service",
-            "train-ticket_v1.0.0_ts-seat-service",
-            "train-ticket_v1.0.0_ts-travel2-service",
-            "train-ticket_v1.0.0_ts-basic-service"
+            "ts-order-service",
+            "ts-station-service",
+            "ts-route-service",
+            "ts-train-service",
+            "ts-order-other-service",
+            "ts-travel-service",
+            "ts-seat-service",
+            "ts-travel2-service",
+            "ts-basic-service"
         ],
         "ER_out_degree": [
-            "train-ticket_v1.0.0_ts-preserve-service",
-            "train-ticket_v1.0.0_ts-preserve-other-service",
-            "train-ticket_v1.0.0_ts-rebook-service",
-            "train-ticket_v1.0.0_ts-admin-basic-info-service",
-            "train-ticket_v1.0.0_ts-admin-travel-service",
-            "train-ticket_v1.0.0_ts-travel-plan-service",
-            "train-ticket_v1.0.0_ts-cancel-service",
-            "train-ticket_v1.0.0_ts-basic-service",
-            "train-ticket_v1.0.0_ts-travel-service",
-            "train-ticket_v1.0.0_ts-travel2-service",
-            "train-ticket_v1.0.0_ts-food-service",
-            "train-ticket_v1.0.0_ts-seat-service",
-            "train-ticket_v1.0.0_ts-inside-payment-service",
-            "train-ticket_v1.0.0_ts-route-plan-service",
-            "train-ticket_v1.0.0_ts-admin-route-service",
-            "train-ticket_v1.0.0_ts-security-service",
-            "train-ticket_v1.0.0_ts-execute-service",
-            "train-ticket_v1.0.0_ts-admin-order-service"
+            "ts-preserve-service",
+            "ts-preserve-other-service",
+            "ts-rebook-service",
+            "ts-admin-basic-info-service",
+            "ts-admin-travel-service",
+            "ts-travel-plan-service",
+            "ts-cancel-service",
+            "ts-basic-service",
+            "ts-travel-service",
+            "ts-travel2-service",
+            "ts-food-service",
+            "ts-seat-service",
+            "ts-inside-payment-service",
+            "ts-route-plan-service",
+            "ts-admin-route-service",
+            "ts-security-service",
+            "ts-execute-service",
+            "ts-admin-order-service"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "train-ticket_v1.0.0_ts-contacts-service",
-            "train-ticket_v1.0.0_ts-order-other-service",
-            "train-ticket_v1.0.0_ts-route-service",
-            "train-ticket_v1.0.0_ts-train-service",
-            "train-ticket_v1.0.0_ts-order-service",
-            "train-ticket_v1.0.0_ts-basic-service",
-            "train-ticket_v1.0.0_ts-station-service",
-            "train-ticket_v1.0.0_ts-user-service",
-            "train-ticket_v1.0.0_ts-seat-service",
-            "train-ticket_v1.0.0_ts-travel2-service",
-            "train-ticket_v1.0.0_ts-travel-service"
+            "ts-contacts-service",
+            "ts-order-other-service",
+            "ts-route-service",
+            "ts-train-service",
+            "ts-order-service",
+            "ts-basic-service",
+            "ts-station-service",
+            "ts-user-service",
+            "ts-seat-service",
+            "ts-travel2-service",
+            "ts-travel-service"
         ],
         "AVG_out_degree": [
-            "train-ticket_v1.0.0_ts-cancel-service",
-            "train-ticket_v1.0.0_ts-preserve-service",
-            "train-ticket_v1.0.0_ts-food-service",
-            "train-ticket_v1.0.0_ts-rebook-service",
-            "train-ticket_v1.0.0_ts-admin-basic-info-service",
-            "train-ticket_v1.0.0_ts-basic-service",
-            "train-ticket_v1.0.0_ts-preserve-other-service",
-            "train-ticket_v1.0.0_ts-route-plan-service",
-            "train-ticket_v1.0.0_ts-inside-payment-service",
-            "train-ticket_v1.0.0_ts-seat-service",
-            "train-ticket_v1.0.0_ts-travel-plan-service",
-            "train-ticket_v1.0.0_ts-travel2-service",
-            "train-ticket_v1.0.0_ts-travel-service",
-            "train-ticket_v1.0.0_ts-admin-travel-service"
+            "ts-cancel-service",
+            "ts-preserve-service",
+            "ts-food-service",
+            "ts-rebook-service",
+            "ts-admin-basic-info-service",
+            "ts-basic-service",
+            "ts-preserve-other-service",
+            "ts-route-plan-service",
+            "ts-inside-payment-service",
+            "ts-seat-service",
+            "ts-travel-plan-service",
+            "ts-travel2-service",
+            "ts-travel-service",
+            "ts-admin-travel-service"
         ],
         "LOUBAR_in_degree": [
-            "train-ticket_v1.0.0_ts-contacts-service",
-            "train-ticket_v1.0.0_ts-order-other-service",
-            "train-ticket_v1.0.0_ts-route-service",
-            "train-ticket_v1.0.0_ts-train-service",
-            "train-ticket_v1.0.0_ts-order-service",
-            "train-ticket_v1.0.0_ts-basic-service",
-            "train-ticket_v1.0.0_ts-station-service",
-            "train-ticket_v1.0.0_ts-user-service",
-            "train-ticket_v1.0.0_ts-seat-service",
-            "train-ticket_v1.0.0_ts-travel2-service",
-            "train-ticket_v1.0.0_ts-travel-service"
+            "ts-contacts-service",
+            "ts-order-other-service",
+            "ts-route-service",
+            "ts-train-service",
+            "ts-order-service",
+            "ts-basic-service",
+            "ts-station-service",
+            "ts-user-service",
+            "ts-seat-service",
+            "ts-travel2-service",
+            "ts-travel-service"
         ],
         "LOUBAR_out_degree": [
-            "train-ticket_v1.0.0_ts-cancel-service",
-            "train-ticket_v1.0.0_ts-preserve-service",
-            "train-ticket_v1.0.0_ts-rebook-service",
-            "train-ticket_v1.0.0_ts-admin-basic-info-service",
-            "train-ticket_v1.0.0_ts-basic-service",
-            "train-ticket_v1.0.0_ts-preserve-other-service",
-            "train-ticket_v1.0.0_ts-travel-plan-service",
-            "train-ticket_v1.0.0_ts-travel2-service",
-            "train-ticket_v1.0.0_ts-travel-service",
-            "train-ticket_v1.0.0_ts-admin-travel-service"
+            "ts-cancel-service",
+            "ts-preserve-service",
+            "ts-rebook-service",
+            "ts-admin-basic-info-service",
+            "ts-basic-service",
+            "ts-preserve-other-service",
+            "ts-travel-plan-service",
+            "ts-travel2-service",
+            "ts-travel-service",
+            "ts-admin-travel-service"
         ]
     },
     "sample-spring-microservices-new": {
@@ -520,30 +520,30 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "sample-spring-microservices-new_employee-service",
-            "sample-spring-microservices-new_department-service",
-            "sample-spring-microservices-new_discovery-service",
-            "sample-spring-microservices-new_zipkin"
+            "employee-service",
+            "department-service",
+            "discovery-service",
+            "zipkin"
         ],
         "AVG_out_degree": [
-            "sample-spring-microservices-new_config-service",
-            "sample-spring-microservices-new_department-service",
-            "sample-spring-microservices-new_gateway-service",
-            "sample-spring-microservices-new_organization-service"
+            "config-service",
+            "department-service",
+            "gateway-service",
+            "organization-service"
         ],
         "LOUBAR_in_degree": [
-            "sample-spring-microservices-new_employee-service",
-            "sample-spring-microservices-new_department-service",
-            "sample-spring-microservices-new_gateway-service",
-            "sample-spring-microservices-new_organization-service",
-            "sample-spring-microservices-new_discovery-service",
-            "sample-spring-microservices-new_zipkin"
+            "employee-service",
+            "department-service",
+            "gateway-service",
+            "organization-service",
+            "discovery-service",
+            "zipkin"
         ],
         "LOUBAR_out_degree": [
-            "sample-spring-microservices-new_config-service",
-            "sample-spring-microservices-new_department-service",
-            "sample-spring-microservices-new_gateway-service",
-            "sample-spring-microservices-new_organization-service"
+            "config-service",
+            "department-service",
+            "gateway-service",
+            "organization-service"
         ]
     },
     "sample-spring-cloud-webflux": {
@@ -552,66 +552,66 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "sample-spring-cloud-webflux_discovery-service"
+            "discovery-service"
         ],
         "AVG_out_degree": [
-            "sample-spring-cloud-webflux_gateway-service"
+            "gateway-service"
         ],
         "LOUBAR_in_degree": [
-            "sample-spring-cloud-webflux_account-service",
-            "sample-spring-cloud-webflux_gateway-service",
-            "sample-spring-cloud-webflux_customer-service",
-            "sample-spring-cloud-webflux_discovery-service"
+            "account-service",
+            "gateway-service",
+            "customer-service",
+            "discovery-service"
         ],
         "LOUBAR_out_degree": [
-            "sample-spring-cloud-webflux_account-service",
-            "sample-spring-cloud-webflux_gateway-service",
-            "sample-spring-cloud-webflux_customer-service",
-            "sample-spring-cloud-webflux_discovery-service"
+            "account-service",
+            "gateway-service",
+            "customer-service",
+            "discovery-service"
         ]
     },
     "scaffold-cloud": {
         "ER_in_degree": [
-            "scaffold-cloud_scaffold-eureka"
+            "scaffold-eureka"
         ],
         "ER_out_degree": [],
         "CM_in_degree": [
-            "scaffold-cloud_scaffold-eureka"
+            "scaffold-eureka"
         ],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "scaffold-cloud_scaffold-zuul",
-            "scaffold-cloud_demo",
-            "scaffold-cloud_scaffold-eureka"
+            "scaffold-zuul",
+            "demo",
+            "scaffold-eureka"
         ],
         "AVG_out_degree": [
-            "scaffold-cloud_scaffold-txmanager",
-            "scaffold-cloud_scaffold-business-thirdparty-service",
-            "scaffold-cloud_scaffold-business-job-service",
-            "scaffold-cloud_scaffold-business-sys-service",
-            "scaffold-cloud_demo",
-            "scaffold-cloud_scaffold-config-server",
-            "scaffold-cloud_scaffold-eureka",
-            "scaffold-cloud_scaffold-route-openapi",
-            "scaffold-cloud_scaffold-route-app",
-            "scaffold-cloud_scaffold-route-operate"
+            "scaffold-txmanager",
+            "scaffold-business-thirdparty-service",
+            "scaffold-business-job-service",
+            "scaffold-business-sys-service",
+            "demo",
+            "scaffold-config-server",
+            "scaffold-eureka",
+            "scaffold-route-openapi",
+            "scaffold-route-app",
+            "scaffold-route-operate"
         ],
         "LOUBAR_in_degree": [
-            "scaffold-cloud_scaffold-zuul",
-            "scaffold-cloud_demo",
-            "scaffold-cloud_scaffold-eureka"
+            "scaffold-zuul",
+            "demo",
+            "scaffold-eureka"
         ],
         "LOUBAR_out_degree": [
-            "scaffold-cloud_scaffold-txmanager",
-            "scaffold-cloud_scaffold-business-thirdparty-service",
-            "scaffold-cloud_scaffold-business-job-service",
-            "scaffold-cloud_scaffold-business-sys-service",
-            "scaffold-cloud_demo",
-            "scaffold-cloud_scaffold-config-server",
-            "scaffold-cloud_scaffold-eureka",
-            "scaffold-cloud_scaffold-route-openapi",
-            "scaffold-cloud_scaffold-route-app",
-            "scaffold-cloud_scaffold-route-operate"
+            "scaffold-txmanager",
+            "scaffold-business-thirdparty-service",
+            "scaffold-business-job-service",
+            "scaffold-business-sys-service",
+            "demo",
+            "scaffold-config-server",
+            "scaffold-eureka",
+            "scaffold-route-openapi",
+            "scaffold-route-app",
+            "scaffold-route-operate"
         ]
     },
     "jhipster-microservices-example": {
@@ -620,55 +620,55 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "jhipster-microservices-example_blog",
-            "jhipster-microservices-example_jhipster-registry",
-            "jhipster-microservices-example_store"
+            "blog",
+            "jhipster-registry",
+            "store"
         ],
         "AVG_out_degree": [
-            "jhipster-microservices-example_jhipster-registry",
-            "jhipster-microservices-example_store",
-            "jhipster-microservices-example_github-repository"
+            "jhipster-registry",
+            "store",
+            "github-repository"
         ],
         "LOUBAR_in_degree": [
-            "jhipster-microservices-example_blog",
-            "jhipster-microservices-example_jhipster-registry",
-            "jhipster-microservices-example_store"
+            "blog",
+            "jhipster-registry",
+            "store"
         ],
         "LOUBAR_out_degree": [
-            "jhipster-microservices-example_jhipster-registry",
-            "jhipster-microservices-example_store",
-            "jhipster-microservices-example_github-repository"
+            "jhipster-registry",
+            "store",
+            "github-repository"
         ]
     },
     "micro_webshop": {
         "ER_in_degree": [
-            "micro_webshop_eureka"
+            "eureka"
         ],
         "ER_out_degree": [],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "micro_webshop_eureka"
+            "eureka"
         ],
         "AVG_out_degree": [
-            "micro_webshop_user-proxy",
-            "micro_webshop_product-proxy"
+            "user-proxy",
+            "product-proxy"
         ],
         "LOUBAR_in_degree": [
-            "micro_webshop_zuul",
-            "micro_webshop_eureka",
-            "micro_webshop_product-service",
-            "micro_webshop_category-service",
-            "micro_webshop_security-service"
+            "zuul",
+            "eureka",
+            "product-service",
+            "category-service",
+            "security-service"
         ],
         "LOUBAR_out_degree": [
-            "micro_webshop_eureka",
-            "micro_webshop_user-proxy",
-            "micro_webshop_product-service",
-            "micro_webshop_category-service",
-            "micro_webshop_security-service",
-            "micro_webshop_product-proxy",
-            "micro_webshop_auth-server"
+            "eureka",
+            "user-proxy",
+            "product-service",
+            "category-service",
+            "security-service",
+            "product-proxy",
+            "auth-server"
         ]
     },
     "microservice": {
@@ -677,26 +677,26 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "microservice_eureka",
-            "microservice_catalog",
-            "microservice_customer"
+            "eureka",
+            "catalog",
+            "customer"
         ],
         "AVG_out_degree": [
-            "microservice_order",
-            "microservice_zuul"
+            "order",
+            "zuul"
         ],
         "LOUBAR_in_degree": [
-            "microservice_eureka",
-            "microservice_catalog",
-            "microservice_customer"
+            "eureka",
+            "catalog",
+            "customer"
         ],
         "LOUBAR_out_degree": [
-            "microservice_order",
-            "microservice_eureka",
-            "microservice_turbine",
-            "microservice_catalog",
-            "microservice_zuul",
-            "microservice_customer"
+            "order",
+            "eureka",
+            "turbine",
+            "catalog",
+            "zuul",
+            "customer"
         ]
     },
     "spring-cloud-movie-recommendation": {
@@ -705,101 +705,101 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "spring-cloud-movie-recommendation_recommendation-service",
-            "spring-cloud-movie-recommendation_recommendation-client",
-            "spring-cloud-movie-recommendation_eureka-service",
-            "spring-cloud-movie-recommendation_user-service",
-            "spring-cloud-movie-recommendation_movie-service"
+            "recommendation-service",
+            "recommendation-client",
+            "eureka-service",
+            "user-service",
+            "movie-service"
         ],
         "AVG_out_degree": [
-            "spring-cloud-movie-recommendation_config-service",
-            "spring-cloud-movie-recommendation_recommendation-client"
+            "config-service",
+            "recommendation-client"
         ],
         "LOUBAR_in_degree": [
-            "spring-cloud-movie-recommendation_recommendation-service",
-            "spring-cloud-movie-recommendation_recommendation-client",
-            "spring-cloud-movie-recommendation_eureka-service",
-            "spring-cloud-movie-recommendation_user-service",
-            "spring-cloud-movie-recommendation_movie-service"
+            "recommendation-service",
+            "recommendation-client",
+            "eureka-service",
+            "user-service",
+            "movie-service"
         ],
         "LOUBAR_out_degree": [
-            "spring-cloud-movie-recommendation_recommendation-service",
-            "spring-cloud-movie-recommendation_config-service",
-            "spring-cloud-movie-recommendation_recommendation-client",
-            "spring-cloud-movie-recommendation_eureka-service",
-            "spring-cloud-movie-recommendation_user-service",
-            "spring-cloud-movie-recommendation_movie-service",
-            "spring-cloud-movie-recommendation_github-repository"
+            "recommendation-service",
+            "config-service",
+            "recommendation-client",
+            "eureka-service",
+            "user-service",
+            "movie-service",
+            "github-repository"
         ]
     },
     "geocoder-microservices": {
         "ER_in_degree": [],
         "ER_out_degree": [
-            "geocoder-microservices_configurator"
+            "configurator"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "geocoder-microservices_geocoderlocal-service",
-            "geocoder-microservices_zuul-gateway",
-            "geocoder-microservices_geocoderremote-service",
-            "geocoder-microservices_eureka-discovery",
-            "geocoder-microservices_auth-service"
+            "geocoderlocal-service",
+            "zuul-gateway",
+            "geocoderremote-service",
+            "eureka-discovery",
+            "auth-service"
         ],
         "AVG_out_degree": [
-            "geocoder-microservices_configurator",
-            "geocoder-microservices_auth-service",
-            "geocoder-microservices_mongodb"
+            "configurator",
+            "auth-service",
+            "mongodb"
         ],
         "LOUBAR_in_degree": [
-            "geocoder-microservices_geocoderlocal-service",
-            "geocoder-microservices_zuul-gateway",
-            "geocoder-microservices_geocoderremote-service",
-            "geocoder-microservices_eureka-discovery",
-            "geocoder-microservices_auth-service"
+            "geocoderlocal-service",
+            "zuul-gateway",
+            "geocoderremote-service",
+            "eureka-discovery",
+            "auth-service"
         ],
         "LOUBAR_out_degree": [
-            "geocoder-microservices_configurator",
-            "geocoder-microservices_auth-service",
-            "geocoder-microservices_mongodb"
+            "configurator",
+            "auth-service",
+            "mongodb"
         ]
     },
     "spring-netflix-oss-microservices": {
         "ER_in_degree": [],
         "ER_out_degree": [
-            "spring-netflix-oss-microservices_config-server"
+            "config-server"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "spring-netflix-oss-microservices_monitor-dashboard",
-            "spring-netflix-oss-microservices_discovery-service",
-            "spring-netflix-oss-microservices_turbine",
-            "spring-netflix-oss-microservices_edge-server",
-            "spring-netflix-oss-microservices_rabbitmq"
+            "monitor-dashboard",
+            "discovery-service",
+            "turbine",
+            "edge-server",
+            "rabbitmq"
         ],
         "AVG_out_degree": [
-            "spring-netflix-oss-microservices_config-server",
-            "spring-netflix-oss-microservices_turbine"
+            "config-server",
+            "turbine"
         ],
         "LOUBAR_in_degree": [
-            "spring-netflix-oss-microservices_monitor-dashboard",
-            "spring-netflix-oss-microservices_discovery-service",
-            "spring-netflix-oss-microservices_turbine",
-            "spring-netflix-oss-microservices_edge-server",
-            "spring-netflix-oss-microservices_rabbitmq"
+            "monitor-dashboard",
+            "discovery-service",
+            "turbine",
+            "edge-server",
+            "rabbitmq"
         ],
         "LOUBAR_out_degree": [
-            "spring-netflix-oss-microservices_monitor-dashboard",
-            "spring-netflix-oss-microservices_card-statement-composite",
-            "spring-netflix-oss-microservices_card-service",
-            "spring-netflix-oss-microservices_discovery-service",
-            "spring-netflix-oss-microservices_statement-service",
-            "spring-netflix-oss-microservices_config-server",
-            "spring-netflix-oss-microservices_turbine",
-            "spring-netflix-oss-microservices_rabbitmq",
-            "spring-netflix-oss-microservices_github-repository",
-            "spring-netflix-oss-microservices_monitor"
+            "monitor-dashboard",
+            "card-statement-composite",
+            "card-service",
+            "discovery-service",
+            "statement-service",
+            "config-server",
+            "turbine",
+            "rabbitmq",
+            "github-repository",
+            "monitor"
         ]
     },
     "website": {
@@ -808,84 +808,84 @@
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "website_registry"
+            "registry"
         ],
         "AVG_out_degree": [
-            "website_gateway"
+            "gateway"
         ],
         "LOUBAR_in_degree": [
-            "website_authserver",
-            "website_backend",
-            "website_registry",
-            "website_gateway"
+            "authserver",
+            "backend",
+            "registry",
+            "gateway"
         ],
         "LOUBAR_out_degree": [
-            "website_authserver",
-            "website_backend",
-            "website_registry",
-            "website_gateway"
+            "authserver",
+            "backend",
+            "registry",
+            "gateway"
         ]
     },
     "Tap-And-Eat-MicroServices": {
         "ER_in_degree": [
-            "Tap-And-Eat-MicroServices_discovery-service"
+            "discovery-service"
         ],
         "ER_out_degree": [
-            "Tap-And-Eat-MicroServices_config-service"
+            "config-service"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "Tap-And-Eat-MicroServices_discovery-service",
-            "Tap-And-Eat-MicroServices_price-service",
-            "Tap-And-Eat-MicroServices_item-service"
+            "discovery-service",
+            "price-service",
+            "item-service"
         ],
         "AVG_out_degree": [
-            "Tap-And-Eat-MicroServices_config-service",
-            "Tap-And-Eat-MicroServices_foodtray-service"
+            "config-service",
+            "foodtray-service"
         ],
         "LOUBAR_in_degree": [
-            "Tap-And-Eat-MicroServices_discovery-service",
-            "Tap-And-Eat-MicroServices_price-service",
-            "Tap-And-Eat-MicroServices_item-service"
+            "discovery-service",
+            "price-service",
+            "item-service"
         ],
         "LOUBAR_out_degree": [
-            "Tap-And-Eat-MicroServices_account-service",
-            "Tap-And-Eat-MicroServices_config-service",
-            "Tap-And-Eat-MicroServices_foodtray-service",
-            "Tap-And-Eat-MicroServices_price-service",
-            "Tap-And-Eat-MicroServices_store-service",
-            "Tap-And-Eat-MicroServices_customer-service",
-            "Tap-And-Eat-MicroServices_item-service",
-            "Tap-And-Eat-MicroServices_github-repository"
+            "account-service",
+            "config-service",
+            "foodtray-service",
+            "price-service",
+            "store-service",
+            "customer-service",
+            "item-service",
+            "github-repository"
         ]
     },
     "spring-boot-microservices": {
         "ER_in_degree": [
-            "spring-boot-microservices_webservice-registry"
+            "webservice-registry"
         ],
         "ER_out_degree": [
-            "spring-boot-microservices_configserver"
+            "configserver"
         ],
         "CM_in_degree": [],
         "CM_out_degree": [],
         "AVG_in_degree": [
-            "spring-boot-microservices_api-gateway",
-            "spring-boot-microservices_comments-webservice",
-            "spring-boot-microservices_webservice-registry"
+            "api-gateway",
+            "comments-webservice",
+            "webservice-registry"
         ],
         "AVG_out_degree": [
-            "spring-boot-microservices_task-webservice",
-            "spring-boot-microservices_configserver"
+            "task-webservice",
+            "configserver"
         ],
         "LOUBAR_in_degree": [
-            "spring-boot-microservices_api-gateway",
-            "spring-boot-microservices_comments-webservice",
-            "spring-boot-microservices_webservice-registry"
+            "api-gateway",
+            "comments-webservice",
+            "webservice-registry"
         ],
         "LOUBAR_out_degree": [
-            "spring-boot-microservices_task-webservice",
-            "spring-boot-microservices_configserver"
+            "task-webservice",
+            "configserver"
         ]
     }
 }
