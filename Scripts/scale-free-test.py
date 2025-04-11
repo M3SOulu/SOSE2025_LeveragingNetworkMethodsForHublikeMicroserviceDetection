@@ -50,32 +50,51 @@ for centrality in distributions:
         "GoF_p_value": pval_gof
     })
 
-    # Plot PDF
-    plt.figure(figsize=(8, 6))
-    fit.plot_pdf(label='Empirical', color='blue')
-    fit.power_law.plot_pdf(label=f'Power Law fit (α={alpha:.2f})', color='red')
-    plt.title(f"PDF - {centrality}")
-    plt.xlabel("Degree")
-    plt.ylabel("P(k)")
-    plt.legend()
-    plt.grid(True)
-    plt.tight_layout()
-    plt.savefig(os.path.join("Results", "ScaleFreeTest", f"pdf_{centrality.replace(' ', '_').lower()}.pdf"))
-    plt.close()
-
-    # Plot CCDF
-    plt.figure(figsize=(8, 6))
-    fit.plot_ccdf(label='Empirical', color='blue')
-    fit.power_law.plot_ccdf(label=f'Power Law CCDF (α={alpha:.2f})', color='red')
-    plt.title(f"CCDF - {centrality}")
-    plt.xlabel("Degree")
-    plt.ylabel("P(X ≥ k)")
-    plt.legend()
-    plt.grid(True)
-    plt.tight_layout()
-    plt.savefig(os.path.join("Results", "ScaleFreeTest", f"ccdf_{centrality.replace(' ', '_').lower()}.pdf"))
-    plt.close()
-
 # Save summary to CSV
 summary_df = pd.DataFrame(results_summary)
-summary_df.to_csv(os.path.join("Results", "ScaleFreeTest", "scale_free_summary.csv"), index=False)
+summary_df.to_csv(os.path.join("Results", "scale_free_summary.csv"), index=False)
+
+deg_scale = df["Degree Centrality"].value_counts(normalize=True).sort_index()
+in_deg_scale = df["In-degree Centrality"].value_counts(normalize=True).sort_index()
+out_deg_scale = df["Out-degree Centrality"].value_counts(normalize=True).sort_index()
+
+degree = summary_df["alpha"].iloc[0]
+in_degree = summary_df["alpha"].iloc[1]
+out_degree = summary_df["alpha"].iloc[2]
+powerlaw = lambda alpha, x: (alpha - 1) * x ** (-alpha)
+degree_power = [powerlaw(degree, x) for x in range(13)]
+in_degree_power = [powerlaw(in_degree, x) for x in range(13)]
+out_degree_power = [powerlaw(out_degree, x) for x in range(13)]
+
+plt.figure(figsize=(10, 3))
+plt.subplot(1, 3, 1)
+plt.plot(deg_scale.index, deg_scale.values)
+plt.plot(degree_power)
+plt.title("Degree")
+plt.xlim((0, 12))
+plt.ylabel("Proportion of nodes, P(k)")
+plt.xlabel("Degree, k")
+plt.tight_layout()
+
+plt.subplot(1, 3, 2)
+plt.plot(in_deg_scale.index, in_deg_scale.values)
+plt.plot(in_degree_power)
+plt.xlabel("Degree, k")
+plt.xlim((0, 12))
+plt.ylim((0.0, 0.5))
+plt.title("In-degree")
+plt.tight_layout()
+
+plt.subplot(1, 3, 3)
+plt.plot(out_deg_scale.index, out_deg_scale.values)
+plt.plot(out_degree_power)
+plt.xlabel("Degree, k")
+plt.xlim((0, 12))
+plt.ylim((0.0, 0.5))
+plt.title("Out-degree")
+plt.legend(["P(k) for degree k", "Power law best fit"], loc='right')
+plt.tight_layout()
+
+plt.suptitle("Power law fits to determine scale-free property")
+plt.tight_layout()
+plt.savefig("Figures/ScaleFree.pdf")
