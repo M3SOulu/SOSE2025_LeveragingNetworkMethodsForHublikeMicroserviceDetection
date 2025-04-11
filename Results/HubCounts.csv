@@ -1,0 +1,20 @@
+Method,Hubs
+AVG_in_degree,96
+AVG_out_degree,92
+CM_in_degree,1
+Clustering & Authority Score,2
+Clustering & Betweenness Centrality,1
+Clustering & Closeness Centrality,5
+Clustering & Eigenvector Centrality,5
+Clustering & Hub Score,1
+Clustering & Norm. Degree Centrality,5
+Clustering & Norm. In-degree Centrality,3
+Clustering & Norm. Out-degree Centrality,5
+Clustering & PageRank Centrality,2
+ER_in_degree,33
+ER_out_degree,39
+LOUBAR_in_degree,119
+LOUBAR_out_degree,138
+CM_out_degree,0
+Arcan_abs,10
+Arcan_norm,66

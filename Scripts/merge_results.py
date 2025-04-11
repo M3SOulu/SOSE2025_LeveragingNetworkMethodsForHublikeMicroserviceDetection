@@ -83,6 +83,10 @@ def main():
     # Select only boolean columns
     bool_cols = merged_df.select_dtypes(include=bool).columns
 
+    count_df = merged_df[bool_cols]
+    count_df = count_df.sum()
+    count_df.to_csv("Results/HubCounts.csv")
+
     # Dictionary to store results
     agreements = {}
 
