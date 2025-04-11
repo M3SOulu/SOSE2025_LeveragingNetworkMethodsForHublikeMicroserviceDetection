@@ -52,7 +52,7 @@ for centrality in distributions:
 
 # Save summary to CSV
 summary_df = pd.DataFrame(results_summary)
-summary_df.to_csv(os.path.join("Results", "scale_free_summary.csv"), index=False)
+summary_df.to_csv(os.path.join("Results", "ScaleFreeTest.csv"), index=False)
 
 deg_scale = df["Degree Centrality"].value_counts(normalize=True).sort_index()
 in_deg_scale = df["In-degree Centrality"].value_counts(normalize=True).sort_index()
