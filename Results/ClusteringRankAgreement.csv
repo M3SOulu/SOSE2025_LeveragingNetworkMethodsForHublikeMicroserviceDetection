@@ -1,4 +1,4 @@
-Norm. Degree Centrality;Norm. In-degree Centrality;Norm. Out-degree Centrality;Eigenvector Centrality;Betweenness Centrality;Closeness Centrality;PageRank Centrality;Hub Score;Authority Score
+Degree Centrality;In-degree Centrality;Out-degree Centrality;Eigenvector Centrality;Betweenness Centrality;Closeness Centrality;PageRank Centrality;Hub Score;Authority Score
 Basilisk_rabbitmq;Basilisk_rabbitmq;Basilisk_rabbitmq;micro_webshop_zuul;Basilisk_rabbitmq;Basilisk_rabbitmq;Basilisk_rabbitmq;Basilisk_benchmark-service;website_registry
 jhipster-microservices-example_jhipster-registry;scaffold-cloud_scaffold-eureka;blog-microservices_config-server;scaffold-cloud_scaffold-zuul;;scaffold-cloud_scaffold-eureka;microservice-kafka_kafka;;Basilisk_rabbitmq
 Basilisk_benchmark-service;micro_webshop_eureka;microservices-basics-spring-boot_configserver;qbike_microservice-api-gateway;;micro_webshop_eureka;;;

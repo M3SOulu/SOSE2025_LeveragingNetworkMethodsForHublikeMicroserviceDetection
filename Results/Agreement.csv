@@ -4,11 +4,11 @@ AVG_in_degree,CM_in_degree,0.6215139442231076
 AVG_in_degree,Clustering & Authority Score,0.6254980079681275
 AVG_in_degree,Clustering & Betweenness Centrality,0.6215139442231076
 AVG_in_degree,Clustering & Closeness Centrality,0.6374501992031872
+AVG_in_degree,Clustering & Degree Centrality,0.6215139442231076
 AVG_in_degree,Clustering & Eigenvector Centrality,0.6215139442231076
 AVG_in_degree,Clustering & Hub Score,0.6135458167330677
-AVG_in_degree,Clustering & Norm. Degree Centrality,0.6215139442231076
-AVG_in_degree,Clustering & Norm. In-degree Centrality,0.6294820717131474
-AVG_in_degree,Clustering & Norm. Out-degree Centrality,0.6055776892430279
+AVG_in_degree,Clustering & In-degree Centrality,0.6294820717131474
+AVG_in_degree,Clustering & Out-degree Centrality,0.6055776892430279
 AVG_in_degree,Clustering & PageRank Centrality,0.6254980079681275
 AVG_in_degree,ER_in_degree,0.749003984063745
 AVG_in_degree,ER_out_degree,0.5179282868525896
@@ -21,11 +21,11 @@ AVG_out_degree,CM_in_degree,0.6374501992031872
 AVG_out_degree,Clustering & Authority Score,0.6334661354581673
 AVG_out_degree,Clustering & Betweenness Centrality,0.6374501992031872
 AVG_out_degree,Clustering & Closeness Centrality,0.6374501992031872
+AVG_out_degree,Clustering & Degree Centrality,0.6374501992031872
 AVG_out_degree,Clustering & Eigenvector Centrality,0.6135458167330677
 AVG_out_degree,Clustering & Hub Score,0.6294820717131474
-AVG_out_degree,Clustering & Norm. Degree Centrality,0.6374501992031872
-AVG_out_degree,Clustering & Norm. In-degree Centrality,0.6374501992031872
-AVG_out_degree,Clustering & Norm. Out-degree Centrality,0.6533864541832669
+AVG_out_degree,Clustering & In-degree Centrality,0.6374501992031872
+AVG_out_degree,Clustering & Out-degree Centrality,0.6533864541832669
 AVG_out_degree,Clustering & PageRank Centrality,0.6414342629482072
 AVG_out_degree,ER_in_degree,0.5737051792828686
 AVG_out_degree,ER_out_degree,0.7569721115537849
@@ -37,11 +37,11 @@ AVG_out_degree,Arcan_norm,0.6414342629482072
 CM_in_degree,Clustering & Authority Score,0.9880478087649402
 CM_in_degree,Clustering & Betweenness Centrality,0.9920318725099602
 CM_in_degree,Clustering & Closeness Centrality,0.9840637450199203
+CM_in_degree,Clustering & Degree Centrality,0.9760956175298805
 CM_in_degree,Clustering & Eigenvector Centrality,0.9760956175298805
 CM_in_degree,Clustering & Hub Score,0.9920318725099602
-CM_in_degree,Clustering & Norm. Degree Centrality,0.9760956175298805
-CM_in_degree,Clustering & Norm. In-degree Centrality,0.9920318725099602
-CM_in_degree,Clustering & Norm. Out-degree Centrality,0.9760956175298805
+CM_in_degree,Clustering & In-degree Centrality,0.9920318725099602
+CM_in_degree,Clustering & Out-degree Centrality,0.9760956175298805
 CM_in_degree,Clustering & PageRank Centrality,0.9880478087649402
 CM_in_degree,ER_in_degree,0.8725099601593626
 CM_in_degree,ER_out_degree,0.8406374501992032
@@ -52,11 +52,11 @@ CM_in_degree,Arcan_abs,0.9561752988047809
 CM_in_degree,Arcan_norm,0.7410358565737052
 Clustering & Authority Score,Clustering & Betweenness Centrality,0.9960159362549801
 Clustering & Authority Score,Clustering & Closeness Centrality,0.9800796812749004
+Clustering & Authority Score,Clustering & Degree Centrality,0.9800796812749004
 Clustering & Authority Score,Clustering & Eigenvector Centrality,0.9721115537848606
 Clustering & Authority Score,Clustering & Hub Score,0.9880478087649402
-Clustering & Authority Score,Clustering & Norm. Degree Centrality,0.9800796812749004
-Clustering & Authority Score,Clustering & Norm. In-degree Centrality,0.9880478087649402
-Clustering & Authority Score,Clustering & Norm. Out-degree Centrality,0.9800796812749004
+Clustering & Authority Score,Clustering & In-degree Centrality,0.9880478087649402
+Clustering & Authority Score,Clustering & Out-degree Centrality,0.9800796812749004
 Clustering & Authority Score,Clustering & PageRank Centrality,0.9920318725099602
 Clustering & Authority Score,ER_in_degree,0.8605577689243028
 Clustering & Authority Score,ER_out_degree,0.8366533864541833
@@ -66,11 +66,11 @@ Clustering & Authority Score,CM_out_degree,0.9920318725099602
 Clustering & Authority Score,Arcan_abs,0.952191235059761
 Clustering & Authority Score,Arcan_norm,0.7450199203187251
 Clustering & Betweenness Centrality,Clustering & Closeness Centrality,0.9840637450199203
+Clustering & Betweenness Centrality,Clustering & Degree Centrality,0.9840637450199203
 Clustering & Betweenness Centrality,Clustering & Eigenvector Centrality,0.9760956175298805
 Clustering & Betweenness Centrality,Clustering & Hub Score,0.9920318725099602
-Clustering & Betweenness Centrality,Clustering & Norm. Degree Centrality,0.9840637450199203
-Clustering & Betweenness Centrality,Clustering & Norm. In-degree Centrality,0.9920318725099602
-Clustering & Betweenness Centrality,Clustering & Norm. Out-degree Centrality,0.9840637450199203
+Clustering & Betweenness Centrality,Clustering & In-degree Centrality,0.9920318725099602
+Clustering & Betweenness Centrality,Clustering & Out-degree Centrality,0.9840637450199203
 Clustering & Betweenness Centrality,Clustering & PageRank Centrality,0.9960159362549801
 Clustering & Betweenness Centrality,ER_in_degree,0.8645418326693227
 Clustering & Betweenness Centrality,ER_out_degree,0.8406374501992032
@@ -79,11 +79,11 @@ Clustering & Betweenness Centrality,LOUBAR_out_degree,0.4541832669322709
 Clustering & Betweenness Centrality,CM_out_degree,0.9960159362549801
 Clustering & Betweenness Centrality,Arcan_abs,0.9561752988047809
 Clustering & Betweenness Centrality,Arcan_norm,0.7410358565737052
+Clustering & Closeness Centrality,Clustering & Degree Centrality,0.9760956175298805
 Clustering & Closeness Centrality,Clustering & Eigenvector Centrality,0.9601593625498008
 Clustering & Closeness Centrality,Clustering & Hub Score,0.9760956175298805
-Clustering & Closeness Centrality,Clustering & Norm. Degree Centrality,0.9760956175298805
-Clustering & Closeness Centrality,Clustering & Norm. In-degree Centrality,0.9920318725099602
-Clustering & Closeness Centrality,Clustering & Norm. Out-degree Centrality,0.9681274900398407
+Clustering & Closeness Centrality,Clustering & In-degree Centrality,0.9920318725099602
+Clustering & Closeness Centrality,Clustering & Out-degree Centrality,0.9681274900398407
 Clustering & Closeness Centrality,Clustering & PageRank Centrality,0.9880478087649402
 Clustering & Closeness Centrality,ER_in_degree,0.8804780876494024
 Clustering & Closeness Centrality,ER_out_degree,0.8247011952191236
@@ -92,10 +92,21 @@ Clustering & Closeness Centrality,LOUBAR_out_degree,0.46215139442231074
 Clustering & Closeness Centrality,CM_out_degree,0.9800796812749004
 Clustering & Closeness Centrality,Arcan_abs,0.9402390438247012
 Clustering & Closeness Centrality,Arcan_norm,0.7569721115537849
+Clustering & Degree Centrality,Clustering & Eigenvector Centrality,0.9601593625498008
+Clustering & Degree Centrality,Clustering & Hub Score,0.9840637450199203
+Clustering & Degree Centrality,Clustering & In-degree Centrality,0.9760956175298805
+Clustering & Degree Centrality,Clustering & Out-degree Centrality,0.9681274900398407
+Clustering & Degree Centrality,Clustering & PageRank Centrality,0.9880478087649402
+Clustering & Degree Centrality,ER_in_degree,0.8565737051792829
+Clustering & Degree Centrality,ER_out_degree,0.8247011952191236
+Clustering & Degree Centrality,LOUBAR_in_degree,0.545816733067729
+Clustering & Degree Centrality,LOUBAR_out_degree,0.4701195219123506
+Clustering & Degree Centrality,CM_out_degree,0.9800796812749004
+Clustering & Degree Centrality,Arcan_abs,0.9402390438247012
+Clustering & Degree Centrality,Arcan_norm,0.7569721115537849
 Clustering & Eigenvector Centrality,Clustering & Hub Score,0.9760956175298805
-Clustering & Eigenvector Centrality,Clustering & Norm. Degree Centrality,0.9601593625498008
-Clustering & Eigenvector Centrality,Clustering & Norm. In-degree Centrality,0.9681274900398407
-Clustering & Eigenvector Centrality,Clustering & Norm. Out-degree Centrality,0.9601593625498008
+Clustering & Eigenvector Centrality,Clustering & In-degree Centrality,0.9681274900398407
+Clustering & Eigenvector Centrality,Clustering & Out-degree Centrality,0.9601593625498008
 Clustering & Eigenvector Centrality,Clustering & PageRank Centrality,0.9721115537848606
 Clustering & Eigenvector Centrality,ER_in_degree,0.8565737051792829
 Clustering & Eigenvector Centrality,ER_out_degree,0.8247011952191236
@@ -104,9 +115,8 @@ Clustering & Eigenvector Centrality,LOUBAR_out_degree,0.4302788844621514
 Clustering & Eigenvector Centrality,CM_out_degree,0.9800796812749004
 Clustering & Eigenvector Centrality,Arcan_abs,0.9402390438247012
 Clustering & Eigenvector Centrality,Arcan_norm,0.7171314741035857
-Clustering & Hub Score,Clustering & Norm. Degree Centrality,0.9840637450199203
-Clustering & Hub Score,Clustering & Norm. In-degree Centrality,0.9840637450199203
-Clustering & Hub Score,Clustering & Norm. Out-degree Centrality,0.9760956175298805
+Clustering & Hub Score,Clustering & In-degree Centrality,0.9840637450199203
+Clustering & Hub Score,Clustering & Out-degree Centrality,0.9760956175298805
 Clustering & Hub Score,Clustering & PageRank Centrality,0.9880478087649402
 Clustering & Hub Score,ER_in_degree,0.8645418326693227
 Clustering & Hub Score,ER_out_degree,0.8406374501992032
@@ -115,33 +125,23 @@ Clustering & Hub Score,LOUBAR_out_degree,0.4541832669322709
 Clustering & Hub Score,CM_out_degree,0.9960159362549801
 Clustering & Hub Score,Arcan_abs,0.9561752988047809
 Clustering & Hub Score,Arcan_norm,0.7410358565737052
-Clustering & Norm. Degree Centrality,Clustering & Norm. In-degree Centrality,0.9760956175298805
-Clustering & Norm. Degree Centrality,Clustering & Norm. Out-degree Centrality,0.9681274900398407
-Clustering & Norm. Degree Centrality,Clustering & PageRank Centrality,0.9880478087649402
-Clustering & Norm. Degree Centrality,ER_in_degree,0.8565737051792829
-Clustering & Norm. Degree Centrality,ER_out_degree,0.8247011952191236
-Clustering & Norm. Degree Centrality,LOUBAR_in_degree,0.545816733067729
-Clustering & Norm. Degree Centrality,LOUBAR_out_degree,0.4701195219123506
-Clustering & Norm. Degree Centrality,CM_out_degree,0.9800796812749004
-Clustering & Norm. Degree Centrality,Arcan_abs,0.9402390438247012
-Clustering & Norm. Degree Centrality,Arcan_norm,0.7569721115537849
-Clustering & Norm. In-degree Centrality,Clustering & Norm. Out-degree Centrality,0.9760956175298805
-Clustering & Norm. In-degree Centrality,Clustering & PageRank Centrality,0.9880478087649402
-Clustering & Norm. In-degree Centrality,ER_in_degree,0.8725099601593626
-Clustering & Norm. In-degree Centrality,ER_out_degree,0.8326693227091634
-Clustering & Norm. In-degree Centrality,LOUBAR_in_degree,0.5378486055776892
-Clustering & Norm. In-degree Centrality,LOUBAR_out_degree,0.46215139442231074
-Clustering & Norm. In-degree Centrality,CM_out_degree,0.9880478087649402
-Clustering & Norm. In-degree Centrality,Arcan_abs,0.9482071713147411
-Clustering & Norm. In-degree Centrality,Arcan_norm,0.749003984063745
-Clustering & Norm. Out-degree Centrality,Clustering & PageRank Centrality,0.9800796812749004
-Clustering & Norm. Out-degree Centrality,ER_in_degree,0.848605577689243
-Clustering & Norm. Out-degree Centrality,ER_out_degree,0.8565737051792829
-Clustering & Norm. Out-degree Centrality,LOUBAR_in_degree,0.5139442231075697
-Clustering & Norm. Out-degree Centrality,LOUBAR_out_degree,0.4701195219123506
-Clustering & Norm. Out-degree Centrality,CM_out_degree,0.9800796812749004
-Clustering & Norm. Out-degree Centrality,Arcan_abs,0.9402390438247012
-Clustering & Norm. Out-degree Centrality,Arcan_norm,0.7569721115537849
+Clustering & In-degree Centrality,Clustering & Out-degree Centrality,0.9760956175298805
+Clustering & In-degree Centrality,Clustering & PageRank Centrality,0.9880478087649402
+Clustering & In-degree Centrality,ER_in_degree,0.8725099601593626
+Clustering & In-degree Centrality,ER_out_degree,0.8326693227091634
+Clustering & In-degree Centrality,LOUBAR_in_degree,0.5378486055776892
+Clustering & In-degree Centrality,LOUBAR_out_degree,0.46215139442231074
+Clustering & In-degree Centrality,CM_out_degree,0.9880478087649402
+Clustering & In-degree Centrality,Arcan_abs,0.9482071713147411
+Clustering & In-degree Centrality,Arcan_norm,0.749003984063745
+Clustering & Out-degree Centrality,Clustering & PageRank Centrality,0.9800796812749004
+Clustering & Out-degree Centrality,ER_in_degree,0.848605577689243
+Clustering & Out-degree Centrality,ER_out_degree,0.8565737051792829
+Clustering & Out-degree Centrality,LOUBAR_in_degree,0.5139442231075697
+Clustering & Out-degree Centrality,LOUBAR_out_degree,0.4701195219123506
+Clustering & Out-degree Centrality,CM_out_degree,0.9800796812749004
+Clustering & Out-degree Centrality,Arcan_abs,0.9402390438247012
+Clustering & Out-degree Centrality,Arcan_norm,0.7569721115537849
 Clustering & PageRank Centrality,ER_in_degree,0.8685258964143426
 Clustering & PageRank Centrality,ER_out_degree,0.8366533864541833
 Clustering & PageRank Centrality,LOUBAR_in_degree,0.5338645418326693

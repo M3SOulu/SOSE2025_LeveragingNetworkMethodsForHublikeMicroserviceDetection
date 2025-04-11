@@ -8,9 +8,9 @@ df = pd.read_csv("Metrics/metrics_centrality.csv")
 
 # Define degree and frequency columns
 distributions = [
-    "Degree Centrality",
-    "In-degree Centrality",
-    "Out-degree Centrality",
+    "Degree",
+    "In-degree",
+    "Out-degree",
 ]
 
 results_summary = []
@@ -54,9 +54,9 @@ for centrality in distributions:
 summary_df = pd.DataFrame(results_summary)
 summary_df.to_csv(os.path.join("Results", "ScaleFreeTest.csv"), index=False)
 
-deg_scale = df["Degree Centrality"].value_counts(normalize=True).sort_index()
-in_deg_scale = df["In-degree Centrality"].value_counts(normalize=True).sort_index()
-out_deg_scale = df["Out-degree Centrality"].value_counts(normalize=True).sort_index()
+deg_scale = df["Degree"].value_counts(normalize=True).sort_index()
+in_deg_scale = df["In-degree"].value_counts(normalize=True).sort_index()
+out_deg_scale = df["Out-degree"].value_counts(normalize=True).sort_index()
 
 degree = summary_df["alpha"].iloc[0]
 in_degree = summary_df["alpha"].iloc[1]

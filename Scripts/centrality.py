@@ -26,12 +26,12 @@ def compute_centrality():
         out_degree_centrality = {k: int(v * (len(G.nodes) - 1)) for k, v in norm_out_degree_centrality.items()}
         clustering_coefficient = nx.clustering(G)
 
-        graph_df[f"Degree Centrality"] = graph_df["Microservice"].map(degree_centrality)
-        graph_df[f"Norm. Degree Centrality"] = graph_df["Microservice"].map(norm_degree_centrality)
-        graph_df[f"In-degree Centrality"] = graph_df["Microservice"].map(in_degree_centrality)
-        graph_df[f"Norm. In-degree Centrality"] = graph_df["Microservice"].map(norm_in_degree_centrality)
-        graph_df[f"Out-degree Centrality"] = graph_df["Microservice"].map(out_degree_centrality)
-        graph_df[f"Norm. Out-degree Centrality"] = graph_df["Microservice"].map(norm_out_degree_centrality)
+        graph_df[f"Degree"] = graph_df["Microservice"].map(degree_centrality)
+        graph_df[f"Degree Centrality"] = graph_df["Microservice"].map(norm_degree_centrality)
+        graph_df[f"In-degree"] = graph_df["Microservice"].map(in_degree_centrality)
+        graph_df[f"In-degree Centrality"] = graph_df["Microservice"].map(norm_in_degree_centrality)
+        graph_df[f"Out-degree"] = graph_df["Microservice"].map(out_degree_centrality)
+        graph_df[f"Out-degree Centrality"] = graph_df["Microservice"].map(norm_out_degree_centrality)
         graph_df[f"Eigenvector Centrality"] = graph_df["Microservice"].map(
             nx.eigenvector_centrality(G, max_iter=1000))
         graph_df[f"Betweenness Centrality"] = graph_df["Microservice"].map(nx.betweenness_centrality(G))

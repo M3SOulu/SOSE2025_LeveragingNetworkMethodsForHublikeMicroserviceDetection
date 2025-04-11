@@ -45,7 +45,7 @@ def get_dist(col, num=100, max=1.0):
 
 
 def plot_centrality_dist(data, name, deriv=None):
-    if name in ["Subgraph Centrality", "Out-degree Centrality", "In-degree Centrality", "Degree Centrality"]:
+    if name in ["Subgraph Centrality", "Out-degree", "In-degree", "Degree"]:
         dist_xs, dist_ys = get_dist(data, max=data.max())
     else:
         dist_xs, dist_ys = get_dist(data)
@@ -83,12 +83,12 @@ def plot_centrality_dist(data, name, deriv=None):
 
 def comparison_figure():
     metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
-    norm_deg_dist = get_dist(metrics["Norm. Degree Centrality"])
-    deg_dist = get_dist(metrics["Degree Centrality"], max=metrics[f"Degree Centrality"].max())
-    norm_in_deg_dist = get_dist(metrics["Norm. In-degree Centrality"])
-    in_deg_dist = get_dist(metrics["In-degree Centrality"], max=metrics[f"In-degree Centrality"].max())
-    norm_out_deg_dist = get_dist(metrics["Norm. Out-degree Centrality"])
-    out_deg_dist = get_dist(metrics[f"Out-degree Centrality"], max=metrics[f"Out-degree Centrality"].max())
+    norm_deg_dist = get_dist(metrics["Degree Centrality"])
+    deg_dist = get_dist(metrics["Degree"], max=metrics[f"Degree"].max())
+    norm_in_deg_dist = get_dist(metrics["In-degree Centrality"])
+    in_deg_dist = get_dist(metrics["In-degree"], max=metrics[f"In-degree"].max())
+    norm_out_deg_dist = get_dist(metrics["Out-degree Centrality"])
+    out_deg_dist = get_dist(metrics[f"Out-degree"], max=metrics[f"Out-degree"].max())
 
     ## Comparison figure
     plt.figure(figsize=(10, 8))
@@ -98,63 +98,63 @@ def comparison_figure():
     plt.ylabel("Count(Centrality > Threshold)")
     plt.xticks([0, 2, 4, 6, 8, 10, 11], [0, 2, 4, 6, 8, 10, 11])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Degree Centrality")
+    plt.title("Degree")
     plt.subplot(332)
     plt.plot(norm_deg_dist[0], norm_deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
                [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Norm. Degree Centrality")
+    plt.title("Degree Centrality")
     plt.subplot(333)
     plt.plot(norm_deg_dist[0], norm_deg_dist[1])
     plt.plot(norm_deg_dist[0], deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 1.0], ["min", "max"])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Overlaid Degree Centrality")
+    plt.title("Overlaid")
     plt.subplot(334)
     plt.plot(in_deg_dist[0], in_deg_dist[1], color='tab:orange')
     plt.xlabel("Threshold")
     plt.ylabel("Count(Centrality > Threshold)")
     plt.xticks([0, 2, 4, 6, 8, 10, 11], [0, 2, 4, 6, 8, 10, 11])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("In-degree Centrality")
+    plt.title("In-degree")
     plt.subplot(335)
     plt.plot(norm_in_deg_dist[0], norm_in_deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
                [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Norm. In-degree Centrality")
+    plt.title("In-degree Centrality")
     plt.subplot(336)
     plt.plot(norm_in_deg_dist[0], norm_in_deg_dist[1])
     plt.plot(norm_in_deg_dist[0], in_deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 1.0], ["min", "max"])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Overlaid In-degree Centrality")
+    plt.title("Overlaid")
     plt.subplot(337)
     plt.plot(out_deg_dist[0], out_deg_dist[1], color='tab:orange')
     plt.xlabel("Threshold")
     plt.ylabel("Count(Centrality > Threshold)")
     plt.xticks([0, 2, 4, 6, 8, 10, 11], [0, 2, 4, 6, 8, 10, 11])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Out-degree Centrality")
+    plt.title("Out-degree")
     plt.subplot(338)
     plt.plot(norm_out_deg_dist[0], norm_out_deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
                [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Norm. Out-degree Centrality")
+    plt.title("Out-degree Centrality")
     plt.subplot(339)
     plt.plot(norm_out_deg_dist[0], norm_out_deg_dist[1])
     plt.plot(norm_out_deg_dist[0], out_deg_dist[1])
     plt.xlabel("Threshold")
     plt.xticks([0.0, 1.0], ["min", "max"])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
-    plt.title("Overlaid Out-degree Centrality")
+    plt.title("Overlaid")
     plt.suptitle(f"Comparison of Absolute and Normalized\n Cumulative Distributions of Degree centralities\n")
     plt.tight_layout()
     plt.savefig("Figures/Comparison.pdf")
@@ -235,15 +235,15 @@ def call_graphs():
 
 if __name__ == "__main__":
     # comparison_figure()
-    call_graphs()
-    # metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
-    # for col in metrics.columns:
-    #     if col in ["MS_system", "Microservice"]:
-    #         continue
-    #     plot_centrality_dist(metrics[col], col)
-    #     plot_centrality_dist(metrics[col], col, deriv=1)
-    #     plot_centrality_dist(metrics[col], col, deriv=2)
-    #     if col not in ["Degree Centrality", "Clustering Coefficient", "In-degree Centrality",
-    #                    "Out-degree Centrality", "Subgraph Centrality"]:
-    #         clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
-    #                                col, metrics["Microservice"])
+    # call_graphs()
+    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    for col in metrics.columns:
+        if col in ["MS_system", "Microservice"]:
+            continue
+        # plot_centrality_dist(metrics[col], col)
+        # plot_centrality_dist(metrics[col], col, deriv=1)
+        # plot_centrality_dist(metrics[col], col, deriv=2)
+        if col not in ["Degree", "Clustering Coefficient", "In-degree",
+                       "Out-degree", "Subgraph Centrality"]:
+            clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
+                                   col, metrics["Microservice"])

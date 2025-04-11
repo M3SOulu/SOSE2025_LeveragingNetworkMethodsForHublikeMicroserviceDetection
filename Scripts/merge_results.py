@@ -37,12 +37,12 @@ def main():
         int_df[f'Int. Clustering & {centrality}'] = metrics_df[centrality] - metrics_df['Clustering Coefficient']
         int_df[f'Int. Clustering & {centrality}'] = int_df[f'Int. Clustering & {centrality}'].clip(lower=-1.0, upper=1.0)
     # Compute quantiles from 1% to 100%
-    low, medium, high = arcan_threshold("Degree Centrality", metrics_df)
+    low, medium, high = arcan_threshold("Degree", metrics_df)
     print(low, medium, high)
-    low_t, medium_t, high_t = arcan_threshold("Norm. Degree Centrality", metrics_df)
+    low_t, medium_t, high_t = arcan_threshold("Degree Centrality", metrics_df)
     print(low_t, medium_t, high_t)
 
-    ref_df = metrics_df[["MS_system", "Microservice", "Degree Centrality", "Norm. Degree Centrality"]]
+    ref_df = metrics_df[["MS_system", "Microservice", "Degree", "Degree Centrality"]]
 
     # Flatten JSON into long format
     rows = []
@@ -70,10 +70,10 @@ def main():
     # Step 4: Fill NaN (from missing entries) with False
     method_cols = [col for col in merged_df.columns if col not in ["MS_system", "Microservice"]]
     merged_df[method_cols] = merged_df[method_cols].fillna(False)
-    merged_df["Arcan_abs"] = merged_df["Degree Centrality"] >= high
-    merged_df["Arcan_norm"] = merged_df["Norm. Degree Centrality"] >= high_t
+    merged_df["Arcan_abs"] = merged_df["Degree"] >= high
+    merged_df["Arcan_norm"] = merged_df["Degree Centrality"] >= high_t
+    del merged_df["Degree"]
     del merged_df["Degree Centrality"]
-    del merged_df["Norm. Degree Centrality"]
 
     # Scale-free test failed, so no hubs for scale-free
     merged_df["ScaleFree"] = None
