@@ -161,23 +161,33 @@ def comparison_figure():
 
 
 def scale_free_figure():
-    scale_free = pd.read_csv("Metrics/scale_free_proportion.csv")
-    deg_scale = scale_free["Degree Centrality"]
-    in_deg_scale = scale_free["In-degree Centrality"]
-    out_deg_scale = scale_free["Out-degree Centrality"]
+    scale_free = pd.read_csv("Metrics/metrics_centrality.csv")
+    deg_scale = scale_free["Degree Centrality"].value_counts(normalize=True).sort_index()
+    in_deg_scale = scale_free["In-degree Centrality"].value_counts(normalize=True).sort_index()
+    out_deg_scale = scale_free["Out-degree Centrality"].value_counts(normalize=True).sort_index()
+
+    pvalues = pd.read_csv("Results/ScaleFreeTest/scale_free_summary.csv")
+    degree = pvalues["alpha"].iloc[0]
+    in_degree = pvalues["alpha"].iloc[1]
+    out_degree = pvalues["alpha"].iloc[2]
+    powerlaw = lambda alpha, x: (alpha - 1) * x ** (-alpha)
+    degree_power = [powerlaw(degree, x) for x in range(13)]
+    in_degree_power = [powerlaw(in_degree, x) for x in range(13)]
+    out_degree_power = [powerlaw(out_degree, x) for x in range(13)]
 
     plt.figure(figsize=(10,3))
     plt.subplot(1,3,1)
-    plt.plot(deg_scale)
+    plt.plot(deg_scale.index, deg_scale.values)
+    plt.plot(degree_power)
     plt.title("Degree")
     plt.xlim((0, 12))
-    plt.ylim((0.0, 0.5))
     plt.ylabel("Proportion of nodes, P(k)")
     plt.xlabel("Degree, k")
     plt.tight_layout()
 
     plt.subplot(1,3,2)
-    plt.plot(in_deg_scale)
+    plt.plot(in_deg_scale.index, in_deg_scale.values)
+    plt.plot(in_degree_power)
     plt.xlabel("Degree, k")
     plt.xlim((0, 12))
     plt.ylim((0.0, 0.5))
@@ -185,14 +195,17 @@ def scale_free_figure():
     plt.tight_layout()
 
     plt.subplot(1,3,3)
-    plt.plot(out_deg_scale)
+    plt.plot(out_deg_scale.index, out_deg_scale.values)
+    plt.plot(out_degree_power)
     plt.xlabel("Degree, k")
     plt.xlim((0, 12))
     plt.ylim((0.0, 0.5))
     plt.title("Out-degree")
+    plt.legend(["P(k) for degree k", "Power law best fit"], loc='right')
     plt.tight_layout()
 
-    plt.suptitle("Proportion of nodes P(k) for a specific degree k")
+    plt.suptitle("Power law fits to determine scale-free property")
+    plt.tight_layout()
     plt.savefig("Figures/ScaleFree.pdf")
 
 def clustering_scatterplot(centrality, clustering, name, microservices):
@@ -270,16 +283,16 @@ def call_graphs():
 
 if __name__ == "__main__":
     # comparison_figure()
-    # scale_free_figure()
+    scale_free_figure()
     # call_graphs()
-    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
-    for col in metrics.columns:
-        if col in ["MS_system", "Microservice"]:
-            continue
+    # metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    # for col in metrics.columns:
+    #     if col in ["MS_system", "Microservice"]:
+    #         continue
     #     plot_centrality_dist(metrics[col], col)
     #     plot_centrality_dist(metrics[col], col, deriv=1)
     #     plot_centrality_dist(metrics[col], col, deriv=2)
-        if col not in ["Degree Centrality", "Clustering Coefficient", "In-degree Centrality",
-                       "Out-degree Centrality", "Subgraph Centrality"]:
-            clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
-                                   col, metrics["Microservice"])
+    #     if col not in ["Degree Centrality", "Clustering Coefficient", "In-degree Centrality",
+    #                    "Out-degree Centrality", "Subgraph Centrality"]:
+    #         clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
+    #                                col, metrics["Microservice"])
