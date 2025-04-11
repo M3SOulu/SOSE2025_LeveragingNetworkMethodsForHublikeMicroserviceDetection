@@ -37,28 +37,12 @@ def main():
         int_df[f'Int. Clustering & {centrality}'] = metrics_df[centrality] - metrics_df['Clustering Coefficient']
         int_df[f'Int. Clustering & {centrality}'] = int_df[f'Int. Clustering & {centrality}'].clip(lower=-1.0, upper=1.0)
     # Compute quantiles from 1% to 100%
-    percentiles = np.linspace(0.01, 1, 100)
-    metric_col = "Degree Centrality"
-    qf = np.percentile(metrics_df[metric_col], percentiles * 100)
+    low, medium, high = arcan_threshold("Degree Centrality", metrics_df)
+    print(low, medium, high)
+    low_t, medium_t, high_t = arcan_threshold("Norm. Degree Centrality", metrics_df)
+    print(low_t, medium_t, high_t)
 
-    # Frequency distribution
-    freq = pd.Series(qf).value_counts().sort_index()
-    freq_mid = freq.median()
-
-    # Determine cropping threshold
-    sorted_qf = pd.Series(qf).sort_values()
-    v_mid = next(v for v in sorted_qf if freq.get(v, 0) <= freq_mid and
-                 all(freq.get(w, 0) <= freq_mid for w in sorted_qf[sorted_qf >= v]))
-
-    # Crop distribution
-    cropped = metrics_df[metrics_df[metric_col] >= v_mid][metric_col]
-
-    # Compute thresholds
-    low = np.percentile(cropped, 25)
-    medium = np.percentile(cropped, 50)
-    high = np.percentile(cropped, 75)
-
-    ref_df = metrics_df[["MS_system", "Microservice", "Degree Centrality"]]
+    ref_df = metrics_df[["MS_system", "Microservice", "Degree Centrality", "Norm. Degree Centrality"]]
 
     # Flatten JSON into long format
     rows = []
@@ -86,8 +70,10 @@ def main():
     # Step 4: Fill NaN (from missing entries) with False
     method_cols = [col for col in merged_df.columns if col not in ["MS_system", "Microservice"]]
     merged_df[method_cols] = merged_df[method_cols].fillna(False)
-    merged_df["Arcan"] = merged_df["Degree Centrality"] >= low
+    merged_df["Arcan_abs"] = merged_df["Degree Centrality"] >= high
+    merged_df["Arcan_norm"] = merged_df["Norm. Degree Centrality"] >= high_t
     del merged_df["Degree Centrality"]
+    del merged_df["Norm. Degree Centrality"]
 
     # Scale-free test failed, so no hubs for scale-free
     merged_df["ScaleFree"] = None
@@ -133,6 +119,47 @@ def main():
     plt.title("Pairwise Agreement Between Hub detectors")
     plt.tight_layout()
     plt.savefig("Figures/HubAgreement.pdf")
+
+
+def arcan_threshold(metric_col, metrics_df):
+
+    values = metrics_df[metric_col].dropna().values
+
+    # Step 1: Compute 100 quantile steps
+    percentiles = np.linspace(0.01, 1, 100)
+    qf = np.percentile(values, percentiles * 100)
+
+    # Step 2: Frequency distribution
+    freq = pd.Series(qf).value_counts().sort_index()
+    freq_mid = freq.median()
+
+    # Step 3: Determine v_mid (start of meaningful variability)
+    sorted_qf = pd.Series(qf).sort_values().unique()
+
+    v_mid = None
+    for v in sorted_qf:
+        if freq.get(v, 0) <= freq_mid:
+            right_side = sorted_qf[sorted_qf >= v]
+            if all(freq.get(w, 0) <= freq_mid for w in right_side):
+                v_mid = v
+                break
+
+    # Fallback if no v_mid found
+    if v_mid is None:
+        cropped = values
+    else:
+        cropped = values[values >= v_mid]
+    if len(cropped) < 3:
+        # If cropped set too small, fall back to original values
+        cropped = values
+
+    # Step 5: Compute thresholds
+    low = np.percentile(cropped, 25)
+    medium = np.percentile(cropped, 50)
+    high = np.percentile(cropped, 75)
+
+    return low, medium, high
+
 
 if __name__ == "__main__":
     main()
