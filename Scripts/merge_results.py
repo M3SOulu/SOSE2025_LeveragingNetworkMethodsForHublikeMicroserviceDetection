@@ -1,4 +1,8 @@
 import json
+from itertools import combinations
+
+import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
@@ -77,6 +81,47 @@ def main():
     # Scale-free test failed, so no hubs for scale-free
     merged_df["ScaleFree"] = False
     merged_df.to_csv("Results/HubTable.csv", index=False, header=True)
+
+    # Select only boolean columns
+    bool_cols = merged_df.select_dtypes(include=bool).columns
+
+    # Dictionary to store results
+    agreements = {}
+
+    # Compute pairwise agreement
+    for col1, col2 in combinations(bool_cols, 2):
+        agree = (merged_df[col1] == merged_df[col2]).sum()
+        total = len(merged_df)
+        agreements[(col1, col2)] = agree / total  # agreement ratio
+
+    # Convert to DataFrame for display
+    agreement_df = pd.DataFrame([
+        {"Column 1": k[0], "Column 2": k[1], "Agreement": v}
+        for k, v in agreements.items()
+    ])
+
+    print(agreement_df)
+    agreement_df.to_csv("Results/Agreement.csv", index=False, header=True)
+    # Step 1: Pivot agreement_df into square matrix
+    heatmap_data = agreement_df.pivot(index="Column 1", columns="Column 2", values="Agreement")
+
+    # Step 2: Make the matrix symmetric by filling in the lower triangle
+    # Optionally include diagonal = 1.0
+    all_cols = sorted(set(heatmap_data.columns).union(set(heatmap_data.index)))
+    heatmap_data = heatmap_data.reindex(index=all_cols, columns=all_cols)
+    for col1 in all_cols:
+        for col2 in all_cols:
+            if pd.isna(heatmap_data.loc[col1, col2]) and not pd.isna(heatmap_data.loc[col2, col1]):
+                heatmap_data.loc[col1, col2] = heatmap_data.loc[col2, col1]
+            elif col1 == col2:
+                heatmap_data.loc[col1, col2] = 1.0  # full agreement with self
+
+    # Step 3: Plot the heatmap
+    plt.figure(figsize=(20, 20))
+    sns.heatmap(heatmap_data, annot=True, cmap="Blues", square=True, cbar_kws={'label': 'Agreement'})
+    plt.title("Pairwise Agreement Between Hub detectors")
+    plt.tight_layout()
+    plt.savefig("Figures/HubAgreement.pdf")
 
 if __name__ == "__main__":
     main()
