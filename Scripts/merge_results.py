@@ -79,7 +79,7 @@ def main():
     del merged_df["Degree Centrality"]
 
     # Scale-free test failed, so no hubs for scale-free
-    merged_df["ScaleFree"] = False
+    merged_df["ScaleFree"] = None
     merged_df.to_csv("Results/HubTable.csv", index=False, header=True)
 
     # Select only boolean columns
