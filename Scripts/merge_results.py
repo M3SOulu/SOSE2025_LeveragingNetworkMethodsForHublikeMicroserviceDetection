@@ -25,6 +25,17 @@ def main():
 
 
     metrics_df = pd.read_csv("Metrics/metrics_centrality.csv")
+    centrality_cols = [col for col in metrics_df.columns if col not in ['MS_system',
+                                                                     "Microservice",
+                                                                     'Clustering Coefficient',
+                                                                        'Degree Centrality',
+                                                                        'In-degree Centrality',
+                                                                        'Out-degree Centrality']]
+    int_df = metrics_df[["MS_system", "Microservice"]]
+    for centrality in centrality_cols:
+        # Compute difference
+        int_df[f'Int. Clustering & {centrality}'] = metrics_df[centrality] - metrics_df['Clustering Coefficient']
+        int_df[f'Int. Clustering & {centrality}'] = int_df[f'Int. Clustering & {centrality}'].clip(lower=-1.0, upper=1.0)
     # Compute quantiles from 1% to 100%
     percentiles = np.linspace(0.01, 1, 100)
     metric_col = "Degree Centrality"
@@ -80,6 +91,7 @@ def main():
 
     # Scale-free test failed, so no hubs for scale-free
     merged_df["ScaleFree"] = None
+    merged_df = pd.merge(merged_df, int_df, on=["MS_system", "Microservice"], how="left")
     merged_df.to_csv("Results/HubTable.csv", index=False, header=True)
 
     # Select only boolean columns
@@ -100,7 +112,6 @@ def main():
         for k, v in agreements.items()
     ])
 
-    print(agreement_df)
     agreement_df.to_csv("Results/Agreement.csv", index=False, header=True)
     # Step 1: Pivot agreement_df into square matrix
     heatmap_data = agreement_df.pivot(index="Column 1", columns="Column 2", values="Agreement")
