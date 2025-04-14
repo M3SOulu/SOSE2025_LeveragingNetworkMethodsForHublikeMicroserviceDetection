@@ -92,9 +92,9 @@ def main():
 
     # Compute pairwise agreement
     for col1, col2 in combinations(bool_cols, 2):
-        agree = (merged_df[col1] == merged_df[col2]).sum()
-        total = len(merged_df)
-        agreements[(col1, col2)] = agree / total  # agreement ratio
+        intersection = ((merged_df[col1]) & (merged_df[col2])).sum()
+        union = ((merged_df[col1]) | (merged_df[col2])).sum()
+        agreements[(col1, col2)] = intersection / union if union > 0 else 0
 
     # Convert to DataFrame for display
     agreement_df = pd.DataFrame([
