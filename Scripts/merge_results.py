@@ -115,6 +115,17 @@ def agreement(in_cols, merged_df, name):
         {"Column 1": k[0], "Column 2": k[1], "Agreement": v}
         for k, v in agreements.items()
     ])
+
+    # Step 2: Convert to counts of True/False per item
+    # Each row will have: [count_false, count_true]
+    rating_counts = merged_df[in_cols].apply(lambda row: pd.Series([
+        (~row).sum(),  # count of False
+        row.sum()      # count of True
+    ]), axis=1)
+
+    rating_counts.columns = ['False', 'True']
+    kappa = fleiss_kappa(rating_counts)
+
     agreement_df.to_csv(f"Results/HubJaccard_{name}.csv", index=False, header=True)
     # Step 1: Pivot agreement_df into square matrix
     heatmap_data = agreement_df.pivot(index="Column 1", columns="Column 2", values="Agreement")
@@ -132,12 +143,43 @@ def agreement(in_cols, merged_df, name):
     plt.figure(figsize=(20, 20))
     sns.heatmap(heatmap_data, annot=True, cmap="Blues", square=True, cbar_kws={'label': 'Agreement'})
     if name == "everything":
-        plt.title(f"Jaccard Index Between all Hub detectors")
+        plt.title(f"Jaccard Index Between all Hub detectors\nFleiss Kauppa = {kappa:.4f}")
     else:
-        plt.title(f"Jaccard Index Between Hub detectors based on {name} connections")
+        plt.title(f"Jaccard Index Between Hub detectors based on {name} connections\nFleiss Kauppa = {kappa:.4f}")
     plt.tight_layout()
     plt.savefig(f"Figures/HubJaccard_{name}.pdf")
 
+    # Step 2: Convert to counts of True/False per item
+    # Each row will have: [count_false, count_true]
+    rating_counts = merged_df[in_cols].apply(lambda row: pd.Series([
+        (~row).sum(),  # count of False
+        row.sum()      # count of True
+    ]), axis=1)
+
+    rating_counts.columns = ['False', 'True']
+    # Step 4: Compute kappa
+    kappa = fleiss_kappa(rating_counts)
+    print(f"Fleiss' Kappa: {kappa:.4f}")
+
+def fleiss_kappa(table):
+    """
+    Compute Fleiss' kappa for a category count table (N_items x N_categories)
+    """
+    N, k = table.shape
+    n = np.sum(table.values[0])  # assumes constant number of raters
+
+    # Proportion of all assignments to each category
+    p = np.sum(table, axis=0) / (N * n)
+
+    # Agreement per item
+    P = ((table ** 2).sum(axis=1) - n) / (n * (n - 1))
+
+    # Mean of P, and expected agreement
+    P_bar = P.mean()
+    P_e = np.sum(p ** 2)
+
+    kappa = (P_bar - P_e) / (1 - P_e)
+    return kappa
 
 def arcan_threshold(metric_col, metrics_df):
 
