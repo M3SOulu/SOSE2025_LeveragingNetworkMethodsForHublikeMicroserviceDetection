@@ -102,8 +102,8 @@ def comparison_figure():
     plt.subplot(332)
     plt.plot(norm_deg_dist[0], norm_deg_dist[1])
     plt.xlabel("Threshold")
-    plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-               [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+    plt.xticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+               [0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.title("Degree Centrality")
     plt.subplot(333)
@@ -123,8 +123,8 @@ def comparison_figure():
     plt.subplot(335)
     plt.plot(norm_in_deg_dist[0], norm_in_deg_dist[1])
     plt.xlabel("Threshold")
-    plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-               [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+    plt.xticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+               [0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.title("In-degree Centrality")
     plt.subplot(336)
@@ -144,8 +144,8 @@ def comparison_figure():
     plt.subplot(338)
     plt.plot(norm_out_deg_dist[0], norm_out_deg_dist[1])
     plt.xlabel("Threshold")
-    plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-               [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+    plt.xticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+               [0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.title("Out-degree Centrality")
     plt.subplot(339)
@@ -155,7 +155,7 @@ def comparison_figure():
     plt.xticks([0.0, 1.0], ["min", "max"])
     plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
     plt.title("Overlaid")
-    plt.suptitle(f"Comparison of Absolute and Normalized\n Cumulative Distributions of Degree centralities\n")
+    # plt.suptitle(f"Comparison of Absolute and Normalized\n Cumulative Distributions of Degree centralities\n")
     plt.tight_layout()
     plt.savefig("Figures/Comparison.pdf")
 
@@ -239,16 +239,16 @@ def call_graphs():
 
 
 if __name__ == "__main__":
-    # comparison_figure()
+    comparison_figure()
     # call_graphs()
-    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
-    for col in metrics.columns:
-        if col in ["MS_system", "Microservice"]:
-            continue
-        # plot_centrality_dist(metrics[col], col)
+    # metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    # for col in metrics.columns:
+    #     if col in ["MS_system", "Microservice"]:
+    #         continue
+    #     plot_centrality_dist(metrics[col], col)
         # plot_centrality_dist(metrics[col], col, deriv=1)
         # plot_centrality_dist(metrics[col], col, deriv=2)
-        if col not in ["Degree", "Clustering Coefficient", "In-degree",
-                       "Out-degree", "Subgraph Centrality"]:
-            clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
-                                   col, metrics["Microservice"])
+        # if col not in ["Degree", "Clustering Coefficient", "In-degree",
+        #                "Out-degree", "Subgraph Centrality"]:
+        #     clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
+        #                            col, metrics["Microservice"])
