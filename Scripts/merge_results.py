@@ -78,11 +78,13 @@ def main():
     # Scale-free test failed, so no hubs for scale-free
     merged_df["ScaleFree"] = None
     merged_df = pd.merge(merged_df, int_df, on=["MS_system", "Microservice"], how="left")
-    merged_df.to_csv("Results/HubTable.csv", index=False, header=True)
+    merged_df.to_csv("Results/HubsAll.csv", index=False, header=True)
 
     # Select only boolean columns
     bool_cols = merged_df.select_dtypes(include=bool).columns
 
+    filtered_df = merged_df[merged_df[bool_cols].any(axis=1)]
+    filtered_df.to_csv("Results/HubsTrue.csv")
     count_df = merged_df[bool_cols]
     count_df = count_df.sum()
     count_df.to_csv("Results/HubCounts.csv")
