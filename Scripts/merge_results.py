@@ -28,9 +28,9 @@ def main():
     centrality_cols = [col for col in metrics_df.columns if col not in ['MS_system',
                                                                      "Microservice",
                                                                      'Clustering Coefficient',
-                                                                        'Degree Centrality',
-                                                                        'In-degree Centrality',
-                                                                        'Out-degree Centrality']]
+                                                                        'Degree',
+                                                                        'In-degree',
+                                                                        'Out-degree']]
     int_df = metrics_df[["MS_system", "Microservice"]]
     for centrality in centrality_cols:
         # Compute difference
