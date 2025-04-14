@@ -88,24 +88,36 @@ def main():
     count_df.to_csv("Results/HubCounts.csv")
 
     # Dictionary to store results
-    agreements = {}
 
+    in_cols = ["AVG_in_degree", "LOUBAR_in_degree", "CM_in_degree",
+               "ER_in_degree", "Clustering & In-degree Centrality", "Clustering & Eigenvector Centrality","Clustering & Authority Score"]
+    out_cols = ["AVG_out_degree", "LOUBAR_out_degree", "CM_out_degree",
+               "ER_out_degree", "Clustering & Out-degree Centrality", "Clustering & Hub Score"]
+    total_cols = ["Clustering & Degree Centrality", "Arcan_abs", "Arcan_norm",
+                  "Clustering & Betweenness Centrality", "Clustering & Closeness Centrality",
+                   "Clustering & PageRank Centrality"]
+
+    agreement(in_cols, merged_df, "incoming")
+    agreement(out_cols, merged_df, "outgoing")
+    agreement(total_cols, merged_df, "all")
+    agreement(bool_cols, merged_df, "everything")
+
+
+def agreement(in_cols, merged_df, name):
+    agreements = {}
     # Compute pairwise agreement
-    for col1, col2 in combinations(bool_cols, 2):
+    for col1, col2 in combinations(in_cols, 2):
         intersection = ((merged_df[col1]) & (merged_df[col2])).sum()
         union = ((merged_df[col1]) | (merged_df[col2])).sum()
         agreements[(col1, col2)] = intersection / union if union > 0 else 0
-
     # Convert to DataFrame for display
     agreement_df = pd.DataFrame([
         {"Column 1": k[0], "Column 2": k[1], "Agreement": v}
         for k, v in agreements.items()
     ])
-
-    agreement_df.to_csv("Results/Agreement.csv", index=False, header=True)
+    agreement_df.to_csv(f"Results/HubJaccard_{name}.csv", index=False, header=True)
     # Step 1: Pivot agreement_df into square matrix
     heatmap_data = agreement_df.pivot(index="Column 1", columns="Column 2", values="Agreement")
-
     # Step 2: Make the matrix symmetric by filling in the lower triangle
     # Optionally include diagonal = 1.0
     all_cols = sorted(set(heatmap_data.columns).union(set(heatmap_data.index)))
@@ -116,13 +128,15 @@ def main():
                 heatmap_data.loc[col1, col2] = heatmap_data.loc[col2, col1]
             elif col1 == col2:
                 heatmap_data.loc[col1, col2] = 1.0  # full agreement with self
-
     # Step 3: Plot the heatmap
     plt.figure(figsize=(20, 20))
     sns.heatmap(heatmap_data, annot=True, cmap="Blues", square=True, cbar_kws={'label': 'Agreement'})
-    plt.title("Pairwise Agreement Between Hub detectors")
+    if name == "everything":
+        plt.title(f"Jaccard Index Between all Hub detectors")
+    else:
+        plt.title(f"Jaccard Index Between Hub detectors based on {name} connections")
     plt.tight_layout()
-    plt.savefig("Figures/HubAgreement.pdf")
+    plt.savefig(f"Figures/HubJaccard_{name}.pdf")
 
 
 def arcan_threshold(metric_col, metrics_df):

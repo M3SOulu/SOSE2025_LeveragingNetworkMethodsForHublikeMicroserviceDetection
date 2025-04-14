@@ -1,0 +1,16 @@
+Column 1,Column 2,Agreement
+Clustering & Degree Centrality,Arcan_abs,0.0
+Clustering & Degree Centrality,Arcan_norm,0.07575757575757576
+Clustering & Degree Centrality,Clustering & Betweenness Centrality,0.2
+Clustering & Degree Centrality,Clustering & Closeness Centrality,0.25
+Clustering & Degree Centrality,Clustering & PageRank Centrality,0.4
+Arcan_abs,Arcan_norm,0.0
+Arcan_abs,Clustering & Betweenness Centrality,0.0
+Arcan_abs,Clustering & Closeness Centrality,0.0
+Arcan_abs,Clustering & PageRank Centrality,0.0
+Arcan_norm,Clustering & Betweenness Centrality,0.015151515151515152
+Arcan_norm,Clustering & Closeness Centrality,0.07575757575757576
+Arcan_norm,Clustering & PageRank Centrality,0.030303030303030304
+Clustering & Betweenness Centrality,Clustering & Closeness Centrality,0.2
+Clustering & Betweenness Centrality,Clustering & PageRank Centrality,0.5
+Clustering & Closeness Centrality,Clustering & PageRank Centrality,0.4

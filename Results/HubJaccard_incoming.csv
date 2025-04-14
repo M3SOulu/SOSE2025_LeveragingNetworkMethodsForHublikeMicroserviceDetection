@@ -1,0 +1,22 @@
+Column 1,Column 2,Agreement
+AVG_in_degree,LOUBAR_in_degree,0.7338709677419355
+AVG_in_degree,CM_in_degree,0.010416666666666666
+AVG_in_degree,ER_in_degree,0.34375
+AVG_in_degree,Clustering & In-degree Centrality,0.03125
+AVG_in_degree,Clustering & Eigenvector Centrality,0.030612244897959183
+AVG_in_degree,Clustering & Authority Score,0.020833333333333332
+LOUBAR_in_degree,CM_in_degree,0.008403361344537815
+LOUBAR_in_degree,ER_in_degree,0.26666666666666666
+LOUBAR_in_degree,Clustering & In-degree Centrality,0.025210084033613446
+LOUBAR_in_degree,Clustering & Eigenvector Centrality,0.03333333333333333
+LOUBAR_in_degree,Clustering & Authority Score,0.01680672268907563
+CM_in_degree,ER_in_degree,0.030303030303030304
+CM_in_degree,Clustering & In-degree Centrality,0.3333333333333333
+CM_in_degree,Clustering & Eigenvector Centrality,0.0
+CM_in_degree,Clustering & Authority Score,0.0
+ER_in_degree,Clustering & In-degree Centrality,0.058823529411764705
+ER_in_degree,Clustering & Eigenvector Centrality,0.02702702702702703
+ER_in_degree,Clustering & Authority Score,0.0
+Clustering & In-degree Centrality,Clustering & Eigenvector Centrality,0.0
+Clustering & In-degree Centrality,Clustering & Authority Score,0.25
+Clustering & Eigenvector Centrality,Clustering & Authority Score,0.0

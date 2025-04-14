@@ -1,0 +1,16 @@
+Column 1,Column 2,Agreement
+AVG_out_degree,LOUBAR_out_degree,0.564625850340136
+AVG_out_degree,CM_out_degree,0.0
+AVG_out_degree,ER_out_degree,0.3645833333333333
+AVG_out_degree,Clustering & Out-degree Centrality,0.05434782608695652
+AVG_out_degree,Clustering & Hub Score,0.0
+LOUBAR_out_degree,CM_out_degree,0.0
+LOUBAR_out_degree,ER_out_degree,0.19594594594594594
+LOUBAR_out_degree,Clustering & Out-degree Centrality,0.036231884057971016
+LOUBAR_out_degree,Clustering & Hub Score,0.007246376811594203
+CM_out_degree,ER_out_degree,0.0
+CM_out_degree,Clustering & Out-degree Centrality,0.0
+CM_out_degree,Clustering & Hub Score,0.0
+ER_out_degree,Clustering & Out-degree Centrality,0.1
+ER_out_degree,Clustering & Hub Score,0.0
+Clustering & Out-degree Centrality,Clustering & Hub Score,0.0
