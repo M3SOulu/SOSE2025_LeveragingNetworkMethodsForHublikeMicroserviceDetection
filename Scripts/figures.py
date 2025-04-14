@@ -170,6 +170,10 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
     ax = plt.gca()
     plt.xlim([-0.05, 1.05])
     plt.ylim([-0.05, 1.05])
+    plt.xticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+               [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+    plt.yticks([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+               [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
 
     # Compute axis limits
     min_x, max_x = 0.0, 1.0
@@ -177,10 +181,11 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
 
     # Create diagonal lines with y - x = constant (adjusted for visual top-right direction)
     x_vals = np.linspace(min_x, max_x, 500)
-    offsets = np.linspace((min_y - max_x), (max_y - min_x), 25)
+    offsets = np.linspace((min_y - max_x), (max_y - min_x), 21)
 
     for offset in offsets:
         y_vals = x_vals + offset
+        y_vals = np.clip(y_vals, min=0.0, max=1.0)
         ax.plot(x_vals, y_vals, linestyle='--', color='gray', linewidth=0.5)
     #
     # for i, label in enumerate(microservices):
@@ -192,8 +197,8 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
     #                 fontsize=8)
 
     # Parameters for gradient
-    N = 200  # Grid resolution
-    steps = 24  # Number of color bands (sharper = fewer, distinct colors)
+    N = 300  # Grid resolution
+    steps = 20  # Number of color bands (sharper = fewer, distinct colors)
 
     # Generate banded gradient: diagonal ↘ direction
     gradient = np.fromfunction(lambda i, j: np.floor((i - j) * steps / N + steps / 2), (N, N))
