@@ -1,4 +1,4 @@
-Column 1,Column 2,Agreement
+Column 1,Column 2,Jaccard Index
 Clustering & Degree Centrality,Arcan_abs,0.0
 Clustering & Degree Centrality,Arcan_norm,0.07575757575757576
 Clustering & Degree Centrality,Clustering & Betweenness Centrality,0.2

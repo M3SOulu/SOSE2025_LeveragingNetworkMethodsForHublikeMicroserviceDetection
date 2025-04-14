@@ -1,4 +1,4 @@
-Column 1,Column 2,Agreement
+Column 1,Column 2,Jaccard Index
 AVG_in_degree,AVG_out_degree,0.13253012048192772
 AVG_in_degree,CM_in_degree,0.010416666666666666
 AVG_in_degree,Clustering & Authority Score,0.020833333333333332

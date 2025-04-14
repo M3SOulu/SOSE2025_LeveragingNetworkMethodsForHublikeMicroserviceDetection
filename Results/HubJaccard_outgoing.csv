@@ -1,4 +1,4 @@
-Column 1,Column 2,Agreement
+Column 1,Column 2,Jaccard Index
 AVG_out_degree,LOUBAR_out_degree,0.564625850340136
 AVG_out_degree,CM_out_degree,0.0
 AVG_out_degree,ER_out_degree,0.3645833333333333

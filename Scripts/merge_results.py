@@ -112,7 +112,7 @@ def agreement(in_cols, merged_df, name):
         agreements[(col1, col2)] = intersection / union if union > 0 else 0
     # Convert to DataFrame for display
     agreement_df = pd.DataFrame([
-        {"Column 1": k[0], "Column 2": k[1], "Agreement": v}
+        {"Column 1": k[0], "Column 2": k[1], "Jaccard Index": v}
         for k, v in agreements.items()
     ])
 
@@ -128,7 +128,7 @@ def agreement(in_cols, merged_df, name):
 
     agreement_df.to_csv(f"Results/HubJaccard_{name}.csv", index=False, header=True)
     # Step 1: Pivot agreement_df into square matrix
-    heatmap_data = agreement_df.pivot(index="Column 1", columns="Column 2", values="Agreement")
+    heatmap_data = agreement_df.pivot(index="Column 1", columns="Column 2", values="Jaccard Index")
     # Step 2: Make the matrix symmetric by filling in the lower triangle
     # Optionally include diagonal = 1.0
     all_cols = sorted(set(heatmap_data.columns).union(set(heatmap_data.index)))
@@ -141,11 +141,11 @@ def agreement(in_cols, merged_df, name):
                 heatmap_data.loc[col1, col2] = 1.0  # full agreement with self
     # Step 3: Plot the heatmap
     plt.figure(figsize=(20, 20))
-    sns.heatmap(heatmap_data, annot=True, cmap="Blues", square=True, cbar_kws={'label': 'Agreement'})
+    sns.heatmap(heatmap_data, annot=True, cmap="Blues", square=True, cbar_kws={'label': 'Jaccard Index'})
     if name == "everything":
-        plt.title(f"Jaccard Index Between all Hub detectors\nFleiss Kauppa = {kappa:.4f}")
+        plt.title(f"Jaccard Index Between all Hub detectors\nFleiss Kappa = {kappa:.4f}")
     else:
-        plt.title(f"Jaccard Index Between Hub detectors based on {name} connections\nFleiss Kauppa = {kappa:.4f}")
+        plt.title(f"Jaccard Index Between Hub detectors based on {name} connections\nFleiss Kappa = {kappa:.4f}")
     plt.tight_layout()
     plt.savefig(f"Figures/HubJaccard_{name}.pdf")
 
