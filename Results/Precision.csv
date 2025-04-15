@@ -1,0 +1,20 @@
+Method,Precision (Infra is TP),Precision (No Infra),Precision (Infra is FP)
+AVG_in_degree,0.6041666666666666,0.4647887323943662,0.34375
+LOUBAR_in_degree,0.5378151260504201,0.38202247191011235,0.2857142857142857
+CM_in_degree,1.0,,0.0
+ER_in_degree,0.8484848484848485,0.782608695652174,0.5454545454545454
+Clustering & In-degree Centrality,0.6666666666666666,0.0,0.0
+Clustering & Eigenvector Centrality,0.2,0.2,0.2
+Clustering & Authority Score,0.5,0.0,0.0
+AVG_out_degree,0.5978260869565217,0.4126984126984127,0.2826086956521739
+LOUBAR_out_degree,0.47101449275362317,0.26262626262626265,0.18840579710144928
+CM_out_degree,,,
+ER_out_degree,0.6410256410256411,0.46153846153846156,0.3076923076923077
+Clustering & Out-degree Centrality,0.8,0.0,0.0
+Clustering & Hub Score,0.0,0.0,0.0
+Clustering & Degree Centrality,0.4,0.0,0.0
+Arcan_abs,1.0,1.0,0.6
+Arcan_norm,0.7272727272727273,0.3333333333333333,0.13636363636363635
+Clustering & Betweenness Centrality,0.0,0.0,0.0
+Clustering & Closeness Centrality,0.8,0.0,0.0
+Clustering & PageRank Centrality,0.5,0.0,0.0

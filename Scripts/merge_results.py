@@ -104,6 +104,49 @@ def main():
     agreement(total_cols, merged_df, "all")
     agreement(bool_cols, merged_df, "everything")
 
+    manual = pd.read_csv("Results/ManualValidation.csv")
+    precision_results = [precision(merged_df, method, manual) for method in [*in_cols, *out_cols, *total_cols]]
+    precision_results.insert(0, ("Method", "Precision (Infra is TP)", "Precision (No Infra)", "Precision (Infra is FP)"))
+    precision_df = pd.DataFrame(precision_results)
+    precision_df.to_csv("Results/Precision.csv", index=False, header=False)
+
+
+def precision(data_df, method, manual_df):
+    # Take only the current method data
+    data_df = data_df[["MS_system", "Microservice", method]]
+
+    # Keep only the TP+FP services (all detected Hubs)
+    data_df = data_df[data_df[method]]
+
+    # Merged corresponding services from manual validation
+    comp_df = pd.merge(data_df, manual_df,  on=["MS_system", "Microservice"], how="left")
+
+    # Consider Infrastructural Hubs as True Positives
+    comp_df["Hublike Full"] = comp_df["Hublike"].map({"True": True, "False": False,
+                                                          "Infra": True})
+    # Compute precision with infrastructural hubs as True
+    TP = int(comp_df["Hublike Full"].sum())
+    P = int(comp_df[method].sum())
+    precision_true = TP / P if P != 0 else None
+    print(f"Precision: {method}, Infra is True, {TP=}, {P=}, precision={precision_true}")
+
+    # Consider Infrastructural Hubs as True Negatives
+    comp_df["Hublike Full"] = comp_df["Hublike"].map({"True": True, "False": False,
+                                                          "Infra": False})
+    # Compute precision with infrastructural hubs as False
+    TP = int(comp_df["Hublike Full"].sum())
+    P = int(comp_df[method].sum())
+    precision_false = TP / P if P != 0 else None
+    print(f"Precision: {method}, Infra is False, {TP=}, {P=}, precision={precision_false}")
+
+    # Filter infrastructural hubs
+    comp_df = comp_df[comp_df["Hublike"] != "Infra"]
+    # Compute precision without infrastructural hubs
+    TP = int(comp_df["Hublike Full"].sum())
+    P = int(comp_df[method].sum())
+    precision_non_infra = TP / P if P != 0 else None
+    print(f"Precision: {method}, Infra is ignored, {TP=}, {P=}, precision={precision_non_infra}")
+    return method, precision_true, precision_non_infra, precision_false
 
 def agreement(in_cols, merged_df, name):
     agreements = {}
