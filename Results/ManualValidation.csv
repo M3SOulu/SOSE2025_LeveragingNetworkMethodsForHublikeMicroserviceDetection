@@ -1,4 +1,4 @@
-MS_system,Microservice,Hublike
+MS_system,Microservice,Manual Validation
 Basilisk,benchmark-service,False
 Basilisk,repository-service,False
 Basilisk,rabbitmq,False
