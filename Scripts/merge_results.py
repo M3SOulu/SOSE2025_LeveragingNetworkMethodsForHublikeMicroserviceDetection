@@ -176,6 +176,19 @@ def agreement(in_cols, merged_df, name):
     # Optionally include diagonal = 1.0
     all_cols = sorted(set(heatmap_data.columns).union(set(heatmap_data.index)))
     heatmap_data = heatmap_data.reindex(index=all_cols, columns=all_cols)
+    rename_method = {"AVG_in_degree": "Avg_in", "LOUBAR_in_degree": "Loubar_in",
+                     "CM_in_degree": "CM_in", "ER_in_degree": "EM_in",
+                     "Clustering & In-degree Centrality": "Cl. & In-degree c.",
+                     "Clustering & Eigenvector Centrality": "Cl. & Eigenvector c.",
+                     "Clustering & Authority Score": "Cl. & Authority sc.",
+                     "AVG_out_degree": "Avg_out", "LOUBAR_out_degree": "Loubar_out",
+                     "CM_out_degree": "CM_out", "ER_out_degree": "EM_out",
+                     "Clustering & Out-degree Centrality": "Cl. & Out-degree c.",
+                     "Clustering & Hub Score": "Cl. & Hub sc.",
+                     "Clustering & Degree Centrality": "Cl. & Degree c.",
+                     "Clustering & Betweenness Centrality": "Cl. & Betweenness c.",
+                     "Clustering & Closeness Centrality": "Cl. & Closeness c.",
+                     "Clustering & PageRank Centrality": "Cl. & PageRank c."}
     for col1 in all_cols:
         for col2 in all_cols:
             if pd.isna(heatmap_data.loc[col1, col2]) and not pd.isna(heatmap_data.loc[col2, col1]):
@@ -183,12 +196,32 @@ def agreement(in_cols, merged_df, name):
             elif col1 == col2:
                 heatmap_data.loc[col1, col2] = 1.0  # full agreement with self
     # Step 3: Plot the heatmap
-    plt.figure(figsize=(20, 20))
-    sns.heatmap(heatmap_data, annot=True, cmap="Blues", square=True, cbar_kws={'label': 'Jaccard Index'})
-    if name == "everything":
-        plt.title(f"Jaccard Index Between all Hub detectors\nFleiss Kappa = {kappa:.4f}")
-    else:
-        plt.title(f"Jaccard Index Between Hub detectors based on {name} connections\nFleiss Kappa = {kappa:.4f}")
+    plt.figure(figsize=(10, 10))
+    heatmap_data = heatmap_data.rename(index=rename_method, columns=rename_method)
+    ax = sns.heatmap(
+        heatmap_data,
+        annot=True,
+        fmt=".2f",
+        cmap="Blues",
+        square=True,
+        linewidths=0.5,
+        linecolor='gray',
+        annot_kws={"size": 14},  # Font size for cell annotations
+        cbar_kws={'label': 'Agreement', 'shrink': 0.6}  # Shorten colorbar
+    )
+    # Make method names (tick labels) larger
+    plt.xticks(fontsize=16, rotation=45, ha='right')  # X-axis: method names
+    plt.yticks(fontsize=16, rotation=0)  # Y-axis: method names
+    plt.xlabel("")
+    plt.ylabel("")
+    colorbar = ax.collections[0].colorbar
+    colorbar.ax.tick_params(labelsize=14)  # Tick label font size
+    colorbar.ax.set_ylabel("Jaccard Index", fontsize=16)  # Label font size
+
+    # if name == "everything":
+    #     plt.title(f"Jaccard Index Between all Hub detectors\nFleiss Kappa = {kappa:.4f}")
+    # else:
+    #     plt.title(f"Jaccard Index Between Hub detectors based on {name} connections\nFleiss Kappa = {kappa:.4f}")
     plt.tight_layout()
     plt.savefig(f"Figures/HubJaccard_{name}.pdf")
 
