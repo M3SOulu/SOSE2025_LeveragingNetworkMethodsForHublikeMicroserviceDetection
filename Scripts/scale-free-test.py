@@ -66,12 +66,13 @@ degree_power = [powerlaw(degree, x) for x in range(13)]
 in_degree_power = [powerlaw(in_degree, x) for x in range(13)]
 out_degree_power = [powerlaw(out_degree, x) for x in range(13)]
 
-plt.figure(figsize=(10, 3))
+plt.figure(figsize=(10, 2.5))
 plt.subplot(1, 3, 1)
 plt.plot(deg_scale.index, deg_scale.values)
 plt.plot(degree_power)
 plt.title("Degree")
 plt.xlim((0, 12))
+plt.ylim((0.0, 0.5))
 plt.ylabel("Proportion of nodes, P(k)")
 plt.xlabel("Degree, k")
 plt.tight_layout()
@@ -92,9 +93,9 @@ plt.xlabel("Degree, k")
 plt.xlim((0, 12))
 plt.ylim((0.0, 0.5))
 plt.title("Out-degree")
-plt.legend(["P(k) for degree k", "Power law best fit"], loc='right')
+plt.legend(["Observed", "Power law fit"], loc='right')
 plt.tight_layout()
 
-plt.suptitle("Power law fits to determine scale-free property")
+# plt.suptitle("Power law fits to determine scale-free property")
 plt.tight_layout()
-plt.savefig("Figures/ScaleFree.pdf")
+plt.savefig("Figures/ScaleFree.pdf", bbox_inches='tight')

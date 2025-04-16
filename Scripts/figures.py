@@ -160,11 +160,11 @@ def comparison_figure():
     plt.savefig("Figures/Comparison.pdf")
 
 
-def clustering_scatterplot(centrality, clustering, name, microservices):
+def clustering_scatterplot(centrality, clustering, name):
 
     plt.figure(figsize=(8,8))
     plt.scatter(clustering, centrality)
-    plt.title(f"Scatter plot of {name} vs. Clustering coeff.")
+    # plt.title(f"Scatter plot of {name} vs. Clustering coeff.")
     plt.xlabel("Clustering Coefficient")
     plt.ylabel(name)
     ax = plt.gca()
@@ -187,14 +187,6 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
         y_vals = x_vals + offset
         y_vals = np.clip(y_vals, min=0.0, max=1.0)
         ax.plot(x_vals, y_vals, linestyle='--', color='gray', linewidth=0.5)
-    #
-    # for i, label in enumerate(microservices):
-    #     ax.annotate(label,
-    #                 (clustering[i], centrality[i]),
-    #                 textcoords="offset points",  # offset the text slightly
-    #                 xytext=(0, 5),
-    #                 ha='center',
-    #                 fontsize=8)
 
     # Parameters for gradient
     N = 300  # Grid resolution
@@ -217,7 +209,7 @@ def clustering_scatterplot(centrality, clustering, name, microservices):
               aspect='auto',
               zorder=0)
 
-    plt.savefig(f"Figures/ClusteringScatter/ClusteringScatter_{name}.pdf")
+    plt.savefig(f"Figures/ClusteringScatter/ClusteringScatter_{name}.pdf", bbox_inches='tight')
 
 
 def call_graphs():
@@ -239,16 +231,16 @@ def call_graphs():
 
 
 if __name__ == "__main__":
-    comparison_figure()
+    # comparison_figure()
     # call_graphs()
-    # metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
-    # for col in metrics.columns:
-    #     if col in ["MS_system", "Microservice"]:
-    #         continue
+    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    for col in metrics.columns:
+        if col in ["MS_system", "Microservice"]:
+            continue
     #     plot_centrality_dist(metrics[col], col)
         # plot_centrality_dist(metrics[col], col, deriv=1)
         # plot_centrality_dist(metrics[col], col, deriv=2)
-        # if col not in ["Degree", "Clustering Coefficient", "In-degree",
-        #                "Out-degree", "Subgraph Centrality"]:
-        #     clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
-        #                            col, metrics["Microservice"])
+        if col not in ["Degree", "Clustering Coefficient", "In-degree",
+                       "Out-degree", "Subgraph Centrality"]:
+            clustering_scatterplot(metrics[col], metrics["Clustering Coefficient"],
+                                   col)

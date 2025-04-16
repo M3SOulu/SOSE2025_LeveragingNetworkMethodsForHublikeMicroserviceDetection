@@ -223,7 +223,7 @@ def agreement(in_cols, merged_df, name):
     # else:
     #     plt.title(f"Jaccard Index Between Hub detectors based on {name} connections\nFleiss Kappa = {kappa:.4f}")
     plt.tight_layout()
-    plt.savefig(f"Figures/HubJaccard_{name}.pdf")
+    plt.savefig(f"Figures/HubJaccard_{name}.pdf", bbox_inches='tight')
 
     # Step 2: Convert to counts of True/False per item
     # Each row will have: [count_false, count_true]
