@@ -104,7 +104,6 @@ def main():
     agreement(in_cols, merged_df, "incoming")
     agreement(out_cols, merged_df, "outgoing")
     agreement(total_cols, merged_df, "all")
-    agreement(bool_cols, merged_df, "everything")
 
     precision_results = [precision(merged_df, method) for method in [*in_cols, *out_cols, *total_cols]]
     precision_results.insert(0, ("Method", "Precision (Infra is TP)", "Precision (No Infra)", "Precision (Infra is FP)"))
