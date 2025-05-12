@@ -46,7 +46,7 @@ def compute_centrality():
 
     all_dfs = sorted(all_dfs, key=lambda d: d["MS_system"].iloc[0].casefold())
     df_db = pd.concat(all_dfs)
-    df_db.to_csv(os.path.join("Metrics", "metrics_centrality.csv"), index=False, header=True)
+    df_db.to_csv(os.path.join("Metrics", "CentralityMetrics.csv"), index=False, header=True)
 
 
 if __name__ == "__main__":

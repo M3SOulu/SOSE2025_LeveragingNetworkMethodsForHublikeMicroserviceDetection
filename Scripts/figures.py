@@ -82,7 +82,7 @@ def plot_centrality_dist(data, name, deriv=None):
 
 
 def comparison_figure():
-    metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    metrics = pd.read_csv(f"Metrics/CentralityMetrics.csv")
     norm_deg_dist = get_dist(metrics["Degree Centrality"])
     deg_dist = get_dist(metrics["Degree"], max=metrics[f"Degree"].max())
     # norm_in_deg_dist = get_dist(metrics["In-degree Centrality"])
@@ -233,7 +233,7 @@ def call_graphs():
 if __name__ == "__main__":
     comparison_figure()
     # call_graphs()
-    # metrics = pd.read_csv(f"Metrics/metrics_centrality.csv")
+    # metrics = pd.read_csv(f"Metrics/CentralityMetrics.csv")
     # for col in metrics.columns:
     #     if col in ["MS_system", "Microservice"]:
     #         continue

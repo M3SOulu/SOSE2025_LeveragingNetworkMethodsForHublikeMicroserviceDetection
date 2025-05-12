@@ -1,6 +1,6 @@
 import pandas as pd
 
-metrics = pd.read_csv("Metrics/metrics_centrality.csv")
+metrics = pd.read_csv("Metrics/CentralityMetrics.csv")
 centrality_cols = [col for col in metrics.columns if col not in ['MS_system',
                                                                  "Microservice",
                                                                  'Clustering Coefficient']]
@@ -20,4 +20,4 @@ for centrality in centrality_cols:
 # Convert results to DataFrame for better display (optional)
 results_df = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in sorted_microservices.items()]))
 
-results_df.to_csv("Metrics/ClusteringRank.csv", index=False)
+results_df.to_csv("Metrics/ClusteringHubStrength.csv", index=False)

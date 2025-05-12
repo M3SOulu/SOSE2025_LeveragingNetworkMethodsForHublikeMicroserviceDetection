@@ -165,5 +165,5 @@ if __name__ == "__main__":
         for method in res_out[system]:
             results_merged[system][f"{method}_in_degree"] = res_in[system][method]
             results_merged[system][f"{method}_out_degree"] = res_out[system][method]
-    with open("Results/Kirkley.json", 'w') as f:
+    with open("Results/RQ1/Kirkley.json", 'w') as f:
         json.dump(results_merged, f, indent=4)

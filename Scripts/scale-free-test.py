@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import powerlaw
 
 # Load data
-df = pd.read_csv("Metrics/metrics_centrality.csv")
+df = pd.read_csv("Metrics/CentralityMetrics.csv")
 
 # Define degree and frequency columns
 distributions = [
@@ -52,7 +52,7 @@ for centrality in distributions:
 
 # Save summary to CSV
 summary_df = pd.DataFrame(results_summary)
-summary_df.to_csv(os.path.join("Results", "ScaleFreeTest.csv"), index=False)
+summary_df.to_csv(os.path.join("Results", "RQ1", "ScaleFreeTest.csv"), index=False)
 
 deg_scale = df["Degree"].value_counts(normalize=True).sort_index()
 in_deg_scale = df["In-degree"].value_counts(normalize=True).sort_index()

@@ -8,11 +8,11 @@ import numpy as np
 
 def main():
     # Start by loading Kirkley
-    with open("Results/Kirkley.json", 'r') as f:
+    with open("Results/RQ1/Kirkley.json", 'r') as f:
         results = json.load(f)
 
     # Insert results from the clustering scatterplots
-    clustering = pd.read_csv("Results/ClusteringRankAgreement.csv", delimiter=";")
+    clustering = pd.read_csv("Results/RQ1/ClusteringHubsAgreement.csv", delimiter=";")
     for centrality in clustering.columns:
         for item in clustering[centrality]:
             if pd.isna(item):
@@ -24,7 +24,7 @@ def main():
             l.append(service)
 
 
-    metrics_df = pd.read_csv("Metrics/metrics_centrality.csv")
+    metrics_df = pd.read_csv("Metrics/CentralityMetrics.csv")
     centrality_cols = [col for col in metrics_df.columns if col not in ['MS_system',
                                                                      "Microservice",
                                                                      'Clustering Coefficient',
@@ -78,18 +78,18 @@ def main():
     # Scale-free test failed, so no hubs for scale-free
     merged_df["ScaleFree"] = None
     merged_df = pd.merge(merged_df, int_df, on=["MS_system", "Microservice"], how="left")
-    manual = pd.read_csv("Results/ManualValidation.csv")
+    manual = pd.read_csv("Results/RQ3/ManualValidation.csv")
     merged_df = pd.merge(merged_df, manual, how = "left")
-    merged_df.to_csv("Results/HubsAll.csv", index=False, header=True)
+    merged_df.to_csv("Results/RQ1/HubsAll.csv", index=False, header=True)
 
     # Select only boolean columns
     bool_cols = merged_df.select_dtypes(include=bool).columns
 
     filtered_df = merged_df[merged_df[bool_cols].any(axis=1)]
-    filtered_df.to_csv("Results/HubsTrue.csv")
+    filtered_df.to_csv("Results/RQ1/HubsTrue.csv")
     count_df = merged_df[bool_cols]
     count_df = count_df.sum()
-    count_df.to_csv("Results/HubCounts.csv")
+    count_df.to_csv("Results/RQ1/HubCounts.csv")
 
     # Dictionary to store results
 
@@ -109,7 +109,7 @@ def main():
     precision_results = [precision(merged_df, method) for method in [*in_cols, *out_cols, *total_cols]]
     precision_results.insert(0, ("Method", "Precision (Infra is TP)", "Precision (No Infra)", "Precision (Infra is FP)"))
     precision_df = pd.DataFrame(precision_results)
-    precision_df.to_csv("Results/Precision.csv", index=False, header=False)
+    precision_df.to_csv("Results/RQ3/Precision.csv", index=False, header=False)
 
 
 def precision(data_df, method):
@@ -169,7 +169,7 @@ def agreement(in_cols, merged_df, name):
     rating_counts.columns = ['False', 'True']
     kappa = fleiss_kappa(rating_counts)
 
-    agreement_df.to_csv(f"Results/HubJaccard_{name}.csv", index=False, header=True)
+    agreement_df.to_csv(f"Results/RQ2/HubJaccard_{name}.csv", index=False, header=True)
     # Step 1: Pivot agreement_df into square matrix
     heatmap_data = agreement_df.pivot(index="Column 1", columns="Column 2", values="Jaccard Index")
     # Step 2: Make the matrix symmetric by filling in the lower triangle
