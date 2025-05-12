@@ -3,6 +3,8 @@ import json
 
 import networkx as nx
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 def compute_centrality():
@@ -15,6 +17,12 @@ def compute_centrality():
         G.remove_nodes_from(["user"])
         G.remove_edges_from(nx.selfloop_edges(G))
         name = f.name.replace("_gwcc_noDB.json", "")
+        plt.figure(figsize=(16, 12))
+        nx.draw_networkx(G, pos=nx.arf_layout(G))
+        plt.title(name)
+        plt.tight_layout()
+        plt.savefig(f"Figures/SDGs/{name}_sdg.pdf")
+        plt.close()
         graph_df = pd.DataFrame(columns=["MS_system", "Microservice"])
         for node in G.nodes:
             graph_df.loc[len(graph_df)] = [name, node]
@@ -45,8 +53,40 @@ def compute_centrality():
         all_dfs.append(graph_df)
 
     all_dfs = sorted(all_dfs, key=lambda d: d["MS_system"].iloc[0].casefold())
-    df_db = pd.concat(all_dfs)
-    df_db.to_csv(os.path.join("Metrics", "CentralityMetrics.csv"), index=False, header=True)
+    df = pd.concat(all_dfs)
+    df.to_csv(os.path.join("Metrics", "CentralityMetrics.csv"), index=False, header=True)
+
+    ## Comparison figure
+    def get_dist(col, num=100, max=1.0):
+        xs = np.linspace(0.0, max, num=num)
+        ys = [(col >= threshold).sum() for threshold in xs]
+        return xs, ys
+    norm_deg_dist = get_dist(df["Degree Centrality"])
+    deg_dist = get_dist(df["Degree"], max=df[f"Degree"].max())
+    plt.figure(figsize=(10, 2.5))
+    plt.subplot(131)
+    plt.plot(deg_dist[0], deg_dist[1], color='tab:orange')
+    plt.xlabel("Threshold")
+    plt.ylabel("Count(Centrality > Threshold)")
+    plt.xticks([0, 2, 4, 6, 8, 10, 11], [0, 2, 4, 6, 8, 10, 11])
+    plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
+    plt.title("Degree")
+    plt.subplot(132)
+    plt.plot(norm_deg_dist[0], norm_deg_dist[1])
+    plt.xlabel("Threshold")
+    plt.xticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+               [0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
+    plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
+    plt.title("Degree Centrality")
+    plt.subplot(133)
+    plt.plot(norm_deg_dist[0], norm_deg_dist[1])
+    plt.plot(norm_deg_dist[0], deg_dist[1])
+    plt.xlabel("Threshold")
+    plt.xticks([0.0, 1.0], ["min", "max"])
+    plt.yticks([0, 50, 100, 150, 200, 250], [0, 50, 100, 150, 200, 250])
+    plt.title("Overlaid")
+    plt.tight_layout()
+    plt.savefig("Figures/Comparison.pdf", bbox_inches='tight')
 
 
 if __name__ == "__main__":
