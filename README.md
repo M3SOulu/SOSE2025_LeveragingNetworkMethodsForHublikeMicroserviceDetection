@@ -7,7 +7,7 @@ This repository contains the following files:
 
 - [Raw](Raw/graph) Raw SDG networks taken from Bakhtin et al. [1]
 - [Metrics](Metrics) Network metrics computed from raw data
-  - [Centralitymetrics.csv](Metrics/CentralityMetrics.csv) All the computed network centrality metrics
+  - [CentralityMetrics.csv](Metrics/CentralityMetrics.csv) All the computed network centrality metrics
   - [ClusteringHubStrength.csv](Metrics/ClusteringHubStrength.csv) Nodes sorted by hubs strength according to RQ1.3 for each used centrality
 - [Results](Results) Results gathered to answer RQ1-3
   - [RQ1](Results/RQ1) Results for RQ1
@@ -22,7 +22,7 @@ This repository contains the following files:
     - [HubJaccard_outgoing.csv](Results/RQ2/HubJaccard_outgoing.csv) Jaccard coefficient of agreement between the methods analyzing the outgoing connections
     - [HubJaccard_all.csv](Results/RQ2/HubJaccard_all.csv) Jaccard coefficient of agreement between the methods analyzing both the incoming and outgoing connections
   - [RQ3](Results/RQ3) Results for RQ3 (precision through manual validation)
-    - [ManualValidation.csv](Results/RQ3/ManualValidation.csv) Nodes detected as hub by at least one approach labelled as True (Hub), Infra (Infrastractural hub), or False (non-Hub)
+    - [ManualValidation.csv](Results/RQ3/ManualValidation.csv) Nodes detected as hub by at least one approach labelled as True (Hub), Infra (Infrastructural hub), or False (non-Hub)
     - [Precision.csv](Results/RQ3/Precision.csv) Precision of the hub detection approach calculated by considering IH as TP, FP, or ignoring them
 - [Scripts](Scripts) Scripts used to perform the study
   - [centrality.py](Scripts/centrality.py) Compute all the centrality metrics and clustering coefficient as well as make the comparison figure of degree and degree centrality, and all SDG figures
