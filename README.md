@@ -5,6 +5,7 @@ This is the replication package for our paper "Leveraging Network Methods for Hu
 # Contents
 This repository contains the following files:
 
+- [Projects](Projects.md) List of analyzed OSS microservice projects take from Bakhtin et al. [1]
 - [Raw](Raw/graph) Raw SDG networks taken from Bakhtin et al. [1]
 - [Metrics](Metrics) Network metrics computed from raw data
   - [CentralityMetrics.csv](Metrics/CentralityMetrics.csv) All the computed network centrality metrics
